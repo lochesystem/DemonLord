@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartas — DemonLord Print</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/print.css">
+</head>
+<body class="screen">
+
+<nav class="print-nav">
+  <h1>Cartas</h1>
+  <a href="index.html">← Kit</a>
+  <a href="tabuleiro.html">Tabuleiro</a>
+  <button type="button" onclick="window.print()">Imprimir / PDF</button>
+  <span class="spec">Corte 63,5×88,9 mm · 9/folha A4</span>
+</nav>
+
+<div id="cards-root"></div>
+
+<script src="js/cards-data.js"></script>
+<script src="js/render.js"></script>
+<script>renderAllCards('cards-root');</script>
+</body>
+</html>

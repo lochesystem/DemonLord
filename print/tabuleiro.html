@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabuleiro — DemonLord Print</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/print.css">
+</head>
+<body class="screen board-doc">
+
+<nav class="print-nav">
+  <h1>Tabuleiro</h1>
+  <a href="index.html">← Kit</a>
+  <a href="cartas.html">Cartas</a>
+  <button type="button" onclick="window.print()">Imprimir / PDF</button>
+  <span class="spec">A3 paisagem · 420 × 297 mm</span>
+</nav>
+
+<div class="section-block screen-only" style="max-width:900px">
+  <h2>Tabuleiro central</h2>
+  <p>Trilha de Moral (0–12), Fase da missão (1–3), área do Cofre da Invasão e referência rápida de rodada.</p>
+  <p><strong>Impressão:</strong> selecione papel <em>A3</em> nas opções de impressão. Se só tiver A4, imprima as duas metades e cole.</p>
+</div>
+
+<section class="board-sheet print-only">
+  <div class="board-inner">
+    <header class="board-title">
+      <h1>DemonLord</h1>
+      <p>Tabuleiro da Invasão · v0.1</p>
+      <div class="legend">
+        <span class="g">◆ Ouro</span>
+        <span class="f">♣ Comida</span>
+        <span class="m">⚔ Militar</span>
+      </div>
+    </header>
+
+    <div class="board-main">
+      <!-- Moral -->
+      <div class="board-panel">
+        <h2>Moral da invasão</h2>
+        <p style="font-size:2.8mm;color:#6a645c;margin:0 0 3mm">Início: 6 · 0 = derrota da mesa</p>
+        <div class="track" id="moral-track">
+          <!-- generated below -->
+        </div>
+        <p style="font-size:2.5mm;color:#8a8478;margin:3mm 0 0">Sucesso +1 · Falha parcial −1 · Falha total −2</p>
+      </div>
+
+      <!-- Centro: Cofre + Fases -->
+      <div class="board-panel" style="display:flex;flex-direction:column;gap:4mm">
+        <h2>Missão em curso</h2>
+        <div class="phase-row">
+          <div class="phase-card active">
+            <div class="ph-num">Fase 1</div>
+            <div class="ph-label">Coloque a carta da fase aqui</div>
+          </div>
+          <div class="phase-card">
+            <div class="ph-num">Fase 2</div>
+            <div class="ph-label">Avança ao vencer fase anterior</div>
+          </div>
+          <div class="phase-card">
+            <div class="ph-num">Fase 3</div>
+            <div class="ph-label">Vitória da invasão</div>
+          </div>
+        </div>
+        <h2 style="margin-top:2mm">Cofre da Invasão</h2>
+        <div class="cofre-area">
+          <p><strong>Deposite recursos aqui</strong><br>
+          Compare com o requisito da fase ao fim da rodada.<br>
+          Esvazie após cada resolução.</p>
+        </div>
+        <div style="display:flex;gap:3mm;margin-top:2mm;font-size:2.8mm">
+          <div style="flex:1;padding:2mm;background:#fff;border-radius:1mm;border:0.3mm solid #d0c8bc;text-align:center">
+            <strong>◆ Ouro</strong><br><span style="color:#8a8478">___</span>
+          </div>
+          <div style="flex:1;padding:2mm;background:#fff;border-radius:1mm;border:0.3mm solid #d0c8bc;text-align:center">
+            <strong>♣ Comida</strong><br><span style="color:#8a8478">___</span>
+          </div>
+          <div style="flex:1;padding:2mm;background:#fff;border-radius:1mm;border:0.3mm solid #d0c8bc;text-align:center">
+            <strong>⚔ Militar</strong><br><span style="color:#8a8478">___</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Referência -->
+      <div class="board-panel">
+        <h2>Referência rápida</h2>
+        <div class="ref-grid">
+          <div><strong>Rodada</strong><br>1. Decreto Real<br>2. Turnos (4 ações)<br>3. Resolução<br>4. Repor mercado</div>
+          <div><strong>Resolução</strong><br>≥100% = sucesso<br>70–99% = falha parcial<br>&lt;70% = falha total</div>
+          <div><strong>Turno</strong><br>Comprar · Recrutar<br>Contribuir · Intriga<br>Máx. 2 de cada tipo</div>
+          <div><strong>Fim de turno</strong><br>≥1 recurso ao Cofre<br>ou −1 Influência</div>
+          <div><strong>Conversão</strong><br>2◆→1♣ ou 1⚔<br>3♣→1⚔<br>2⚔→1◆ (−1 Moral)</div>
+          <div><strong>Vitória</strong><br>Mesa pode perder todos.<br>Mesa não ganha todos.</div>
+        </div>
+        <div style="margin-top:4mm;padding:3mm;background:#fff;border-radius:1mm;border:0.3mm solid #d0c8bc">
+          <p style="margin:0;font-size:2.6mm;color:#5a544c"><strong>Herói humano</strong> — revele 1 carta no setup. Coloque aqui →</p>
+          <div style="margin-top:2mm;height:22mm;border:0.4mm dashed #c8c0b4;border-radius:1mm;background:#faf8f5"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="board-footer">
+      <span>DemonLord v0.1 · Corte cartas 63,5 × 88,9 mm</span>
+      <span>Área segura: 3 mm dentro da borda · lochesystem.github.io/DemonLord</span>
+    </footer>
+  </div>
+</section>
+
+<!-- A4 fallback: segunda metade do board para quem não tem A3 -->
+<div class="section-block screen-only" style="margin-top:3rem">
+  <h2>Alternativa A4 (metade do tabuleiro)</h2>
+  <p>Se não puder imprimir A3, use esta folha complementar com a zona de jogadores e marcadores.</p>
+</div>
+
+<section class="print-sheet print-only" style="min-height:297mm;padding:8mm;background:#f5f0e8;color:#1a1814;font-family:'DM Sans',sans-serif">
+  <div class="sheet-label" style="color:#666">Tabuleiro complementar A4 — zonas de jogador</div>
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:14pt;margin:4mm 0 6mm;text-align:center">Marcadores por jogador</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5mm">
+    <div style="border:0.4mm solid #c8c0b4;border-radius:2mm;padding:4mm;background:#fff;min-height:40mm">
+      <strong style="font-size:3mm">Jogador 1</strong>
+      <p style="font-size:2.6mm;color:#6a645c;margin:2mm 0 0">Estoque pessoal · Influência: ○○○</p>
+    </div>
+    <div style="border:0.4mm solid #c8c0b4;border-radius:2mm;padding:4mm;background:#fff;min-height:40mm">
+      <strong style="font-size:3mm">Jogador 2</strong>
+      <p style="font-size:2.6mm;color:#6a645c;margin:2mm 0 0">Estoque pessoal · Influência: ○○○</p>
+    </div>
+    <div style="border:0.4mm solid #c8c0b4;border-radius:2mm;padding:4mm;background:#fff;min-height:40mm">
+      <strong style="font-size:3mm">Jogador 3</strong>
+      <p style="font-size:2.6mm;color:#6a645c;margin:2mm 0 0">Estoque pessoal · Influência: ○○○</p>
+    </div>
+    <div style="border:0.4mm solid #c8c0b4;border-radius:2mm;padding:4mm;background:#fff;min-height:40mm">
+      <strong style="font-size:3mm">Jogador 4</strong>
+      <p style="font-size:2.6mm;color:#6a645c;margin:2mm 0 0">Estoque pessoal · Influência: ○○○</p>
+    </div>
+  </div>
+  <div style="margin-top:6mm;padding:4mm;border:0.4mm solid #c4674a;border-radius:2mm;background:#fff8f5">
+    <strong style="font-size:3.2mm">Mercado (4 cartas visíveis)</strong>
+    <div style="display:flex;gap:3mm;margin-top:3mm">
+      <div style="flex:1;height:35mm;border:0.3mm dashed #c8c0b4;border-radius:1mm;background:#fff"></div>
+      <div style="flex:1;height:35mm;border:0.3mm dashed #c8c0b4;border-radius:1mm;background:#fff"></div>
+      <div style="flex:1;height:35mm;border:0.3mm dashed #c8c0b4;border-radius:1mm;background:#fff"></div>
+      <div style="flex:1;height:35mm;border:0.3mm dashed #c8c0b4;border-radius:1mm;background:#fff"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const track = document.getElementById('moral-track');
+  for (let i = 0; i <= 12; i++) {
+    const box = document.createElement('div');
+    box.className = 'track-box' + (i === 6 ? ' marked' : '') + (i === 0 ? ' end' : '') + (i === 12 ? ' start' : '');
+    box.textContent = i;
+    track.appendChild(box);
+  }
+</script>
+</body>
+</html>
