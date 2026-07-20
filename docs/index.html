@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DemonLord — board game semi-cooperativo de cartas. Generais do Rei Demônio invadem o Reino Humano com mandatos secretos e intriga de corte.">
+  <title>DemonLord — Board Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body data-page="home" data-base=".">
+
+<header class="site-header">
+  <a href="index.html" class="logo">
+    <span class="logo-icon">👑</span>
+    <span>DemonLord</span>
+  </a>
+  <nav class="nav-main">
+    <a href="index.html" data-page="home">Início</a>
+    <a href="rulebook.html" data-page="rulebook">Regras</a>
+    <a href="gdd.html" data-page="gdd">GDD</a>
+    <a href="https://github.com/lochesystem/DemonLord" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Menu">☰</button>
+</header>
+
+<main>
+  <section class="hero">
+    <span class="hero-badge">Board game · v0.1 · Pré-produção</span>
+    <h1>Conquiste o Reino.<br>Traia o Trono.</h1>
+    <p class="hero-lead">
+      Vocês são generais do Rei Demônio com poucos recursos e muita ambição.
+      Organizem a invasão ao Reino Humano — mas cada um guarda um <strong>mandato secreto</strong>.
+      Vencer a guerra não basta.
+    </p>
+    <div class="hero-cta">
+      <a href="rulebook.html" class="btn btn-primary">📜 Ler as Regras</a>
+      <a href="gdd.html" class="btn btn-secondary">🎲 Ver o GDD</a>
+    </div>
+  </section>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-value">3–5</div>
+      <div class="stat-label">Jogadores</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">60–90</div>
+      <div class="stat-label">Minutos</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">14+</div>
+      <div class="stat-label">Idade</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">Semi-coop</div>
+      <div class="stat-label">Gênero</div>
+    </div>
+  </div>
+
+  <div class="full-width">
+    <section class="section" id="como-funciona">
+      <div class="section-header">
+        <h2>Como funciona</h2>
+        <p>Três camadas de objetivo que criam tensão entre a mesa e cada general.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-icon gold">🏛️</div>
+          <h3>Objetivo da Mesa</h3>
+          <p>Preencher o <strong>Cofre da Invasão</strong> com Ouro, Comida e Militar para vencer as 3 fases da missão antes que a Moral chegue a zero.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon purple">📋</div>
+          <h3>Mandato Secreto</h3>
+          <p>O Rei deu a cada general uma ordem privada. Cumprir o mandato é obrigatório para vencer — mesmo que a invasão seja bem-sucedida.</p>
+          <div class="mandate-tags">
+            <span class="tag tag-loyalty">Lealdade</span>
+            <span class="tag tag-restriction">Restrição</span>
+            <span class="tag tag-ambition">Ambição</span>
+            <span class="tag tag-coup">Golpe</span>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-icon red">⚔️</div>
+          <h3>Herói Humano</h3>
+          <p>Cada partida enfrenta um defensor diferente — Paladino, Maga, Ladina… — que modifica requisitos e regras da missão.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Regra de ouro</h2>
+      </div>
+      <blockquote style="max-width:640px;margin:0 auto;text-align:center;padding:1.5rem 2rem;background:var(--bg-card);border-left:4px solid var(--crimson);border-radius:var(--radius);font-size:1.15rem;color:var(--text-muted);font-style:italic;">
+        A mesa pode <strong style="color:#fff">perder todos juntos</strong>.<br>
+        A mesa <strong style="color:var(--gold)">não ganha todos juntos</strong>.
+      </blockquote>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Uma rodada em 4 passos</h2>
+        <p>Cada rodada é uma tentativa de cumprir a fase atual da missão.</p>
+      </div>
+
+      <div class="flow-diagram">
+        <div class="flow-step">
+          <div class="flow-step-num">1</div>
+          <h4>Decreto Real</h4>
+          <p>Revelar evento que altera a rodada</p>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <div class="flow-step-num">2</div>
+          <h4>Turnos</h4>
+          <p>Comprar, recrutar, contribuir, intrigar</p>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <div class="flow-step-num">3</div>
+          <h4>Resolução</h4>
+          <p>Cofre vs requisito da fase</p>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <div class="flow-step-num">4</div>
+          <h4>Resultado</h4>
+          <p>Avança fase, perde Moral ou vence</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Os três recursos</h2>
+        <p>Escassez força escolhas difíceis a cada turno.</p>
+      </div>
+
+      <div class="resources-demo">
+        <span class="resource-pill gold">🟡 Ouro — compras e subornos</span>
+        <span class="resource-pill green">🟢 Comida — marchas e tropas</span>
+        <span class="resource-pill red">🔴 Militar — ataque e defesa</span>
+      </div>
+
+      <div class="card-grid" style="margin-top:2rem;">
+        <article class="card">
+          <h3>Cofre da Invasão</h3>
+          <p>Pool <strong>público</strong>. Todos depositam aqui para cumprir a missão. Visível para todos.</p>
+        </article>
+        <article class="card">
+          <h3>Estoque pessoal</h3>
+          <p>Reserva <strong>privada</strong>. Use para compras, mandatos e golpe. Outros não sabem quanto você tem.</p>
+        </article>
+        <article class="card">
+          <h3>Influência</h3>
+          <p>Moeda política. Gaste em acusações, favores e golpes. Quem não contribui ao Cofre perde Influência.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Exemplo: turno de um general</h2>
+        <p>Fase 1 da missão exige 4 Comida e 2 Militar. O Cofre está vazio.</p>
+      </div>
+
+      <div class="example-box">
+        <div class="example-box-header">📖 Exemplo didático</div>
+        <h4>General Krazul — 4 ações no turno</h4>
+        <ol style="margin:0;padding-left:1.25rem;color:var(--text-muted);">
+          <li><strong style="color:#fff">Comprar</strong> — Goblins (2 Ouro) → +2 Militar pessoal</li>
+          <li><strong style="color:#fff">Recrutar</strong> — Joga Goblins → +2 Militar no estoque</li>
+          <li><strong style="color:#fff">Contribuir</strong> — Deposita 2 Comida + 2 Militar no Cofre</li>
+          <li><strong style="color:#fff">Intriga</strong> — Negocia com outro general: "Contribuo mais na próxima se você me der 1 Ouro"</li>
+        </ol>
+        <p style="margin:1rem 0 0;font-size:0.9rem;color:var(--text-dim);">
+          ✓ Contribuiu ≥1 recurso → não perde Influência. Os outros generais ainda precisam agir nesta rodada.
+        </p>
+      </div>
+
+      <div class="example-box">
+        <div class="example-box-header">📊 Exemplo: resolução da fase</div>
+        <h4>Cofre final: 4 Comida, 1 Militar · Requisito: 4 Comida, 2 Militar</h4>
+        <ul style="margin:0;padding-left:1.25rem;color:var(--text-muted);">
+          <li>Comida: 4÷4 = <strong style="color:var(--green)">100%</strong></li>
+          <li>Militar: 1÷2 = <strong style="color:var(--ember)">50%</strong></li>
+          <li>Média: (100 + 50) ÷ 2 = <strong style="color:var(--ember)">75%</strong> → <strong style="color:#fff">Falha parcial</strong></li>
+        </ul>
+        <p style="margin:1rem 0 0;font-size:0.9rem;color:var(--text-dim);">
+          Não avança de fase. A mesa perde <strong>−1 Moral</strong>. O Cofre é esvaziado. Nova rodada na mesma fase.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Mandatos em ação</h2>
+        <p>Objetivos secretos que mudam como cada jogador age.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <span class="tag tag-restriction">Restrição</span>
+          <h3 style="margin-top:0.75rem;">Economia de Guerra</h3>
+          <p>Vencer com 8+ Ouro pessoal, mas gastar no máximo <strong>2 Ouro por rodada</strong> em cartas de Raça. Parece que está sabotando — pode ser só o mandato.</p>
+        </article>
+        <article class="card">
+          <span class="tag tag-ambition">Ambição</span>
+          <h3 style="margin-top:0.75rem;">Tesouro do General</h3>
+          <p>Vencer a invasão com <strong>10+ Ouro pessoal</strong>. Incentiva segurar recursos enquanto a mesa pede contribuição.</p>
+        </article>
+        <article class="card">
+          <span class="tag tag-coup">Golpe</span>
+          <h3 style="margin-top:0.75rem;">Usurpador</h3>
+          <p>Com 6+ Ouro, 3+ Influência e apoio fraco na corte, tente um <strong>golpe de estado</strong> para vencer sozinho — mesmo se a invasão falhar.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" style="text-align:center;padding-bottom:2rem;">
+      <div class="section-header">
+        <h2>Pronto para jogar?</h2>
+        <p>Comece pelo livro de regras. Use o GDD para entender o design por trás das mecânicas.</p>
+      </div>
+      <div class="hero-cta">
+        <a href="rulebook.html" class="btn btn-primary">📜 Livro de Regras completo</a>
+        <a href="gdd.html" class="btn btn-secondary">🎲 Game Design Document</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>DemonLord v0.1 — Board game de cartas semi-cooperativo · <a href="https://github.com/lochesystem/DemonLord">GitHub</a></p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

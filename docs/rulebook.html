@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Livro de Regras de DemonLord — board game semi-cooperativo de cartas.">
+  <title>Regras — DemonLord</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body data-page="rulebook" data-doc="rulebook" data-base=".">
+
+<header class="site-header">
+  <a href="index.html" class="logo">
+    <span class="logo-icon">👑</span>
+    <span>DemonLord</span>
+  </a>
+  <nav class="nav-main">
+    <a href="index.html" data-page="home">Início</a>
+    <a href="rulebook.html" data-page="rulebook">Regras</a>
+    <a href="gdd.html" data-page="gdd">GDD</a>
+    <a href="https://github.com/lochesystem/DemonLord" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Menu">☰</button>
+</header>
+
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<div class="page-layout">
+  <aside class="sidebar" id="sidebar">
+    <p class="sidebar-label">Neste documento</p>
+    <nav id="toc"></nav>
+    <hr style="border-color:var(--border);margin:1.5rem 0;">
+    <p class="sidebar-label">Links</p>
+    <nav class="toc">
+      <ul class="toc">
+        <li><a href="index.html">← Início</a></li>
+        <li><a href="gdd.html">Game Design Document</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <div class="doc-meta">
+      <span>📜 Livro de Regras</span>
+      <span>v0.1</span>
+      <span>3–5 jogadores</span>
+      <span>60–90 min</span>
+    </div>
+
+    <div id="doc-content" class="prose loading">
+      <div class="loading-spinner"></div>
+      <p>Carregando regras…</p>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <p>DemonLord v0.1 · <a href="index.html">Início</a> · <a href="gdd.html">GDD</a></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
