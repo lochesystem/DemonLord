@@ -694,4 +694,4 @@ No mínimo 3 (se vencerem cada fase de primeira). Na prática, 4–6 rodadas.
 
 ---
 
-*DemonLord v0.1 — Regras alinhadas ao [GDD](GDD.md). Reporte erros de balanceamento nas sessões de playtest.*
+*DemonLord v0.1 — Regras alinhadas ao [GDD](../design/GDD.md). Site: [lochesystem.github.io/DemonLord](https://lochesystem.github.io/DemonLord/)*
