@@ -11,7 +11,7 @@ Board game semi-cooperativo de cartas: generais do Rei Demônio alocam recursos 
 | [design/GDD.md](design/GDD.md) | Game Design Document (fonte) |
 | [design/RULEBOOK.md](design/RULEBOOK.md) | Livro de regras (fonte) |
 | [docs/](docs/) | Site GitHub Pages |
-| [print/](print/) | Kit Print & Play (cartas + tabuleiro) |
+| [docs/print/](docs/print/) | Kit Print & Play (cartas + tabuleiro) · [abrir no site](https://lochesystem.github.io/DemonLord/print/) |
 
 ## Pitch rápido
 
