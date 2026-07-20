@@ -7,21 +7,25 @@
   <title>GDD — DemonLord</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body data-page="gdd" data-doc="gdd" data-base=".">
 
 <header class="site-header">
   <a href="index.html" class="logo">
-    <span class="logo-icon">👑</span>
+    <svg class="logo-mark" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+      <rect width="38" height="38" rx="9" fill="#1a1814"/>
+      <path d="M19 7L24 14H28L22 19L24 27L19 23L14 27L16 19L10 14H14L19 7Z" fill="#c4674a" opacity="0.9"/>
+      <circle cx="19" cy="19" r="16" stroke="#c9a962" stroke-width="0.75" opacity="0.35"/>
+    </svg>
     <span>DemonLord</span>
   </a>
   <nav class="nav-main">
     <a href="index.html" data-page="home">Início</a>
     <a href="rulebook.html" data-page="rulebook">Regras</a>
     <a href="gdd.html" data-page="gdd">GDD</a>
-    <a href="https://github.com/lochesystem/DemonLord" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://github.com/lochesystem/DemonLord" class="nav-external" target="_blank" rel="noopener">GitHub</a>
   </nav>
   <button class="menu-toggle" id="menu-toggle" aria-label="Menu">☰</button>
 </header>
@@ -32,21 +36,23 @@
   <aside class="sidebar" id="sidebar">
     <p class="sidebar-label">Neste documento</p>
     <nav id="toc"></nav>
-    <hr style="border-color:var(--border);margin:1.5rem 0;">
-    <p class="sidebar-label">Links</p>
-    <nav class="toc">
+    <hr style="border:none;border-top:1px solid var(--line);margin:1.5rem 0;">
+    <p class="sidebar-label">Navegação</p>
+    <nav>
       <ul class="toc">
-        <li><a href="index.html">← Início</a></li>
+        <li><a href="index.html">Início</a></li>
         <li><a href="rulebook.html">Livro de Regras</a></li>
       </ul>
     </nav>
   </aside>
 
   <main class="main-content">
+    <h1 class="doc-page-title">Game Design Document</h1>
+    <p class="doc-page-sub">Versão 0.1 · Pré-produção</p>
+
     <div class="doc-meta">
-      <span>🎲 Game Design Document</span>
-      <span>v0.1</span>
-      <span>Pré-produção</span>
+      <span>Documento de design</span>
+      <span>Referência interna</span>
     </div>
 
     <div id="doc-content" class="prose loading">

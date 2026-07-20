@@ -136,12 +136,13 @@
           startOnLoad: false,
           theme: 'dark',
           themeVariables: {
-            primaryColor: '#1f1a2e',
-            primaryTextColor: '#e8e2f0',
-            primaryBorderColor: '#d4a853',
-            lineColor: '#9b92ad',
-            secondaryColor: '#1a1624',
-            tertiaryColor: '#12101a',
+            primaryColor: '#161412',
+            primaryTextColor: '#ece8e1',
+            primaryBorderColor: '#c4674a',
+            lineColor: '#7a746a',
+            secondaryColor: '#1a1814',
+            tertiaryColor: '#0c0b0a',
+            fontFamily: 'DM Sans, sans-serif',
           },
         });
         await mermaid.run({ nodes: contentEl.querySelectorAll('.mermaid') });
