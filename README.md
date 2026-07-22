@@ -8,10 +8,12 @@ Board game semi-cooperativo de cartas: generais do Rei Demônio alocam recursos 
 
 | Documento | Descrição |
 |-----------|-----------|
-| [design/GDD.md](design/GDD.md) | Game Design Document (fonte) |
-| [design/RULEBOOK.md](design/RULEBOOK.md) | Livro de regras (fonte) |
+| [design/GDD-v0.2.md](design/GDD-v0.2.md) | **GDD atual** — mercado de raças, decretos, itens |
+| [design/DESIGN-PIVOT-v0.2.md](design/DESIGN-PIVOT-v0.2.md) | O que mudou após feedback do PO |
+| [design/GDD.md](design/GDD.md) | GDD v0.1 arquivado (semi-coop / Cofre) |
+| [design/RULEBOOK.md](design/RULEBOOK.md) | Livro de regras v0.1 (desatualizado) |
 | [docs/](docs/) | Site GitHub Pages |
-| [docs/print/](docs/print/) | Kit Print & Play (cartas + tabuleiro) · [abrir no site](https://lochesystem.github.io/DemonLord/print/) |
+| [docs/print/](docs/print/) | Kit Print & Play v0.1 |
 
 ## Pitch rápido
 

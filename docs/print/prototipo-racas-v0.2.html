@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protótipo Raças v0.2 — DemonLord</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/print.css">
+  <style>
+    /* Layout PO — carta de raça v0.2 */
+    .race-v2 {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      background: linear-gradient(180deg, #1e1c18 0%, #12100e 100%);
+      border: 0.5mm solid #c9a962;
+      border-radius: 2mm;
+      font-family: 'DM Sans', sans-serif;
+      color: #ece8e1;
+      overflow: hidden;
+    }
+    .race-v2-stats {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 2mm 2.5mm 1.5mm;
+      background: rgba(0,0,0,0.35);
+      border-bottom: 0.3mm solid rgba(201,169,98,0.3);
+      font-size: 2.6mm; font-weight: 700;
+    }
+    .race-v2-stats span { margin-right: 2mm; }
+    .race-v2-stats .lbl { color: #9a9488; font-weight: 500; font-size: 2mm; }
+    .race-v2-cost {
+      width: 8mm; height: 8mm; border-radius: 50%;
+      background: linear-gradient(145deg, #e8c547, #c9a030);
+      color: #1a1408; font-weight: 800; font-size: 3.5mm;
+      display: grid; place-items: center;
+      border: 0.4mm solid #f0d878;
+      flex-shrink: 0;
+    }
+    .race-v2-title {
+      padding: 1.5mm 2.5mm;
+      display: flex; justify-content: space-between; align-items: baseline;
+    }
+    .race-v2-title h3 {
+      margin: 0; font-family: 'Cormorant Garamond', serif;
+      font-size: 4.5mm; font-weight: 700; letter-spacing: 0.04em;
+    }
+    .race-v2-title .tag {
+      font-size: 2.4mm; color: #c4674a; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .race-v2-art {
+      flex: 1; margin: 0 2.5mm;
+      border: 0.3mm dashed rgba(255,255,255,0.15);
+      border-radius: 1.5mm;
+      display: grid; place-items: center;
+      background: rgba(0,0,0,0.25);
+      font-size: 2.2mm; color: #6a645c; text-align: center;
+      min-height: 28mm;
+    }
+    .race-v2-foot {
+      padding: 2mm 2.5mm 2.5mm;
+      border-top: 0.3mm solid rgba(255,255,255,0.08);
+      font-size: 2.4mm; line-height: 1.35;
+    }
+    .race-v2-foot strong { color: #c9a962; }
+    .race-v2-foot .ability { color: #b8b2a6; margin-top: 1mm; font-size: 2.2mm; }
+    .banner-v02 {
+      background: #c4674a; color: #fff; text-align: center;
+      padding: 0.5rem; font-size: 0.85rem; font-weight: 600;
+    }
+  </style>
+</head>
+<body class="screen">
+
+<div class="banner-v02">PROTÓTIPO v0.2 — Layout alinhado ao feedback do PO (PV · ATK · INT · custo · traço)</div>
+
+<nav class="print-nav">
+  <h1>Raças v0.2</h1>
+  <a href="index.html">← Kit</a>
+  <button type="button" onclick="window.print()">Imprimir / PDF</button>
+  <span class="spec">63,5×88,9 mm · 9/folha</span>
+</nav>
+
+<div class="section-block screen-only">
+  <h2>Cartas de Raça — layout PO</h2>
+  <p>12 raças do GDD v0.2. Arte central é placeholder para orientar ilustrador/gráfica.</p>
+</div>
+
+<div id="race-root"></div>
+
+<script>
+const RACES_V2 = [
+  { id:'R01', name:'Harpia', tag:'Voador', pv:3, atk:4, int:2, cost:4, trait:'Voa', ability:'—' },
+  { id:'R02', name:'Golem', tag:'Bruto', pv:6, atk:5, int:1, cost:5, trait:'Bruto', ability:'+1 PV se INT total do exército ≤5' },
+  { id:'R03', name:'Goblin', tag:'Furtivo', pv:2, atk:2, int:3, cost:2, trait:'Furtivo', ability:'—' },
+  { id:'R04', name:'Ogros', tag:'Bruto', pv:5, atk:6, int:1, cost:5, trait:'Bruto', ability:'—' },
+  { id:'R05', name:'Súcubo', tag:'Arcano', pv:3, atk:3, int:5, cost:4, trait:'Arcano', ability:'Ao recrutar: olhe 1 item do descarte' },
+  { id:'R06', name:'Tritão', tag:'Aquático', pv:4, atk:3, int:2, cost:3, trait:'Nada', ability:'—' },
+  { id:'R07', name:'Kobold', tag:'Furtivo', pv:2, atk:1, int:4, cost:2, trait:'Furtivo', ability:'+1 INT' },
+  { id:'R08', name:'Minotauro', tag:'Bruto', pv:5, atk:5, int:2, cost:5, trait:'Bruto', ability:'—' },
+  { id:'R09', name:'Espectro', tag:'Voador', pv:2, atk:2, int:4, cost:3, trait:'Voa', ability:'Ignora penalidade de campo terrestre' },
+  { id:'R10', name:'Slime', tag:'Aquático', pv:4, atk:2, int:1, cost:2, trait:'Nada', ability:'—' },
+  { id:'R11', name:'Diabrete', tag:'Arcano', pv:2, atk:3, int:3, cost:3, trait:'Arcano', ability:'—' },
+  { id:'R12', name:'Centauro', tag:'Cavalaria', pv:4, atk:4, int:2, cost:4, trait:'—', ability:'Marcha: +1 ATK' },
+];
+
+function renderRace(c) {
+  return `<div class="card-sheet"><div class="card-face" style="padding:0">
+    <div class="race-v2">
+      <div class="race-v2-stats">
+        <div>
+          <span><span class="lbl">PV</span> ${c.pv}</span>
+          <span><span class="lbl">ATK</span> ${c.atk}</span>
+          <span><span class="lbl">INT</span> ${c.int}</span>
+        </div>
+        <div class="race-v2-cost">${c.cost}</div>
+      </div>
+      <div class="race-v2-title">
+        <h3>${c.name}</h3>
+        <span class="tag">${c.tag}</span>
+      </div>
+      <div class="race-v2-art">ARTE<br>${c.name}</div>
+      <div class="race-v2-foot">
+        <strong>Traço:</strong> ${c.trait}
+        <div class="ability">${c.ability !== '—' ? c.ability : ''}</div>
+      </div>
+    </div>
+  </div></div>`;
+}
+
+(function () {
+  const root = document.getElementById('race-root');
+  const perPage = 9;
+  for (let i = 0; i < RACES_V2.length; i += perPage) {
+    const page = document.createElement('div');
+    page.className = 'print-sheet print-only';
+    const slice = RACES_V2.slice(i, i + perPage);
+    page.innerHTML = `<div class="sheet-label">Raças v0.2 — folha ${Math.floor(i/perPage)+1}</div>`;
+    slice.forEach(c => {
+      const w = document.createElement('div');
+      w.innerHTML = renderRace(c);
+      page.appendChild(w.firstElementChild);
+    });
+    for (let j = slice.length; j < perPage; j++) {
+      const e = document.createElement('div');
+      e.className = 'card-sheet';
+      page.appendChild(e);
+    }
+    root.appendChild(page);
+  }
+})();
+</script>
+</body>
+</html>

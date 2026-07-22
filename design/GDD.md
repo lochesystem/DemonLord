@@ -1,6 +1,9 @@
 # GDD — DemonLord
 
-Documento mestre de design. Versão **0.1** — pré-produção (papel).
+> ⚠️ **Versão 0.1 arquivada.** O PO redirecionou o design.  
+> **Versão atual:** [GDD-v0.2.md](GDD-v0.2.md) · [Pivot v0.1→v0.2](DESIGN-PIVOT-v0.2.md)
+
+Documento mestre de design. Versão **0.1** — pré-produção (papel). **Não reflete a visão atual do jogo.**
 
 ---
 
