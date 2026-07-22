@@ -163,8 +163,14 @@
   if (docType) {
     const contentEl = document.getElementById('doc-content');
     const tocEl = document.getElementById('toc');
-    const mdFile = docType === 'gdd' ? 'content/gdd.md' : 'content/rulebook.md';
-    loadDoc(`${BASE}/${mdFile}`.replace(/\/\.\//, '/'), contentEl, tocEl);
+    const mdMap = {
+      gdd: 'content/gdd.md',
+      rulebook: 'content/rulebook.md',
+      'gdd-v0.2': 'content/gdd-v0.2.md',
+      'pivot-v0.2': 'content/pivot-v0.2.md',
+    };
+    const mdFile = mdMap[docType];
+    if (mdFile) loadDoc(`${BASE}/${mdFile}`.replace(/\/\.\//, '/'), contentEl, tocEl);
   }
 
   /* ── Highlight active nav ── */
