@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playmat Mercado v0.2 — DemonLord</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/print.css">
+  <style>
+  @page playmat { size: A3 landscape; margin: 0; }
+  .playmat-v2 {
+    page: playmat;
+    width: 420mm; height: 297mm;
+    padding: 10mm;
+    background: linear-gradient(160deg, #1a1410 0%, #0c0a08 50%, #141018 100%);
+    color: #ece8e1;
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+  .playmat-v2::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse 50% 40% at 50% 45%, rgba(196,103,74,0.08), transparent);
+  }
+  .pm-inner { position: relative; height: 100%; display: flex; flex-direction: column; }
+  .pm-title {
+    text-align: center; margin-bottom: 6mm;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .pm-title h1 { margin: 0; font-size: 11mm; letter-spacing: 0.12em; color: #c9a962; }
+  .pm-title p { margin: 1mm 0 0; font-size: 3.2mm; color: #7a746a; }
+  .pm-body { flex: 1; display: grid; grid-template-columns: 1fr 72mm; gap: 8mm; min-height: 0; }
+  .pm-market-wrap {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    border: 0.5mm solid rgba(201,169,98,0.35);
+    border-radius: 4mm;
+    padding: 8mm;
+    background: rgba(0,0,0,0.35);
+  }
+  .pm-market-label {
+    font-size: 4mm; font-weight: 600; letter-spacing: 0.15em;
+    text-transform: uppercase; color: #c9a962; margin-bottom: 5mm;
+  }
+  .pm-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 58mm);
+    grid-template-rows: repeat(3, 82mm);
+    gap: 4mm;
+  }
+  .pm-slot {
+    border: 0.4mm dashed rgba(255,255,255,0.2);
+    border-radius: 2mm;
+    background: rgba(255,255,255,0.03);
+    display: grid; place-items: center;
+    text-align: center;
+    font-size: 2.8mm; color: #6a645c;
+    line-height: 1.4;
+  }
+  .pm-slot span { color: #9a9488; font-weight: 600; }
+  .pm-field-global {
+    margin-top: 6mm;
+    width: 100%;
+    max-width: 128mm;
+    min-height: 38mm;
+    border: 0.5mm solid #c4674a;
+    border-radius: 2mm;
+    background: rgba(196,103,74,0.08);
+    padding: 3mm;
+    text-align: center;
+  }
+  .pm-field-global h3 {
+    margin: 0 0 2mm; font-size: 3.2mm; font-weight: 700;
+    color: #e8a88a; text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .pm-field-global p { margin: 0; font-size: 2.6mm; color: #9a9488; line-height: 1.4; }
+  .pm-side { display: flex; flex-direction: column; gap: 5mm; }
+  .pm-deck {
+    flex: 1;
+    border: 0.4mm solid rgba(255,255,255,0.15);
+    border-radius: 2mm;
+    display: grid; place-items: center;
+    background: rgba(0,0,0,0.4);
+    min-height: 80mm;
+  }
+  .pm-deck-stack {
+    width: 42mm; height: 58mm;
+    border: 0.4mm solid #5a544c;
+    border-radius: 2mm;
+    background: linear-gradient(135deg, #2a2420, #1a1612);
+    box-shadow: 2mm 2mm 0 rgba(0,0,0,0.4);
+    display: grid; place-items: center;
+    font-size: 2.8mm; color: #8a8478; text-align: center;
+  }
+  .pm-ref {
+    padding: 3mm;
+    border: 0.3mm solid rgba(255,255,255,0.1);
+    border-radius: 2mm;
+    font-size: 2.4mm; color: #8a8478; line-height: 1.45;
+  }
+  .pm-ref strong { color: #c9a962; }
+  .pm-players {
+    margin-top: 6mm;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4mm;
+  }
+  .pm-player {
+    border: 0.35mm solid rgba(255,255,255,0.12);
+    border-radius: 2mm;
+    padding: 3mm;
+    background: rgba(0,0,0,0.25);
+  }
+  .pm-player h4 { margin: 0 0 2mm; font-size: 3mm; color: #c9a962; }
+  .pm-influence-ind {
+    min-height: 18mm;
+    border: 0.35mm dashed #8b5cf6;
+    border-radius: 1.5mm;
+    background: rgba(139,92,246,0.06);
+    padding: 2mm;
+    margin-bottom: 2mm;
+    font-size: 2.2mm; color: #a78bfa;
+    line-height: 1.35;
+  }
+  .pm-army {
+    min-height: 22mm;
+    border: 0.3mm dashed rgba(255,255,255,0.15);
+    border-radius: 1.5mm;
+    font-size: 2.2mm; color: #6a645c;
+    padding: 2mm;
+  }
+  .pm-footer {
+    margin-top: 4mm; text-align: center;
+    font-size: 2.4mm; color: #5a544c;
+  }
+  @media screen {
+    .playmat-v2 {
+      margin: 0 auto 2rem;
+      transform: scale(0.48);
+      transform-origin: top center;
+      margin-bottom: -140mm;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    }
+  }
+  @media print {
+    .playmat-v2 { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+  </style>
+</head>
+<body class="screen board-doc">
+
+<nav class="print-nav">
+  <h1>Playmat Mercado</h1>
+  <a href="index.html">← Kit</a>
+  <a href="prototipo-racas-v0.2.html">Cartas</a>
+  <button type="button" onclick="window.print()">Imprimir A3 PDF</button>
+  <span class="spec">A3 · Mercado 2×3 + Campo global</span>
+</nav>
+
+<div class="section-block screen-only" style="max-width:800px">
+  <h2>Playmat v0.2 — esboço PO</h2>
+  <p><strong>Opção A (esta folha):</strong> playmat A3 com mercado central, carta de influência de mercado (todos os jogadores) e zonas por jogador com influência individual + exército.</p>
+  <p><strong>Opção B (custo menor):</strong> imprimir só a grade 2×3 + campo em A4 e usar a mesa como resto do espaço.</p>
+</div>
+
+<section class="playmat-v2 print-only">
+  <div class="pm-inner">
+    <header class="pm-title">
+      <h1>Mercado do Makai</h1>
+      <p>DemonLord · Playmat central · v0.2</p>
+    </header>
+
+    <div class="pm-body">
+      <div class="pm-market-wrap">
+        <div class="pm-market-label">Mercado — 6 raças</div>
+        <div class="pm-grid">
+          <div class="pm-slot"><span>1</span><br>Raça</div>
+          <div class="pm-slot"><span>2</span><br>Raça</div>
+          <div class="pm-slot"><span>3</span><br>Raça</div>
+          <div class="pm-slot"><span>4</span><br>Raça</div>
+          <div class="pm-slot"><span>5</span><br>Raça</div>
+          <div class="pm-slot"><span>6</span><br>Raça</div>
+        </div>
+        <div class="pm-field-global">
+          <h3>Campo — Influência de mercado</h3>
+          <p>Carta de campo que afeta <strong>todos os jogadores</strong>.<br>
+          Ex.: Harpias +1◆ · Goblins −2 ATK no mercado</p>
+        </div>
+      </div>
+
+      <div class="pm-side">
+        <div class="pm-deck">
+          <div class="pm-deck-stack">Pilha<br>de raças</div>
+        </div>
+        <div class="pm-ref">
+          <strong>Campo de mercado</strong> — preço/stats das raças no grid.<br>
+          <strong>Influência individual</strong> — jogada contra 1 jogador (zona roxa em cada área).<br>
+          <strong>Exército</strong> — raças recrutadas ficam na área do jogador.
+        </div>
+      </div>
+    </div>
+
+    <div class="pm-players">
+      <div class="pm-player">
+        <h4>Jogador 1</h4>
+        <div class="pm-influence-ind">Influência individual<br><small>Campo contra este jogador</small></div>
+        <div class="pm-army">Exército (monstros recrutados)</div>
+      </div>
+      <div class="pm-player">
+        <h4>Jogador 2</h4>
+        <div class="pm-influence-ind">Influência individual</div>
+        <div class="pm-army">Exército</div>
+      </div>
+      <div class="pm-player">
+        <h4>Jogador 3</h4>
+        <div class="pm-influence-ind">Influência individual</div>
+        <div class="pm-army">Exército</div>
+      </div>
+      <div class="pm-player">
+        <h4>Jogador 4</h4>
+        <div class="pm-influence-ind">Influência individual</div>
+        <div class="pm-army">Exército</div>
+      </div>
+    </div>
+
+    <footer class="pm-footer">Corte cartas 63,5 × 88,9 mm · lochesystem.github.io/DemonLord</footer>
+  </div>
+</section>
+
+</body>
+</html>

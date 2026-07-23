@@ -107,13 +107,15 @@ flowchart TB
 | **Decreto** | Só o dono | Missão do Rei: requisitos + orçamento |
 | **Mão** | Privada | Itens (compra, roubo, campo…) |
 | **Exército** | Pública | Raças recrutadas (cartas em campo) |
+| **Influência individual** | Pública | Campo jogado contra este jogador (máx. 1?) |
 | **Orçamento gasto** | Público | Total de ◆ já comprometido |
 
 ### Zonas compartilhadas
 
 | Zona | Função |
 |------|--------|
-| **Mercado** | 6 raças visíveis para recrutar (layout referência PO) |
+| **Mercado** | 6 raças visíveis para recrutar (grid 2×3 central) |
+| **Campo de mercado** | 1 slot abaixo do mercado — carta que afeta todos |
 | **Descarte** | Itens usados, raças removidas |
 | **Baralho de raças** | Repõe mercado |
 | **Baralho de itens** | Compra ou compra inicial por rodada |
@@ -124,29 +126,35 @@ flowchart TB
 
 ### 4.1 Carta de Raça (mercado e exército)
 
-Layout alinhado à referência visual do PO:
+Layout **v0.2.1** — esboço PO (23/07): ícones **pequenos** à esquerda, **arte grande** no centro.
 
 ```
 ┌─────────────────────────────┐
-│ PV 4   ATK 3   INT 2    (4)│  stats + custo em ◆
+│ ◆4              HARPIA      │  custo (canto sup. esq.) · nome (sup. dir.)
+│ ♥3                          │
+│ ✦4      ┌─────────────────┐ │
+│ INT2    │                 │ │  stats em círculos discretos
+│         │     ARTE        │ │
+│         │    MONSTRO      │ │
+│         └─────────────────┘ │
 │─────────────────────────────│
-│ HARPIA            Voador    │
-│                             │
-│         [ ARTE ]            │
-│                             │
-│ Traço: Voa                  │
-│ Marcha pelos céus do Makai  │
+│ Voador │ Ao recrutar: …    │  rodapé: traço OU efeito imediato
 └─────────────────────────────┘
 ```
 
 | Campo | Uso mecânico |
 |-------|--------------|
-| **PV** | Soma ao total de vida do exército |
-| **ATK** | Soma ao total de força |
+| **PV (♥)** | Soma ao total de vida do exército |
+| **ATK (✦)** | Soma ao total de força |
 | **INT** | Soma ao total de inteligência |
 | **Custo (◆)** | Soma ao orçamento gasto ao recrutar |
-| **Traço** | Tag para requisitos do Decreto (Voa, Nada, Bruto, Furtivo, Arcano…) |
-| **Habilidade** | Efeito opcional da raça |
+| **Traço** | Tag para requisitos do Decreto (Voador, Nadador, Bruto, Furtivo, Arcano…) — exibida no rodapé |
+| **Efeito ao recrutar** | Opcional: dispara **no momento da compra** (antes de repor o slot). Ex.: *Lagáxido* — "inunda vilarejo goblin: Goblins no mercado −2 ATK nesta rodada" |
+| **Habilidade passiva** | Opcional: efeito contínuo enquanto a raça está no exército |
+
+**Rodapé da carta:** mostra o **traço** quando não há efeito especial; quando há, o traço fica à esquerda e o texto do efeito à direita (com prefixo *Ao recrutar:* quando aplicável).
+
+Protótipo visual: `docs/print/prototipo-racas-v0.2.html`
 
 **Regra de orçamento:** ao recrutar, o custo **não sai de um pool de ouro físico** — soma ao total gasto do general, que não pode exceder o limite do Decreto.
 
@@ -164,13 +172,23 @@ Layout alinhado à referência visual do PO:
 
 Tipos (podem compartilhar baralho com ícone):
 
-| Tipo | Ícone | Exemplo |
-|------|-------|---------|
-| Campo | 🏴 | Efeito persistente no mercado |
-| Equipamento | ⚙ | Buff em raça sua |
-| Armadilha | ⚡ | Dispara quando rival recruta |
-| Intriga | 🎭 | Revela ou troca decreto |
-| Roubo | 🗡 | Rouba raça ou carta |
+| Tipo | Ícone | Onde fica | Exemplo |
+|------|-------|-----------|---------|
+| **Campo de mercado** | 🏴 | Slot abaixo do grid 2×3 — afeta **todos** | Harpias +1◆ no mercado |
+| **Campo individual** | 🎯 | Slot na área de **1 jogador** — afeta só ele | Alvo paga +2◆ ao recrutar |
+| Equipamento | ⚙ | Exército do dono | +2 ATK em 1 raça Bruta |
+| Armadilha | ⚡ | Mão / campo oculto | Cancela recrutamento rival |
+| Intriga | 🎭 | Resolve e descarta | Revela ou troca decreto |
+| Roubo | 🗡 | Resolve e descarta | Rouba raça ou carta |
+
+**Campo de mercado vs individual**
+
+| | Campo de mercado | Campo individual (influência) |
+|--|------------------|--------------------------------|
+| **Alvo** | Todos os jogadores | 1 jogador escolhido ao jogar |
+| **Posição** | Abaixo do mercado central | Na zona do jogador alvo |
+| **Efeito típico** | Preço/stats de raças no grid | Penalidade/bônus só para o alvo |
+| **Exemplo PO** | "Harpias custam +1◆" | "Seu exército Bruto −1 ATK" |
 
 ---
 
@@ -178,19 +196,21 @@ Tipos (podem compartilhar baralho com ícone):
 
 ### Setup
 
-1. Revele **6 raças** no mercado (grid 2×3 ou 3×2 — ver layout PO).
-2. Baralho de raças embaralhado ao lado.
+1. Revele **6 raças** no mercado (grid **2 colunas × 3 linhas**, cartas em pé).
+2. Baralho de raças embaralhado à **direita** do mercado (playmat).
+3. Slot vazio abaixo do grid para **Campo de mercado** (influência global — opcional no início).
 
 ### Recrutar (ação principal)
 
 1. Escolha 1 raça do mercado.
-2. Pague o **custo em ◆** (soma ao seu total gasto; deve ser ≤ orçamento do Decreto).
-3. Coloque a raça no seu **exército** (campo público).
-4. Repõe o slot vazio do mercado.
+2. Pague o **custo em ◆** (soma ao seu total gasto; deve ser ≤ orçamento do Decreto). Aplica modificadores do **Campo de mercado** ativo.
+3. Resolve **efeito ao recrutar** da raça, se houver (ex.: Lagáxido inunda vilarejo goblin).
+4. Coloque a raça no seu **exército** (campo público).
+5. Repõe o slot vazio do mercado.
 
 ### Volatilidade
 
-Cartas de **Campo** e alguns **Itens** alteram:
+Cartas de **Campo de mercado** (slot central) e **Campo individual** (zona do jogador) alteram:
 
 | Modificador | Exemplo |
 |-------------|---------|
@@ -351,30 +371,40 @@ Orçamento gasto ≤ Orçamento máximo do Decreto
 
 ## 11. Tabuleiro e layout de mesa
 
-Baseado na referência visual enviada pelo PO:
+Baseado nos esboços PO (23/07):
 
 ```
-┌──────────────────────────────────────────────────────────┐
-│  [Jogador 2 exército]              [Jogador 3 exército]  │
-│                                                          │
-│     ┌─────┬─────┬─────┐                                  │
-│     │ R1  │ R2  │ R3  │  ← MERCADO (6 slots)            │
-│     ├─────┼─────┼─────┤                                  │
-│     │ R4  │ R5  │ R6  │                                  │
-│     └─────┴─────┴─────┘                                  │
-│                                                          │
-│  [Jogador 1 exército]              [Jogador 4 exército]  │
-│                                                          │
-│  Trilha orçamento · Rodada · Efeitos de campo ativos     │
-└──────────────────────────────────────────────────────────┘
+                    ┌─────┬─────┐
+                    │ R1  │ R2  │  MERCADO (centro da mesa)
+                    ├─────┼─────┤
+                    │ R3  │ R4  │
+                    ├─────┼─────┤
+                    │ R5  │ R6  │
+                    └─────┴─────┘
+              ┌─────────────────────┐
+              │ Campo de mercado    │  ← influência global (todos)
+              └─────────────────────┘     [Pilha raças] →
+
+  ┌─ Jogador 1 ─────────────────────────────────────────┐
+  │ [Influência individual]  ← campo jogado contra ele  │
+  │ [Exército: monstros recrutados]                     │
+  └─────────────────────────────────────────────────────┘
+  (repetir zona por jogador ao redor da mesa)
 ```
 
 ### Playmat MVP
 
-- **Centro:** grid mercado 2×3 (encaixe visual das cartas)
-- **Bordas:** área de exército por jogador
-- **Canto:** referência de turno + zona de efeitos de campo ativos
-- **Formato impressão:** A3 (ver `docs/print/tabuleiro.html` — atualizar na v0.2)
+| Opção | Custo | Conteúdo |
+|-------|-------|----------|
+| **A — Playmat A3** | Maior | Grid 2×3 + campo de mercado + pilha + 4 zonas de jogador (influência + exército) |
+| **B — Simples** | Menor | Só grid 2×3 + campo em A4; resto da mesa é livre |
+
+- **Centro:** mercado 2×3 (cartas em pé, orientação retrato)
+- **Abaixo do mercado:** slot **Campo de mercado** (carta de influência global)
+- **Lateral:** pilha de raças
+- **Por jogador:** slot **Influência individual** + área de **exército**
+- **Formato impressão:** A3 — `docs/print/playmat-mercado-v0.2.html`  
+  (tabuleiro v0.1 em `tabuleiro.html` permanece arquivado)
 
 ---
 
@@ -394,6 +424,7 @@ Baseado na referência visual enviada pelo PO:
 | Minotauro | 5 | 5 | 2 | 5 | Bruto | — |
 | Espectro | 2 | 2 | 4 | 3 | Voa | Ignora campo terrestre |
 | Slime | 4 | 2 | 1 | 2 | Nada | — |
+| Lagáxido | 3 | 2 | 3 | 3 | Nada | *Ao recrutar:* inunda vilarejo goblin (−2 ATK Goblins no mercado, rodada) |
 | Diabrete | 2 | 3 | 3 | 3 | Arcano | — |
 | Centauro | 4 | 4 | 2 | 4 | — | Marcha: +1 ATK |
 
@@ -418,7 +449,7 @@ Baseado na referência visual enviada pelo PO:
 |--------------|------------------|
 | **Munchkin** | Negociação, trapaça, combinações absurdas |
 | **Makai** (folclore JP) | Nome e tom do reino demoníaco |
-| Layout PO (imagem ref.) | Mercado central, stats na carta |
+| Layout PO (esboços 23/07) | Carta: arte grande, stats discretos; mercado 2×3 + campo global + influência individual |
 | v0.1 DemonLord | Decretos ocultos, tom de corte (mecânica substituída) |
 
 ---
