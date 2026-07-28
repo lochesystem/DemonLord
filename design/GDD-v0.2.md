@@ -111,7 +111,7 @@ O MVP não usa marcador dedicado de rodada nem trilha individual de orçamento. 
 | **Decreto** | Só o dono | Missão do Rei: requisitos + orçamento |
 | **Mão** | Privada | Cartas de terreno, mercado, equipamento, intriga, roubo e armadilha |
 | **Exército** | Pública | Raças recrutadas (cartas em campo) |
-| **Influência individual** | Pública | Campo jogado contra este jogador (máx. 1?) |
+| **Influência individual** | Pública | Campo jogado contra este jogador (máx. 1) |
 | **Verba comprometida** | Pública | Moedas de Verba Real permanecem sobre as Raças contratadas |
 
 ### Zonas compartilhadas
@@ -272,7 +272,9 @@ Distribuídos no setup — **1 por jogador**, ocultos.
 
 ### Vitória por decreto
 
-Jogador **declara** cumprimento quando acredita ter atingido todos os requisitos. A mesa valida os valores públicos e revela o Decreto. Uma declaração incorreta gera uma penalidade recuperável, nunca eliminação definitiva. A penalidade e a janela exata de declaração serão definidas em playtest.
+Jogador **declara** cumprimento durante seu turno quando acredita ter atingido todos os requisitos. A validação ocorre no **fim da rodada**, depois que todos tiveram a mesma quantidade de turnos e oportunidade de reagir.
+
+Se a declaração estiver incorreta, o Decreto permanece revelado e o jogador devolve ao fundo do baralho de Raças aquela de maior contrato em seu exército, retornando sua Verba ao Tesouro. Em empate de contrato, o próprio jogador escolhe. A penalidade é recuperável e nunca elimina definitivamente.
 
 ---
 
@@ -280,7 +282,7 @@ Jogador **declara** cumprimento quando acredita ter atingido todos os requisitos
 
 ### Compra e mão
 
-- Início de rodada: comprar **1 item** OU comprar **0** e comprar **2** no próximo (opcional — playtest).
+- Início do turno: comprar **1 Item**.
 - Limite de mão: **5** (descarte no fim se exceder).
 
 ### Catálogo do microprotótipo (16 efeitos)
@@ -333,9 +335,9 @@ Estes 16 efeitos validam as categorias antes da expansão para 50–64 cartas. O
 
 - **Recrutar** — mercado → exército; pegue Verba do Tesouro e coloque sobre a Raça
 - **Jogar item** — resolve e descarta (ou campo permanece)
+- **Dispensar** — devolva 1 Raça ao descarte e sua Verba ao Tesouro
 - **Negociar** — troca com jogador (não vinculante até confirmar)
 - **Declarar vitória** — valida decreto
-- **Reposição mercado** (1× por turno) — descarta 1 slot e repõe (custa 1◆ do orçamento? playtest)
 
 ### Fim de rodada
 
@@ -384,13 +386,13 @@ O Tesouro Real adianta a Verba necessária para cada contratação. As moedas n�
 
 | Modo | Regra |
 |------|-------|
-| **Padrão provisório** | Jogadores declaram e validam o Decreto dentro da janela de vitória testada |
-| **Desempate por eficiência** | Se 2+ cumprirem na mesma janela: menor Verba comprometida vence |
-| **Fim por baralho** | Se mercado esgotar 2×: maior cumprimento parcial vence |
+| **Padrão do microprotótipo** | Declarações são validadas no fim da rodada |
+| **Desempate por eficiência** | Se 2+ cumprirem: menor Verba; depois, menos Raças; persistindo, vitória compartilhada |
+| **Fim por baralho** | Quando o baralho de Raças esgotar pela segunda vez, termine a rodada e valide cumprimento parcial |
 
-O menor custo **não é um bônus escrito no Decreto**; é somente critério de desempate. O playtest deve comparar vitória imediata com uma janela até o fim da rodada, pois o desempate só é relevante se mais de um jogador puder concluir antes da resolução.
+O menor custo **não é um bônus escrito no Decreto**; é somente critério de desempate. Após o primeiro esgotamento, embaralhe o descarte e deixe o novo baralho girado em 90° como lembrete, sem exigir marcador adicional.
 
-Falhar na validação ou exceder o orçamento nunca retira o jogador definitivamente da mesa. A consequência deve permitir reorganizar ou reconstruir o exército.
+Se o baralho esgotar pela segunda vez sem vitória completa, vence quem cumprir mais requisitos do próprio Decreto. Empates usam menor Verba comprometida e depois menos Raças.
 
 ### Validação
 
@@ -510,15 +512,15 @@ O jogo unifica orçamento secreto e dinheiro físico:
 
 O primeiro playtest usa Tesouro ilimitado. Deve registrar a maior quantidade simultânea de moedas para dimensionar o componente físico final.
 
-### Decisões necessárias
+### Parâmetros do primeiro playtest
 
 | # | Pergunta | Impacto |
 |---|----------|---------|
-| 1 | Qual consequência recuperável ocorre ao declarar incorretamente? | Tensão sem eliminação |
-| 2 | A vitória é imediata ou existe janela até o fim da rodada? | Torna o desempate por menor Verba relevante |
-| 3 | Mercado 6 fixo ou escala com jogadores? | Componentes |
-| 4 | Campo individual aceita no máximo 1 carta? | Legibilidade e acúmulo de penalidades |
-| 5 | Mercado esgotar 2× encerra mesmo a partida? | Duração e desempate parcial |
+| 1 | A penalidade de devolver a Raça mais cara é leve ou severa demais? | Recuperação após declaração incorreta |
+| 2 | A janela até o fim da rodada cria interação ou frustração excessiva? | Ritmo e sabotagem |
+| 3 | Mercado fixo com 6 cartas oferece variedade suficiente em 3–5 jogadores? | Fluxo do mercado |
+| 4 | Limite de 1 Campo individual por jogador reduz acúmulo sem eliminar combos? | Legibilidade |
+| 5 | Dois esgotamentos do baralho produzem duração adequada? | Fim de partida |
 | 6 | O Tesouro deve continuar ilimitado ou a escassez global adiciona decisões interessantes? | Balanceamento e quantidade de moedas |
 
 ---

@@ -166,6 +166,7 @@
     const mdMap = {
       gdd: 'content/gdd.md',
       rulebook: 'content/rulebook.md',
+      'rulebook-v0.2': 'content/rulebook-v0.2.md',
       'gdd-v0.2': 'content/gdd-v0.2.md',
       'pivot-v0.2': 'content/pivot-v0.2.md',
     };

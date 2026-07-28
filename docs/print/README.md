@@ -7,8 +7,11 @@ Arquivos prontos para protótipo e envio à gráfica. Abra no **Chrome** ou **Ed
 | Arquivo | Conteúdo |
 |---------|----------|
 | [index.html](index.html) | Índice do kit |
-| [cartas.html](cartas.html) | Todas as cartas (frentes + verso) |
-| [tabuleiro.html](tabuleiro.html) | Tabuleiro central + folha de referência |
+| [microprototipo-v0.2.html](microprototipo-v0.2.html) | **Kit atual:** 70 cartas + Verba Real |
+| [playmat-mercado-v0.2.html](playmat-mercado-v0.2.html) | Playmat de mercado e Tesouro |
+| [prototipo-racas-v0.2.html](prototipo-racas-v0.2.html) | Esboço anterior das cartas de Raça |
+| [cartas.html](cartas.html) | Cartas v0.1 arquivadas |
+| [tabuleiro.html](tabuleiro.html) | Tabuleiro v0.1 arquivado |
 
 ## Especificações técnicas (para a gráfica)
 
@@ -28,47 +31,45 @@ Arquivos prontos para protótipo e envio à gráfica. Abra no **Chrome** ou **Ed
 
 | Medida | Valor |
 |--------|-------|
-| **Formato** | A3 paisagem (420 × 297 mm) |
+| **Formato** | A3 retrato (297 × 420 mm) |
 | **Sangria** | 3 mm (arquivo 426 × 303 mm se a gráfica pedir) |
 | **Papel sugerido** | 200–250 g/m² ou impressão em adesivo / papel couché |
 
-### Fichas de Influência (opcional)
+### Moedas de Verba Real
 
-Imprima a página de fichas no final de `cartas.html` em papel mais fino (180 g) ou use contadores de outro jogo.
+O final de `microprototipo-v0.2.html` contém 48 moedas: 24× 1◆, 16× 3◆ e 8× 5◆. Para o primeiro teste, use substitutos se o Tesouro acabar.
 
-## Contagem do MVP
+## Contagem do microprotótipo v0.2
 
 | Tipo | Quantidade |
 |------|------------|
-| Recursos (Ouro / Comida / Militar) | 60 |
-| Mercado | 40 |
-| Missão (fases) | 12 |
-| Heróis | 8 |
-| Mandatos secretos | 24 |
-| Decretos reais | 20 |
-| Verso de carta | 1 arte (repetir) |
+| Raças | 34 — 17 espécies × 2 |
+| Itens | 28 |
+| Decretos | 8 |
+| **Total** | **70 cartas** |
+| Moedas de Verba Real | 48 |
 
 ## Montagem
 
-1. Imprima **verso** das cartas primeiro (espelhado se impressão frente-e-verso automática).
-2. Alinhe e corte na linha de corte (guilhotina ou estilete + régua).
-3. Mandatos: mesmo verso das outras cartas ou verso liso.
-4. Tabuleiro: laminar opcional para durabilidade.
+1. Imprima as frentes em papel comum.
+2. Recorte e coloque em sleeves com cartas antigas como suporte.
+3. Recorte as moedas ou use fichas/cubos equivalentes.
+4. Imprima o playmat A3 ou organize 6 cartas em grade 2×3 sobre a mesa.
 
 ## Enviar à gráfica
 
 Envie os PDFs gerados com esta tabela:
 
 ```
-Produto: Cartas DemonLord v0.1
+Produto: Microprotótipo DemonLord v0.2
 Formato corte: 63,5 x 88,9 mm
 Sangria: 3 mm
-Quantidade: [ver tabela acima]
+Quantidade: 70 cartas
 Papel: Cartão 300g fosco
 ```
 
 ```
-Produto: Tabuleiro DemonLord v0.1
-Formato: A3 paisagem
+Produto: Playmat DemonLord v0.2
+Formato: A3 retrato
 Papel: Couché 250g ou cartão 200g
 ```

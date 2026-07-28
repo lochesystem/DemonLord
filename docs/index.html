@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DemonLord — board game semi-cooperativo de cartas. Generais do Rei Demônio invadem o Reino Humano com mandatos secretos e intriga de corte.">
-  <title>DemonLord — Board Game</title>
+  <meta name="description" content="DemonLord — board game competitivo de Crédito de Guerra, mercado de monstros, Decretos secretos e sabotagem.">
+  <title>DemonLord — Crédito de Guerra</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&amp;family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body data-page="home" data-base=".">
@@ -23,29 +23,28 @@
   </a>
   <nav class="nav-main">
     <a href="index.html" data-page="home">Início</a>
-    <a href="gdd-v0.2.html" data-page="gdd-v02">GDD v0.2</a>
-    <a href="pivot-v0.2.html">Pivot</a>
+    <a href="gdd-v0.2.html">GDD v0.2</a>
+    <a href="rulebook-v0.2.html">Regras v0.2</a>
+    <a href="print/microprototipo-v0.2.html">Microprotótipo</a>
     <a href="print/index.html">Imprimir</a>
-    <a href="https://github.com/lochesystem/DemonLord" class="nav-external" target="_blank" rel="noopener">GitHub</a>
   </nav>
   <button class="menu-toggle" id="menu-toggle" aria-label="Menu">☰</button>
 </header>
 
 <main class="landing">
-
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">GDD v0.2 · Para revisão do PO</p>
-        <h1>Monte o exército.<br><em>Sabote o mercado.</em></h1>
+        <p class="eyebrow">Microprotótipo v0.2 · Crédito de Guerra</p>
+        <h1>Monte o exército.<br><em>Estoure o orçamento dos rivais.</em></h1>
         <p class="hero-lead">
-          O Makai está em guerra. O Rei Demônio dá a cada general um <strong>Decreto secreto</strong>:
-          monte um exército com os atributos certos dentro do <strong>orçamento</strong>.
-          Recrute raças do mercado, jogue itens de trapaça, negocie e vença.
+          O Rei Demônio entrega a cada general um <strong>Decreto secreto</strong>.
+          Use adiantamentos do Tesouro Real para contratar monstros, manipule o mercado
+          e cumpra os requisitos sem ultrapassar a verba aprovada.
         </p>
         <div class="hero-actions">
-          <a href="gdd-v0.2.html" class="btn btn-primary">GDD v0.2 (atual)</a>
-          <a href="pivot-v0.2.html" class="btn btn-secondary">O que mudou</a>
+          <a href="print/microprototipo-v0.2.html" class="btn btn-primary">Imprimir microprotótipo</a>
+          <a href="rulebook-v0.2.html" class="btn btn-secondary">Ler regras</a>
         </div>
       </div>
 
@@ -53,8 +52,8 @@
         <div class="hero-card">
           <p class="hero-card-label">Regra de ouro</p>
           <blockquote>
-            A mesa pode <strong>perder todos juntos</strong>.<br>
-            A mesa <strong>não ganha todos juntos</strong>.
+            As moedas são públicas.<br>
+            O <strong>limite é secreto</strong>.
           </blockquote>
         </div>
         <div class="hero-stats">
@@ -63,16 +62,16 @@
             <div class="stat-label">Jogadores</div>
           </div>
           <div class="stat-item">
-            <div class="stat-value">60–90</div>
+            <div class="stat-value">45–75</div>
             <div class="stat-label">Minutos</div>
           </div>
           <div class="stat-item">
-            <div class="stat-value">14+</div>
-            <div class="stat-label">Idade</div>
+            <div class="stat-value">70</div>
+            <div class="stat-label">Cartas no teste</div>
           </div>
           <div class="stat-item">
-            <div class="stat-value">Semi-coop</div>
-            <div class="stat-label">Gênero</div>
+            <div class="stat-value">Competitivo</div>
+            <div class="stat-label">Negociação</div>
           </div>
         </div>
       </div>
@@ -82,32 +81,26 @@
   <section class="section">
     <div class="container">
       <div class="section-head centered">
-        <p class="section-eyebrow">Fundamentos</p>
-        <h2>Três camadas de objetivo</h2>
-        <p>Tensão entre o que a mesa precisa e o que cada general quer.</p>
+        <p class="section-eyebrow">Núcleo do jogo</p>
+        <h2>Contrate, manipule e declare</h2>
+        <p>Todo valor comprometido fica visível. Só você conhece o teto aprovado pelo Rei.</p>
       </div>
 
       <div class="feature-grid">
         <article class="feature-card">
           <div class="feature-num">01</div>
-          <h3>Objetivo da mesa</h3>
-          <p>Preencher o Cofre da Invasão com Ouro, Comida e Militar para vencer as três fases da missão antes que a Moral chegue a zero.</p>
+          <h3>Recrute do mercado</h3>
+          <p>Escolha entre seis Raças visíveis. Pegue moedas do Tesouro e deixe a Verba sobre o monstro contratado.</p>
         </article>
         <article class="feature-card">
           <div class="feature-num">02</div>
-          <h3>Mandato secreto</h3>
-          <p>O Rei deu a cada general uma ordem privada. Cumprir o mandato é obrigatório para vencer — mesmo com a invasão bem-sucedida.</p>
-          <div class="mandate-tags">
-            <span class="tag tag-loyalty">Lealdade</span>
-            <span class="tag tag-restriction">Restrição</span>
-            <span class="tag tag-ambition">Ambição</span>
-            <span class="tag tag-coup">Golpe</span>
-          </div>
+          <h3>Sabote contratos</h3>
+          <p>Terrenos e Itens alteram preços, atributos e exércitos. Roube ou transfira monstros com toda a dívida anexada.</p>
         </article>
         <article class="feature-card">
           <div class="feature-num">03</div>
-          <h3>Herói humano</h3>
-          <p>Cada partida enfrenta um defensor diferente — Paladino, Maga, Ladina — que modifica requisitos e regras da missão.</p>
+          <h3>Cumpra o Decreto</h3>
+          <p>Atinja PV, ATK, INT, traços e composição dentro do orçamento. Declare e sobreviva às reações até o fim da rodada.</p>
         </article>
       </div>
     </div>
@@ -116,161 +109,40 @@
   <section class="section">
     <div class="container">
       <div class="section-head">
-        <p class="section-eyebrow">Fluxo</p>
-        <h2>Uma rodada em quatro passos</h2>
-        <p>Cada rodada é uma tentativa de cumprir a fase atual da missão.</p>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-step">
-          <h4>Decreto Real</h4>
-          <p>Revelar um evento que altera a rodada.</p>
-        </div>
-        <div class="timeline-step">
-          <h4>Turnos</h4>
-          <p>Comprar, recrutar, contribuir e intrigar.</p>
-        </div>
-        <div class="timeline-step">
-          <h4>Resolução</h4>
-          <p>Comparar o Cofre com o requisito da fase.</p>
-        </div>
-        <div class="timeline-step">
-          <h4>Resultado</h4>
-          <p>Avançar fase, perder Moral ou vencer a invasão.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <p class="section-eyebrow">Economia</p>
-        <h2>Os três recursos</h2>
-        <p>Escassez força escolhas difíceis a cada turno.</p>
+        <p class="section-eyebrow">Primeiro playtest</p>
+        <h2>Kit reduzido e pronto para mesa</h2>
+        <p>O objetivo desta versão é validar o Crédito de Guerra antes de expandir para 110–120 cartas.</p>
       </div>
 
       <div class="resource-row">
         <div class="resource-card">
           <span class="resource-dot gold"></span>
-          <div>
-            <h4>Ouro</h4>
-            <p>Compras no mercado, subornos e rituais.</p>
-          </div>
+          <div><h4>34 Raças</h4><p>17 espécies, duas cópias de cada.</p></div>
         </div>
         <div class="resource-card">
           <span class="resource-dot green"></span>
-          <div>
-            <h4>Comida</h4>
-            <p>Marchas longas e manutenção de tropas.</p>
-          </div>
+          <div><h4>28 Itens</h4><p>Terrenos, Campos, roubo, intriga e equipamentos.</p></div>
         </div>
         <div class="resource-card">
           <span class="resource-dot red"></span>
-          <div>
-            <h4>Militar</h4>
-            <p>Ataques, defesa e requisitos de missão.</p>
-          </div>
+          <div><h4>8 Decretos</h4><p>Objetivos secretos com orçamento e múltiplos requisitos.</p></div>
         </div>
       </div>
 
-      <div class="pool-grid">
-        <div class="pool-card">
-          <h4>Cofre da Invasão</h4>
-          <p>Pool público. Todos depositam aqui para cumprir a missão.</p>
-        </div>
-        <div class="pool-card">
-          <h4>Estoque pessoal</h4>
-          <p>Reserva privada para compras, mandatos e golpe.</p>
-        </div>
-        <div class="pool-card">
-          <h4>Influência</h4>
-          <p>Moeda política para acusações, favores e golpes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <p class="section-eyebrow">Exemplos</p>
-        <h2>Como se joga na prática</h2>
-        <p>Fase 1 exige 4 Comida e 2 Militar. O Cofre começa vazio.</p>
-      </div>
-
-      <div class="example-grid">
-        <article class="example-card">
-          <span class="example-label">Turno</span>
-          <h4>General Krazul — 4 ações</h4>
-          <ol>
-            <li><strong>Comprar</strong> — Goblins (2 Ouro)</li>
-            <li><strong>Recrutar</strong> — Joga Goblins (+2 Militar)</li>
-            <li><strong>Contribuir</strong> — 2 Comida + 2 Militar ao Cofre</li>
-            <li><strong>Intriga</strong> — Negocia troca de Ouro</li>
-          </ol>
-          <p class="example-note">Contribuiu ao Cofre → não perde Influência neste turno.</p>
-        </article>
-
-        <article class="example-card">
-          <span class="example-label">Resolução</span>
-          <h4>Cofre: 4 Comida, 1 Militar</h4>
-          <ul>
-            <li>Comida: 4÷4 = <span class="result-ok">100%</span></li>
-            <li>Militar: 1÷2 = <span class="result-warn">50%</span></li>
-            <li>Média 75% → <strong>falha parcial</strong></li>
-          </ul>
-          <p class="example-note">Não avança de fase. Mesa perde −1 Moral. Nova rodada na mesma fase.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <p class="section-eyebrow">Intriga</p>
-        <h2>Mandatos em ação</h2>
-        <p>Objetivos secretos que mudam o comportamento de cada jogador.</p>
-      </div>
-
-      <div class="mandate-grid">
-        <article class="mandate-card loyalty">
-          <span class="tag tag-restriction">Restrição</span>
-          <h3>Economia de Guerra</h3>
-          <p>Vencer com 8+ Ouro pessoal, gastando no máximo 2 Ouro por rodada em Raças. Parece sabotagem — pode ser só o mandato.</p>
-        </article>
-        <article class="mandate-card ambition">
-          <span class="tag tag-ambition">Ambição</span>
-          <h3>Tesouro do General</h3>
-          <p>Vencer a invasão com 10+ Ouro pessoal. Incentiva segurar recursos enquanto a mesa pede contribuição.</p>
-        </article>
-        <article class="mandate-card coup">
-          <span class="tag tag-coup">Golpe</span>
-          <h3>Usurpador</h3>
-          <p>Com ouro, influência e apoio fraco na corte, tente um golpe de estado para vencer sozinho.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="cta-band">
-        <h2>Pronto para jogar?</h2>
-        <p>Comece pelo livro de regras. Use o GDD para entender o design por trás das mecânicas.</p>
+      <div class="cta-band" style="margin-top:3rem">
+        <h2>Comece pelo microprotótipo</h2>
+        <p>Imprima as cartas, use sleeves e registre duração, Verba, declarações e dúvidas.</p>
         <div class="cta-actions">
-          <a href="rulebook.html" class="btn btn-primary">Livro de regras</a>
-          <a href="gdd.html" class="btn btn-secondary">Game Design Document</a>
+          <a href="print/microprototipo-v0.2.html" class="btn btn-primary">Cartas e moedas</a>
+          <a href="gdd-v0.2.html" class="btn btn-secondary">Decisões de design</a>
         </div>
       </div>
     </div>
   </section>
-
 </main>
 
 <footer class="site-footer">
-  <p>DemonLord v0.1 — Board game de cartas semi-cooperativo · <a href="https://github.com/lochesystem/DemonLord">GitHub</a></p>
+  <p>DemonLord v0.2 · Microprotótipo Crédito de Guerra · 28/07/2026</p>
 </footer>
 
 <script src="js/app.js"></script>

@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Playmat Mercado v0.2 — DemonLord</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=DM+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/print.css">
   <style>
-  @page playmat { size: A3 landscape; margin: 0; }
+  @page playmat { size: A3 portrait; margin: 0; }
   .playmat-v2 {
     page: playmat;
-    width: 420mm; height: 297mm;
-    padding: 10mm;
+    width: 297mm; height: 420mm;
+    padding: 7mm;
     background: linear-gradient(160deg, #1a1410 0%, #0c0a08 50%, #141018 100%);
     color: #ece8e1;
     font-family: 'DM Sans', sans-serif;
@@ -26,28 +26,28 @@
   }
   .pm-inner { position: relative; height: 100%; display: flex; flex-direction: column; }
   .pm-title {
-    text-align: center; margin-bottom: 6mm;
+    text-align: center; margin-bottom: 4mm;
     font-family: 'Cormorant Garamond', serif;
   }
-  .pm-title h1 { margin: 0; font-size: 11mm; letter-spacing: 0.12em; color: #c9a962; }
+  .pm-title h1 { margin: 0; font-size: 9mm; letter-spacing: 0.12em; color: #c9a962; }
   .pm-title p { margin: 1mm 0 0; font-size: 3.2mm; color: #7a746a; }
-  .pm-body { flex: 1; display: grid; grid-template-columns: 1fr 72mm; gap: 8mm; min-height: 0; }
+  .pm-body { flex: 1; display: grid; grid-template-columns: 1fr 60mm; gap: 5mm; min-height: 0; }
   .pm-market-wrap {
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     border: 0.5mm solid rgba(201,169,98,0.35);
     border-radius: 4mm;
-    padding: 8mm;
+    padding: 4mm;
     background: rgba(0,0,0,0.35);
   }
   .pm-market-label {
     font-size: 4mm; font-weight: 600; letter-spacing: 0.15em;
-    text-transform: uppercase; color: #c9a962; margin-bottom: 5mm;
+    text-transform: uppercase; color: #c9a962; margin-bottom: 3mm;
   }
   .pm-grid {
     display: grid;
-    grid-template-columns: repeat(2, 58mm);
-    grid-template-rows: repeat(3, 82mm);
-    gap: 4mm;
+    grid-template-columns: repeat(2, 63.5mm);
+    grid-template-rows: repeat(3, 88.9mm);
+    gap: 3mm;
   }
   .pm-slot {
     border: 0.4mm dashed rgba(255,255,255,0.2);
@@ -60,10 +60,10 @@
   }
   .pm-slot span { color: #9a9488; font-weight: 600; }
   .pm-field-global {
-    margin-top: 6mm;
+    margin-top: 4mm;
     width: 100%;
     max-width: 128mm;
-    min-height: 38mm;
+    min-height: 32mm;
     border: 0.5mm solid #c4674a;
     border-radius: 2mm;
     background: rgba(196,103,74,0.08);
@@ -75,14 +75,27 @@
     color: #e8a88a; text-transform: uppercase; letter-spacing: 0.08em;
   }
   .pm-field-global p { margin: 0; font-size: 2.6mm; color: #9a9488; line-height: 1.4; }
-  .pm-side { display: flex; flex-direction: column; gap: 5mm; }
+  .pm-side { display: flex; flex-direction: column; gap: 4mm; }
   .pm-deck {
     flex: 1;
     border: 0.4mm solid rgba(255,255,255,0.15);
     border-radius: 2mm;
     display: grid; place-items: center;
     background: rgba(0,0,0,0.4);
-    min-height: 80mm;
+    min-height: 70mm;
+  }
+  .pm-treasury {
+    min-height: 36mm;
+    border: 0.45mm solid #d3a83b;
+    border-radius: 2mm;
+    padding: 3mm;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: rgba(211,168,59,0.08);
+    color: #d9bd68;
+    font-size: 2.5mm;
+    line-height: 1.35;
   }
   .pm-deck-stack {
     width: 42mm; height: 58mm;
@@ -101,20 +114,20 @@
   }
   .pm-ref strong { color: #c9a962; }
   .pm-players {
-    margin-top: 6mm;
+    margin-top: 4mm;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 4mm;
+    gap: 2mm;
   }
   .pm-player {
     border: 0.35mm solid rgba(255,255,255,0.12);
     border-radius: 2mm;
-    padding: 3mm;
+    padding: 2mm;
     background: rgba(0,0,0,0.25);
   }
-  .pm-player h4 { margin: 0 0 2mm; font-size: 3mm; color: #c9a962; }
+  .pm-player h4 { margin: 0 0 1mm; font-size: 2.6mm; color: #c9a962; }
   .pm-influence-ind {
-    min-height: 18mm;
+    min-height: 15mm;
     border: 0.35mm dashed #8b5cf6;
     border-radius: 1.5mm;
     background: rgba(139,92,246,0.06);
@@ -124,22 +137,22 @@
     line-height: 1.35;
   }
   .pm-army {
-    min-height: 22mm;
+    min-height: 16mm;
     border: 0.3mm dashed rgba(255,255,255,0.15);
     border-radius: 1.5mm;
     font-size: 2.2mm; color: #6a645c;
     padding: 2mm;
   }
   .pm-footer {
-    margin-top: 4mm; text-align: center;
+    margin-top: 2mm; text-align: center;
     font-size: 2.4mm; color: #5a544c;
   }
   @media screen {
     .playmat-v2 {
       margin: 0 auto 2rem;
-      transform: scale(0.48);
+      transform: scale(0.5);
       transform-origin: top center;
-      margin-bottom: -140mm;
+      margin-bottom: -190mm;
       box-shadow: 0 8px 40px rgba(0,0,0,0.5);
     }
   }
@@ -155,12 +168,12 @@
   <a href="index.html">← Kit</a>
   <a href="prototipo-racas-v0.2.html">Cartas</a>
   <button type="button" onclick="window.print()">Imprimir A3 PDF</button>
-  <span class="spec">A3 · Mercado 2×3 + Campo global</span>
+  <span class="spec">A3 retrato · Mercado 2×3 + Tesouro</span>
 </nav>
 
 <div class="section-block screen-only" style="max-width:800px">
   <h2>Playmat v0.2 — esboço PO</h2>
-  <p><strong>Opção A (esta folha):</strong> playmat A3 com mercado central, carta de influência de mercado (todos os jogadores) e zonas por jogador com influência individual + exército.</p>
+  <p><strong>Opção A (esta folha):</strong> playmat A3 retrato com mercado central em tamanho real, Terreno compartilhado, Tesouro Real e zonas por jogador.</p>
   <p><strong>Opção B (custo menor):</strong> imprimir só a grade 2×3 + campo em A4 e usar a mesa como resto do espaço.</p>
 </div>
 
@@ -183,20 +196,21 @@
           <div class="pm-slot"><span>6</span><br>Raça</div>
         </div>
         <div class="pm-field-global">
-          <h3>Campo — Influência de mercado</h3>
-          <p>Carta de campo que afeta <strong>todos os jogadores</strong>.<br>
-          Ex.: Harpias +1◆ · Goblins −2 ATK no mercado</p>
+          <h3>Terreno / Campo de mercado</h3>
+          <p>Máximo 1 carta que afeta <strong>todos os jogadores</strong>.<br>
+          Ex.: novos contratos de Harpia −1◆ · Voadores −1 ATK</p>
         </div>
       </div>
 
       <div class="pm-side">
         <div class="pm-deck">
-          <div class="pm-deck-stack">Pilha<br>de raças</div>
+          <div class="pm-deck-stack">Baralho<br>de Raças</div>
         </div>
+        <div class="pm-treasury"><strong>TESOURO REAL</strong><br>Moedas usadas ficam sobre as Raças como Verba comprometida.</div>
         <div class="pm-ref">
-          <strong>Campo de mercado</strong> — preço/stats das raças no grid.<br>
-          <strong>Influência individual</strong> — jogada contra 1 jogador (zona roxa em cada área).<br>
-          <strong>Exército</strong> — raças recrutadas ficam na área do jogador.
+          <strong>Contrato</strong> — pegue moedas do Tesouro e coloque sobre a Raça.<br>
+          <strong>Campo individual</strong> — máximo 1 carta sobre cada jogador.<br>
+          <strong>Exército</strong> — Raças, moedas e modificadores são públicos.
         </div>
       </div>
     </div>
@@ -204,23 +218,23 @@
     <div class="pm-players">
       <div class="pm-player">
         <h4>Jogador 1</h4>
-        <div class="pm-influence-ind">Influência individual<br><small>Campo contra este jogador</small></div>
-        <div class="pm-army">Exército (monstros recrutados)</div>
+        <div class="pm-influence-ind">Campo individual · máx. 1<br><small>Campo contra este jogador</small></div>
+        <div class="pm-army">Exército · mantenha a Verba sobre cada Raça</div>
       </div>
       <div class="pm-player">
         <h4>Jogador 2</h4>
-        <div class="pm-influence-ind">Influência individual</div>
-        <div class="pm-army">Exército</div>
+        <div class="pm-influence-ind">Campo individual · máx. 1</div>
+        <div class="pm-army">Exército + Verba</div>
       </div>
       <div class="pm-player">
         <h4>Jogador 3</h4>
-        <div class="pm-influence-ind">Influência individual</div>
-        <div class="pm-army">Exército</div>
+        <div class="pm-influence-ind">Campo individual · máx. 1</div>
+        <div class="pm-army">Exército + Verba</div>
       </div>
       <div class="pm-player">
         <h4>Jogador 4</h4>
-        <div class="pm-influence-ind">Influência individual</div>
-        <div class="pm-army">Exército</div>
+        <div class="pm-influence-ind">Campo individual · máx. 1</div>
+        <div class="pm-army">Exército + Verba</div>
       </div>
     </div>
 

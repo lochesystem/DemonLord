@@ -1,6 +1,6 @@
 # DemonLord
 
-Board game semi-cooperativo de cartas: generais do Rei Demônio alocam recursos escassos para conquistar o Reino Humano, enquanto cumprem (ou sabotam) ordens secretas do trono.
+Board game competitivo de cartas: generais usam Crédito de Guerra para montar exércitos dentro de um orçamento secreto, manipulando mercado, terrenos e contratos rivais.
 
 **Site:** [lochesystem.github.io/DemonLord](https://lochesystem.github.io/DemonLord/)
 
@@ -9,27 +9,29 @@ Board game semi-cooperativo de cartas: generais do Rei Demônio alocam recursos 
 | Documento | Descrição |
 |-----------|-----------|
 | [design/GDD-v0.2.md](design/GDD-v0.2.md) | **GDD atual** — mercado de raças, decretos, itens |
+| [design/RULEBOOK-v0.2.md](design/RULEBOOK-v0.2.md) | **Regras do microprotótipo** — Crédito de Guerra |
+| [design/PLAYTEST-v0.2.md](design/PLAYTEST-v0.2.md) | Ficha para registrar as primeiras partidas |
 | [design/DESIGN-PIVOT-v0.2.md](design/DESIGN-PIVOT-v0.2.md) | O que mudou após feedback do PO |
 | [design/GDD.md](design/GDD.md) | GDD v0.1 arquivado (semi-coop / Cofre) |
 | [design/RULEBOOK.md](design/RULEBOOK.md) | Livro de regras v0.1 (desatualizado) |
 | [docs/](docs/) | Site GitHub Pages |
-| [docs/print/](docs/print/) | Kit Print & Play v0.1 |
+| [docs/print/microprototipo-v0.2.html](docs/print/microprototipo-v0.2.html) | Print & Play v0.2 — 70 cartas + Verba Real |
 
 ## Pitch rápido
 
-> O Rei Demônio tem pouco ouro e muita ambição. Cada general recebe um mandato secreto e deve equilibrar a vitória da invasão com ambições pessoais — recrutar a raça certa, acumular ouro, ou preparar um golpe de estado.
+> O Rei Demônio adianta Verba para cada general montar um exército. Cumpra o Decreto secreto sem estourar o orçamento — enquanto o mercado e seus contratos são sabotados pelos rivais.
 
 ## Status
 
-**Pré-produção** v0.1 — conceito, GDD e regras em papel. Protótipo físico em planejamento.
+**Microprotótipo v0.2 pronto para playtest** — 34 Raças, 28 Itens, 8 Decretos e moedas de Verba Real.
 
 ## Jogar (resumo)
 
-- **Jogadores:** 3–5 · **Duração:** 60–90 min · **Idade:** 14+
-- **Recursos:** Ouro, Comida, Militar
-- **Vitória:** cumprir mandato secreto + vencer a invasão (ou executar golpe)
+- **Jogadores:** 3–5 · **Duração:** 45–75 min · **Idade:** 14+
+- **Núcleo:** mercado de 6 Raças, contratos públicos e Decreto secreto
+- **Vitória:** cumprir os requisitos dentro do orçamento e declarar no momento certo
 
-Leia as regras completas no [site](https://lochesystem.github.io/DemonLord/rulebook.html) ou em [design/RULEBOOK.md](design/RULEBOOK.md).
+Leia as regras em [design/RULEBOOK-v0.2.md](design/RULEBOOK-v0.2.md) e abra o [microprotótipo para impressão](docs/print/microprototipo-v0.2.html).
 
 ## GitHub Pages
 

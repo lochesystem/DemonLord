@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Microprotótipo Print &amp; Play DemonLord v0.2 — Crédito de Guerra.">
+  <title>Microprotótipo v0.2 — DemonLord</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=DM+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/print.css">
+  <link rel="stylesheet" href="css/micro-v02.css">
+</head>
+<body class="screen">
+
+<nav class="print-nav">
+  <h1>Microprotótipo v0.2</h1>
+  <a href="index.html">← Kit</a>
+  <a href="../rulebook-v0.2.html">Regras</a>
+  <a href="playmat-mercado-v0.2.html">Playmat</a>
+  <button type="button" onclick="window.print()">Imprimir / PDF</button>
+  <span class="spec">Poker 63,5×88,9 mm · 9 cartas/A4</span>
+</nav>
+
+<div class="section-block screen-only">
+  <h2>Crédito de Guerra — primeiro playtest</h2>
+  <p id="micro-count">Carregando contagem…</p>
+  <p>Use sleeves com cartas comuns como suporte. As artes são placeholders; o objetivo desta versão é testar mercado, contratos, Verba Real, sabotagem e Decretos.</p>
+</div>
+
+<main id="micro-root"></main>
+
+<script src="js/micro-v02-data.js"></script>
+<script src="js/micro-v02-render.js"></script>
+<script>renderMicroPrototype('micro-root');</script>
+</body>
+</html>
