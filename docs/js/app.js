@@ -10,18 +10,27 @@
   const toggle = document.getElementById('menu-toggle');
   const sidebar = document.getElementById('sidebar');
   const overlay = document.getElementById('sidebar-overlay');
+  const mainNav = document.querySelector('.nav-main');
 
   function closeSidebar() {
     sidebar?.classList.remove('open');
     overlay?.classList.remove('open');
+    mainNav?.classList.remove('open');
   }
 
   toggle?.addEventListener('click', () => {
-    sidebar?.classList.toggle('open');
-    overlay?.classList.toggle('open');
+    if (sidebar) {
+      sidebar.classList.toggle('open');
+      overlay?.classList.toggle('open');
+    } else {
+      mainNav?.classList.toggle('open');
+    }
   });
 
   overlay?.addEventListener('click', closeSidebar);
+  mainNav?.addEventListener('click', (event) => {
+    if (event.target.closest('a')) closeSidebar();
+  });
 
   /* ── Slug helper ── */
   function slugify(text) {
