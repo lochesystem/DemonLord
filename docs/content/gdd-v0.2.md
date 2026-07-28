@@ -31,7 +31,7 @@ Documento mestre de design alinhado ao feedback do PO (Hugo Rezende).
 
 ### Elevator pitch
 
-O **Makai** está em guerra com o Reino Humano. O Rei Demônio tem pouco ouro e convoca seus generais: cada um recebe um **Decreto secreto** — monte um exército com atributos específicos dentro do **orçamento** concedido. No mercado de monstros, raças têm **PV, ATK e Inteligência**; cartas de **item** manipulam preços, roubam tropas e expõem rivais. Negocie como em *Munchkin*, saboteie como um general sem escrúpulos, e vença montando o exército mais otimizado.
+O **Makai** está em guerra com o Reino Humano. O Rei Demônio tem pouco ouro e convoca seus generais: cada um recebe um **Decreto secreto** — monte um exército com atributos específicos dentro do **orçamento** concedido. No mercado de monstros, raças têm **PV, ATK e Inteligência**; jogue cartas para transformar o terreno, manipular o mercado, sabotar exércitos e expor os planos dos rivais. Negocie como em *Munchkin*, trapaceie como um general sem escrúpulos e vença cumprindo o Decreto com o exército mais eficiente.
 
 ### Gênero
 
@@ -68,7 +68,7 @@ Você é um general demônio com missão secreta e orçamento apertado. Recruta 
 | Pilar | Na mesa |
 |-------|---------|
 | **Orçamento como puzzle** | Cada ◆ conta; raça cara vs raça fraca é escolha real |
-| **Mercado volátil** | Item muda preço e stat de raça — oportunidade ou sabotagem |
+| **Mundo manipulável** | Cartas alteram terreno, mercado, custos e exércitos — oportunidade ou sabotagem |
 | **Informação oculta** | Decreto escondido até alguém forçar revelação |
 | **Interação direta** | Roubar raça, roubar carta, trocar com jogador |
 | **Legibilidade** | Carta de raça mostra tudo: PV, ATK, INT, custo, traço |
@@ -93,22 +93,24 @@ flowchart TB
 
 | Componente | Qtd | Notas |
 |------------|-----|-------|
-| Cartas de **Raça** | 36–48 | Mercado + baralho de reposição |
-| Cartas de **Item** | 40 | Mão dos jogadores |
-| Cartas de **Decreto** | 24 | 1 por jogador, ocultas |
+| Cartas de **Raça** | 36–48 | Mercado + baralho de reposição; espécies podem ter cópias |
+| Cartas de **Item** | 50–64 | Principal baralho de interação |
+| Cartas de **Decreto** | 16–20 | 1 por jogador, ocultas |
 | Tabuleiro / playmat | 1 | Mercado 6 slots + referência |
-| Marcadores de orçamento | 5 | Trilha 0–25◆ por jogador |
-| Marcador de rodada | 1 | — |
+
+**Meta inicial de produto:** aproximadamente **110–120 cartas** no formato grande. Uma distribuição de referência para protótipo expandido é **42 Raças + 60 Itens + 18 Decretos = 120 cartas**. A quantidade final depende dos playtests e pode usar cópias de uma mesma espécie para reduzir a necessidade de artes exclusivas.
+
+O MVP não usa marcador dedicado de rodada nem trilha individual de orçamento. Caso o playtest escolha dinheiro físico, moedas ou cartas de dinheiro entram como componente condicional — ver [§14](#14-riscos-e-perguntas-em-aberto).
 
 ### Zonas por jogador
 
 | Zona | Visível | Conteúdo |
 |------|---------|----------|
 | **Decreto** | Só o dono | Missão do Rei: requisitos + orçamento |
-| **Mão** | Privada | Itens (compra, roubo, campo…) |
+| **Mão** | Privada | Cartas de terreno, mercado, equipamento, intriga, roubo e armadilha |
 | **Exército** | Pública | Raças recrutadas (cartas em campo) |
 | **Influência individual** | Pública | Campo jogado contra este jogador (máx. 1?) |
-| **Orçamento gasto** | Público | Total de ◆ já comprometido |
+| **Custos das raças** | Pública | Valores impressos e modificadores visíveis; forma de pagamento depende do modelo econômico em teste |
 
 ### Zonas compartilhadas
 
@@ -138,7 +140,7 @@ Layout **v0.2.1** — esboço PO (23/07): ícones **pequenos** à esquerda, **ar
 │         │    MONSTRO      │ │
 │         └─────────────────┘ │
 │─────────────────────────────│
-│ Voador │ Ao recrutar: …    │  rodapé: traço OU efeito imediato
+│ Voador │ Ao entrar: …      │  rodapé: traço OU efeito imediato
 └─────────────────────────────┘
 ```
 
@@ -147,26 +149,35 @@ Layout **v0.2.1** — esboço PO (23/07): ícones **pequenos** à esquerda, **ar
 | **PV (♥)** | Soma ao total de vida do exército |
 | **ATK (✦)** | Soma ao total de força |
 | **INT** | Soma ao total de inteligência |
-| **Custo (◆)** | Soma ao orçamento gasto ao recrutar |
+| **Custo (◆)** | Valor-base público da raça; uso exato depende do modelo econômico |
 | **Traço** | Tag para requisitos do Decreto (Voador, Nadador, Bruto, Furtivo, Arcano…) — exibida no rodapé |
-| **Efeito ao recrutar** | Opcional: dispara **no momento da compra** (antes de repor o slot). Ex.: *Lagáxido* — "inunda vilarejo goblin: Goblins no mercado −2 ATK nesta rodada" |
+| **Efeito de entrada** | Opcional: dispara quando a raça entra em um exército, inclusive por troca, roubo ou transferência |
 | **Habilidade passiva** | Opcional: efeito contínuo enquanto a raça está no exército |
+| **Efeito de saída** | Opcional: dispara quando a raça deixa um exército |
+| **Efeito de transferência** | Opcional: dispara ou muda de alvo quando outro jogador passa a controlar a raça |
 
-**Rodapé da carta:** mostra o **traço** quando não há efeito especial; quando há, o traço fica à esquerda e o texto do efeito à direita (com prefixo *Ao recrutar:* quando aplicável).
+**Rodapé da carta:** mostra o **traço** quando não há efeito especial; quando há, o traço fica à esquerda e o texto do efeito à direita. Use gatilhos padronizados: **Ao entrar**, **Enquanto estiver**, **Ao sair** e **Ao ser transferido**.
+
+**Dono e controlador:** dono é quem iniciou a partida com a carta em seu baralho/conjunto; controlador é o jogador em cujo exército ela está. Habilidades passivas e penalidades afetam o controlador atual, salvo quando a carta disser o contrário.
+
+**Variedade de traços:** nenhum traço importante deve depender de uma única espécie. O conjunto completo deve oferecer pelo menos 3 espécies diferentes para traços recorrentes como **Voador**, **Nadador**, **Bruto**, **Furtivo** e **Arcano**.
 
 Protótipo visual: `docs/print/prototipo-racas-v0.2.html`
 
-**Regra de orçamento:** ao recrutar, o custo **não sai de um pool de ouro físico** — soma ao total gasto do general, que não pode exceder o limite do Decreto.
+**Regra de custo:** o valor ◆ de cada raça é sempre público. Se ele representa pagamento imediato ou valor contratual acumulado é uma decisão de playtest — ver [§14](#14-riscos-e-perguntas-em-aberto).
 
 ### 4.2 Carta de Decreto (oculta)
 
 | Campo | Exemplo |
 |-------|---------|
 | Orçamento máximo | 18◆ |
-| Requisitos de stat | PV total ≥14, ATK ≥10 |
-| Requisitos de traço | ≥3 raças com **Voa** |
+| Requisitos de stat | PV total ≥14, ATK ≥10, INT ≥8 |
+| Requisitos de traço | ≥3 raças com **Voador** |
 | Requisitos de composição | ≥4 raças diferentes |
-| Bônus de otimização | "Gaste ≤15◆ para vitória perfeita" |
+
+Os Decretos **não possuem bônus de otimização separado**. Cumprir requisitos com menor custo já representa maior eficiência e pode servir como desempate quando mais de um jogador concluir na mesma janela de vitória.
+
+Cada Decreto deve combinar pelo menos **dois eixos de exigência** — atributos, traços, composição ou restrições — para evitar objetivos triviais. **INT** deve aparecer com frequência comparável a PV e ATK.
 
 ### 4.3 Carta de Item (mão)
 
@@ -174,8 +185,8 @@ Tipos (podem compartilhar baralho com ícone):
 
 | Tipo | Ícone | Onde fica | Exemplo |
 |------|-------|-----------|---------|
-| **Campo de mercado** | 🏴 | Slot abaixo do grid 2×3 — afeta **todos** | Harpias +1◆ no mercado |
-| **Campo individual** | 🎯 | Slot na área de **1 jogador** — afeta só ele | Alvo paga +2◆ ao recrutar |
+| **Terreno / Campo de mercado** | 🏴 | Slot abaixo do grid 2×3 — afeta **todos** | Pântano reduz PV de Nadadores; tempestade altera Voadores |
+| **Campo individual** | 🎯 | Slot na área de **1 jogador** — afeta só ele | Raças no exército do alvo contam como +1◆ |
 | Equipamento | ⚙ | Exército do dono | +2 ATK em 1 raça Bruta |
 | Armadilha | ⚡ | Mão / campo oculto | Cancela recrutamento rival |
 | Intriga | 🎭 | Resolve e descarta | Revela ou troca decreto |
@@ -183,12 +194,12 @@ Tipos (podem compartilhar baralho com ícone):
 
 **Campo de mercado vs individual**
 
-| | Campo de mercado | Campo individual (influência) |
+| | Terreno / Campo de mercado | Campo individual (influência) |
 |--|------------------|--------------------------------|
 | **Alvo** | Todos os jogadores | 1 jogador escolhido ao jogar |
 | **Posição** | Abaixo do mercado central | Na zona do jogador alvo |
 | **Efeito típico** | Preço/stats de raças no grid | Penalidade/bônus só para o alvo |
-| **Exemplo PO** | "Harpias custam +1◆" | "Seu exército Bruto −1 ATK" |
+| **Exemplo PO** | "Tempestade: Voadores −1 ATK" | "Cada raça no exército do alvo conta como +1◆" |
 
 ---
 
@@ -203,14 +214,14 @@ Tipos (podem compartilhar baralho com ícone):
 ### Recrutar (ação principal)
 
 1. Escolha 1 raça do mercado.
-2. Pague o **custo em ◆** (soma ao seu total gasto; deve ser ≤ orçamento do Decreto). Aplica modificadores do **Campo de mercado** ativo.
-3. Resolve **efeito ao recrutar** da raça, se houver (ex.: Lagáxido inunda vilarejo goblin).
+2. Resolva o **custo em ◆** conforme o modelo econômico em teste e aplique modificadores de terreno, mercado e campo individual.
+3. Resolva o efeito **Ao entrar** da raça, se houver (ex.: Lagáxido inunda vilarejo goblin).
 4. Coloque a raça no seu **exército** (campo público).
 5. Repõe o slot vazio do mercado.
 
 ### Volatilidade
 
-Cartas de **Campo de mercado** (slot central) e **Campo individual** (zona do jogador) alteram:
+Cartas de **Terreno / Campo de mercado** (slot central) e **Campo individual** (zona do jogador) alteram:
 
 | Modificador | Exemplo |
 |-------------|---------|
@@ -238,10 +249,9 @@ Distribuídos no setup — **1 por jogador**, ocultos.
 |------|---------|
 | **Stat mínimo** | ATK total ≥12 |
 | **Stat máximo** | INT total ≤6 (exército bruto) |
-| **Traço** | ≥2 **Nada**, ≥3 **Voa** |
+| **Traço** | ≥2 **Nadador**, ≥3 **Voador** |
 | **Composição** | 5 raças, máx. 2 do mesmo traço |
 | **Orçamento** | Gastar no máximo 16◆ |
-| **Otimização** | Cumprir tudo gastando ≤80% do orçamento |
 
 ### Interação com decretos alheios
 
@@ -253,7 +263,7 @@ Distribuídos no setup — **1 por jogador**, ocultos.
 
 ### Vitória por decreto
 
-Jogador **declara** cumprimento no seu turno se acredita ter atingido todos os requisitos. Mesa valida. Se correto → vitória. Se incorreto → penalidade (perde 1 turno ou descarta 2 itens — a definir em playtest).
+Jogador **declara** cumprimento quando acredita ter atingido todos os requisitos. A mesa valida os valores públicos e revela o Decreto. Uma declaração incorreta gera uma penalidade recuperável, nunca eliminação definitiva. A penalidade e a janela exata de declaração serão definidas em playtest.
 
 ---
 
@@ -264,24 +274,26 @@ Jogador **declara** cumprimento no seu turno se acredita ter atingido todos os r
 - Início de rodada: comprar **1 item** OU comprar **0** e comprar **2** no próximo (opcional — playtest).
 - Limite de mão: **5** (descarte no fim se exceder).
 
-### Catálogo MVP (16 cartas)
+### Catálogo do microprotótipo (16 efeitos)
 
-**Campo (4)**  
+Estes 16 efeitos validam as categorias antes da expansão para 50–64 cartas. O baralho completo pode combinar cópias, variações numéricas e novas cartas, com maior concentração de Itens do que de Decretos.
+
+**Terreno / Campo (4)**  
 - Cidade Natal Destruída (Harpia −2 ATK, −1◆)  
-- Praga no Pântano (Nada −2 PV)  
+- Praga no Pântano (Nadador −2 PV)  
 - Forja Abissal aberta (Bruto +1 ATK, +1◆)  
 - Mercado negro (todas raças +1◆)
 
 **Roubo (4)**  
 - Suborno de clã (roube 1 raça do exército alvo)  
 - Espionagem (roube 1 carta da mão)  
-- Saque (roube 2◆ de orçamento — reduz gasto do alvo? ou limite efetivo — playtest)  
+- Transferência compulsória (mova 1 raça do seu exército para o exército alvo; ele se torna o controlador)  
 - Deserção (devolva 1 raça sua ao mercado)
 
 **Intriga (4)**  
 - Interrogatório real (revela decreto)  
 - Realocar missão (troca decreto)  
-- Contrato falso (alvo paga +2◆ no próximo recrutamento)  
+- Contrato falso (a próxima raça do alvo conta como +2◆ para fins de orçamento)  
 - Propaganda (copie o traço de 1 raça sua para contar em dobro nesta rodada)
 
 **Buff / Armadilha (4)**  
@@ -299,7 +311,7 @@ Jogador **declara** cumprimento no seu turno se acredita ter atingido todos os r
 1. Cada jogador recebe 1 **Decreto** (oculto).
 2. Comprar **3 itens** iniciais.
 3. Revelar **6 raças** no mercado.
-4. Orçamento gasto = **0** para todos.
+4. Preparar moedas somente se o playtest usar o modelo de dinheiro físico.
 
 ### Turno do general
 
@@ -310,7 +322,7 @@ Jogador **declara** cumprimento no seu turno se acredita ter atingido todos os r
 
 **Lista de ações (escolhe 2):**
 
-- **Recrutar** — mercado → exército (paga ◆)
+- **Recrutar** — mercado → exército (resolve o custo conforme o modelo econômico em teste)
 - **Jogar item** — resolve e descarta (ou campo permanece)
 - **Negociar** — troca com jogador (não vinculante até confirmar)
 - **Declarar vitória** — valida decreto
@@ -318,15 +330,18 @@ Jogador **declara** cumprimento no seu turno se acredita ter atingido todos os r
 
 ### Fim de rodada
 
-Quando todos jogaram: limpar modificadores "até fim da rodada", passar marcador.
+Quando todos jogaram: limpar modificadores "até fim da rodada". O jogador à esquerda de quem iniciou começa a próxima rodada; não é necessário registrar o número da rodada.
 
-### Limite de orçamento
+### Custo e orçamento
 
 ```
-Orçamento gasto = soma dos custos de todas as raças no exército
-                 + custos de itens que consumam ◆ (se houver)
-Orçamento gasto ≤ Orçamento máximo do Decreto
+Valor do exército = soma dos custos atuais de todas as raças no exército
+                  + modificadores de terreno, mercado e campo individual
 ```
+
+O valor ◆ das cartas e todos os modificadores em campo são públicos. O limite concedido pelo Rei permanece oculto no Decreto.
+
+O jogo não elimina definitivamente quem ultrapassa ou calcula incorretamente o orçamento. O tratamento exato depende da escolha entre **dinheiro físico** e **orçamento contratual**, descrita nas hipóteses de playtest do [§14](#14-riscos-e-perguntas-em-aberto).
 
 ---
 
@@ -341,7 +356,7 @@ Orçamento gasto ≤ Orçamento máximo do Decreto
 ### Roubo
 
 - Itens de roubo resolvem contra exército ou mão.
-- Raça roubada vai para o exército do ladrão (se couber no orçamento? **pergunta aberta** — ver §14).
+- Raça roubada vai para o exército do ladrão, que se torna seu controlador e resolve efeitos de transferência. O tratamento do custo depende do modelo econômico — ver §14.
 
 ### Trapaça de mercado
 
@@ -356,9 +371,13 @@ Orçamento gasto ≤ Orçamento máximo do Decreto
 
 | Modo | Regra |
 |------|-------|
-| **Padrão** | Primeiro a declarar e validar o Decreto vence |
-| **Desempate otimização** | Se 2+ cumpriram na mesma rodada: menor ◆ gasto vence |
+| **Padrão provisório** | Jogadores declaram e validam o Decreto dentro da janela de vitória testada |
+| **Desempate por eficiência** | Se 2+ cumprirem na mesma janela: menor valor ◆ do exército vence |
 | **Fim por baralho** | Se mercado esgotar 2×: maior cumprimento parcial vence |
+
+O menor custo **não é um bônus escrito no Decreto**; é somente critério de desempate. O playtest deve comparar vitória imediata com uma janela até o fim da rodada, pois o desempate só é relevante se mais de um jogador puder concluir antes da resolução.
+
+Falhar na validação ou exceder o orçamento nunca retira o jogador definitivamente da mesa. A consequência deve permitir reorganizar ou reconstruir o exército.
 
 ### Validação
 
@@ -410,36 +429,44 @@ Baseado nos esboços PO (23/07):
 
 ## 12. Conteúdo MVP — catálogo inicial
 
-### Raças (12 para playtest)
+### Raças (17 espécies para playtest)
+
+O protótipo expandido usa cópias dessas espécies para alcançar 36–48 cartas sem exigir uma arte exclusiva por carta. Cada traço recorrente deve aparecer em pelo menos 3 espécies, permitindo que efeitos atinjam uma família de monstros em vez de depender apenas de Harpias ou de outra raça específica.
 
 | Raça | PV | ATK | INT | ◆ | Traço | Habilidade |
 |------|----|----|-----|---|-------|------------|
-| Harpia | 3 | 4 | 2 | 4 | Voa | — |
-| Golem | 6 | 5 | 1 | 5 | Bruto | +1 PV se INT total ≤5 |
+| Harpia | 3 | 4 | 2 | 4 | Voador | — |
+| Gárgula | 5 | 3 | 1 | 4 | Voador | *Enquanto estiver:* +1 PV sob Terreno urbano |
+| Morcego Infernal | 2 | 2 | 3 | 2 | Voador | *Ao entrar:* olhe a próxima raça do baralho |
+| Mantícora | 4 | 5 | 2 | 5 | Voador | *Ao entrar:* expulse do exército alvo 1 raça com PV 2 ou menos |
+| Golem | 6 | 5 | 1 | 5 | Bruto | *Enquanto estiver:* +1 PV se INT total ≤5 |
 | Goblin | 2 | 2 | 3 | 2 | Furtivo | — |
+| Gremlin Fiscal | 2 | 1 | 4 | 2 | Furtivo | *Enquanto estiver:* suas outras raças contam como +1◆; pode ser transferido |
 | Ogro | 5 | 6 | 1 | 5 | Bruto | — |
-| Súcubo | 3 | 3 | 5 | 4 | Arcano | Rouba 1 item ao recrutar |
-| Tritão | 4 | 3 | 2 | 3 | Nada | — |
+| Súcubo | 3 | 3 | 5 | 4 | Arcano | *Ao entrar:* roube 1 item |
+| Tritão | 4 | 3 | 2 | 3 | Nadador | — |
 | Kobold | 2 | 1 | 4 | 2 | Furtivo | +1 INT |
 | Minotauro | 5 | 5 | 2 | 5 | Bruto | — |
-| Espectro | 2 | 2 | 4 | 3 | Voa | Ignora campo terrestre |
-| Slime | 4 | 2 | 1 | 2 | Nada | — |
-| Lagáxido | 3 | 2 | 3 | 3 | Nada | *Ao recrutar:* inunda vilarejo goblin (−2 ATK Goblins no mercado, rodada) |
+| Espectro | 2 | 2 | 4 | 3 | Arcano | Ignora penalidades de Terreno físico |
+| Slime | 4 | 2 | 1 | 2 | Nadador | — |
+| Lagáxido | 3 | 2 | 3 | 3 | Nadador | *Ao entrar:* inunda vilarejo goblin (−2 ATK Goblins no mercado, rodada) |
 | Diabrete | 2 | 3 | 3 | 3 | Arcano | — |
-| Centauro | 4 | 4 | 2 | 4 | — | Marcha: +1 ATK |
+| Centauro | 4 | 4 | 2 | 4 | — | *Enquanto estiver:* suas outras raças recebem +1 ATK na rodada em que entram |
 
 ### Decretos (8 para playtest)
 
 | ID | Nome | Orçamento | Requisito resumido |
 |----|------|-----------|-------------------|
-| D01 | Legião dos Céus | 18◆ | ≥3 Voa, PV≥10 |
-| D02 | Tritões do Abismo | 15◆ | ≥2 Nada, ATK≥8 |
-| D03 | Punho de Pedra | 20◆ | ≥2 Bruto, INT≤5 |
-| D04 | Esquadra Mista | 16◆ | 4 raças diferentes |
-| D05 | Exército barato | 12◆ | 5 raças, custo médio ≤3◆ |
-| D06 | Corte arcana | 18◆ | INT total ≥15 |
-| D07 | Força bruta | 17◆ | ATK total ≥18 |
-| D08 | Eficiência real | 14◆ | Cumprir gastando ≤11◆ |
+| D01 | Legião dos Céus | 18◆ | ≥3 Voador, PV≥12, INT≥8 |
+| D02 | Tritões do Abismo | 15◆ | ≥2 Nadador, ATK≥10, ≥3 raças |
+| D03 | Punho de Pedra | 20◆ | ≥2 Bruto, ATK≥16, INT≤6 |
+| D04 | Esquadra Mista | 16◆ | ≥4 raças diferentes, PV≥14, ATK≥12 |
+| D05 | Companhia Econômica | 12◆ | ≥4 raças, custo médio ≤3◆, INT≥10 |
+| D06 | Corte Arcana | 18◆ | ≥2 Arcano, INT≥16, PV≥10 |
+| D07 | Força Bruta | 17◆ | ATK≥20, PV≥14, INT≤10 |
+| D08 | Exército Equilibrado | 16◆ | PV≥12, ATK≥12, INT≥12, ≥4 raças |
+
+Os valores acima são pontos de partida mais exigentes, não números balanceados finais. O playtest deve medir quantidade média de turnos para cumprir cada Decreto e evitar combinações muito fáceis ou impossíveis.
 
 ---
 
@@ -456,14 +483,34 @@ Baseado nos esboços PO (23/07):
 
 ## 14. Riscos e perguntas em aberto
 
+### Hipótese A — orçamento contratual
+
+- O Rei aprova o exército e só paga após o cumprimento do Decreto.
+- Recrutar não consome moedas; o jogador soma o valor atual das raças que controla.
+- Terrenos, campos e habilidades alteram o valor contabilizado do exército.
+- O limite permanece secreto e é conferido na declaração.
+- Estar acima do limite impede a vitória, mas não elimina: o jogador pode reorganizar o exército.
+
+### Hipótese B — dinheiro físico
+
+- Cada jogador recebe moedas e paga ao recrutar no mercado.
+- Alterações de preço são imediatas e intuitivas.
+- O limite do Decreto pode funcionar como verba inicial ou condição adicional.
+- Exige moedas, cartas de dinheiro ou outro componente de controle.
+
+O próximo playtest deve comparar os dois modelos. Até essa decisão, cartas devem preferir textos compatíveis com ambos, como **“esta raça conta como +2◆”**, evitando depender de “pagar” ou “receber” dinheiro.
+
+### Decisões necessárias
+
 | # | Pergunta | Impacto |
 |---|----------|---------|
-| 1 | Raça roubada conta no orçamento do ladrão? | Balanceamento de roubo |
-| 2 | Orçamento é teto rígido ou pode exceder com penalidade? | Rigidez do puzzle |
-| 3 | Mercado 6 fixo ou escala com jogadores? | Componentes |
-| 4 | Declarar vitória errado: qual penalidade justa? | Anti-spam |
-| 5 | Partida pode estagnar se todos sabotam? | Duração |
-| 6 | Campo empilhado demais confunde? | UX |
+| 1 | O jogo usa orçamento contratual ou dinheiro físico? | Define recrutamento, componentes e textos das cartas |
+| 2 | No modelo físico, o Decreto concede verba inicial ou também impõe teto final? | Economia e condição de vitória |
+| 3 | Qual consequência recuperável ocorre ao declarar incorretamente ou exceder o limite? | Tensão sem eliminação |
+| 4 | A vitória é imediata ou existe janela até o fim da rodada? | Torna o desempate por menor custo relevante |
+| 5 | Mercado 6 fixo ou escala com jogadores? | Componentes |
+| 6 | Campo individual aceita no máximo 1 carta? | Legibilidade e acúmulo de penalidades |
+| 7 | Mercado esgotar 2× encerra mesmo a partida? | Duração e desempate parcial |
 
 ---
 
@@ -471,12 +518,12 @@ Baseado nos esboços PO (23/07):
 
 | Fase | Entrega |
 |------|---------|
-| **Agora** | Validar GDD v0.2 com PO |
+| **Agora** | Validar com o PO: modelo econômico, consequência de falha e janela de vitória |
 | **+1** | RULEBOOK v0.2 |
-| **+2** | Print: carta de raça novo layout + 12 exemplos |
+| **+2** | Print: carta de raça novo layout + 17 espécies de teste |
 | **+3** | Playtest papel com 4 jogadores |
 | **+4** | Site: banner "v0.2 em design" + pivot doc público |
 
 ---
 
-*GDD v0.2 — alinhado ao feedback do PO Hugo Rezende, 22/07/2026.*
+*GDD v0.2 — feedback do PO incorporado até 27/07/2026.*
