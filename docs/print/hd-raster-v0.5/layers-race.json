@@ -1,0 +1,17 @@
+{
+  "canvas": { "width": 1050, "height": 1500 },
+  "layers": [
+    { "name": "parchment", "file": "components/pergaminho-base.png", "x": 0, "y": 0, "width": 1050, "height": 1500 },
+    { "name": "art", "file": "art/{card-id}.png", "x": 87, "y": 95, "width": 876, "height": 1260 },
+    { "name": "frame", "file": "components/normalized/borda-raca.png", "x": 0, "y": 0, "width": 1050, "height": 1500 },
+    { "name": "cost", "file": "components/normalized/medalhao-custo.png", "x": 45, "y": 43, "width": 255, "height": 255 },
+    { "name": "name", "file": "components/normalized/placa-nome.png", "x": 408, "y": 58, "width": 585, "height": 160 },
+    { "name": "pv", "file": "components/normalized/capsula-atributo.png", "x": 49, "y": 405, "width": 198, "height": 255 },
+    { "name": "atk", "file": "components/normalized/capsula-atributo.png", "x": 49, "y": 660, "width": 198, "height": 255 },
+    { "name": "int", "file": "components/normalized/capsula-atributo.png", "x": 49, "y": 915, "width": 198, "height": 255 },
+    { "name": "effect", "file": "components/normalized/caixa-efeito.png", "x": 275, "y": 1118, "width": 710, "height": 200 },
+    { "name": "sex", "x": 113, "y": 1230, "width": 70, "height": 70, "centerX": 148, "centerY": 1265 },
+    { "name": "trait", "file": "components/normalized/faixa-traco.png", "x": 165, "y": 1333, "width": 720, "height": 112 },
+    { "name": "id", "file": "components/normalized/tag-id.png", "x": 425, "y": 1442, "width": 200, "height": 51 }
+  ]
+}

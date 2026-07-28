@@ -180,6 +180,10 @@ A declaração custa 1 ação. Depois de declarar:
 
 O valor ◆ impresso na Raça é seu contrato-base. Modificadores do mercado alteram apenas Raças recrutadas enquanto estiverem ativos.
 
+Em todos os componentes, `◆` representa Verba Real e usa a cor **dourada**.
+Rubis vermelhos e detalhes azuis, verdes ou roxos são apenas ornamentais e não
+representam recursos diferentes.
+
 Depois que uma Raça entra no exército, seu contrato fica travado. Mudanças futuras no preço do mercado não recalculam moedas já colocadas.
 
 ### 7.2 Alterar contratos existentes
@@ -223,6 +227,12 @@ Some os valores atuais de todas as Raças controladas. Modificadores podem aumen
 ### Traços
 
 Voador, Nadador, Bruto, Furtivo e Arcano são tags usadas por Decretos, Terrenos e habilidades.
+
+### Sexo das Raças
+
+Cada Raça possui uma característica impressa: **Masculino**, **Feminino** ou **Neutro**. Ela não produz efeito sozinha e só importa quando uma carta a mencionar. Uma Raça Neutra não é considerada Masculina nem Feminina.
+
+Quando a Súcubo entra em um exército, seu controlador pode transferir para esse exército 1 Raça **Masculina** de contrato 3◆ ou menos controlada por um rival. As moedas e os Equipamentos acompanham a Raça transferida, e efeitos **Ao ser transferido** são resolvidos normalmente.
 
 ### Gatilhos
 

@@ -15,7 +15,7 @@ O **Makai** (reino dos demônios) está em guerra com os humanos. O Rei Demônio
 
 Vence o general que cumprir o decreto da forma **mais otimizada** ou dentro dos requisitos exigidos.
 
-O jogo é um **carteado de trapaça**: manipulação de campo, mercado volátil, roubo, negociação estilo Munchkin.
+O jogo é um **carteado de trapaça**: manipulação de campo, mercado volátil, roubo, blefe e negociação livre.
 
 ---
 
@@ -42,7 +42,7 @@ O jogo é um **carteado de trapaça**: manipulação de campo, mercado volátil,
 - **Traição** via cartas que revelam ou trocam decreto alheio
 - **Rejogabilidade** por combinação de decretos + mercado + itens
 - Tom de intriga na corte demoníaca
-- Referências úteis: *Munchkin* (negociação), *Dead of Winter* (objetivo oculto), economia volátil
+- Referências úteis: jogos de objetivo oculto, negociação aberta e economia volátil
 
 ---
 

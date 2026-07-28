@@ -1,0 +1,15 @@
+{
+  "canvas": { "width": 1050, "height": 1500 },
+  "layers": [
+    { "name": "parchment", "file": "components/pergaminho-base.png", "x": 0, "y": 0, "width": 1050, "height": 1500 },
+    { "name": "art", "file": "art/{card-id}.png", "x": 87, "y": 95, "width": 876, "height": 1110 },
+    { "name": "frame", "file": "components/normalized/borda-raca.png", "x": 0, "y": 0, "width": 1050, "height": 1500 },
+    { "name": "type", "file": "components/normalized/banner-decreto.png", "x": 270, "y": 35, "width": 510, "height": 92 },
+    { "name": "name", "file": "components/normalized/placa-nome.png", "x": 130, "y": 112, "width": 790, "height": 185 },
+    { "name": "budget", "file": "components/normalized/medalhao-custo.png", "x": 400, "y": 915, "width": 250, "height": 250 },
+    { "name": "requirement-1", "file": "components/normalized/bloco-requisito.png", "x": 57, "y": 1175, "width": 290, "height": 225 },
+    { "name": "requirement-2", "file": "components/normalized/bloco-requisito.png", "x": 380, "y": 1175, "width": 290, "height": 225 },
+    { "name": "requirement-3", "file": "components/normalized/bloco-requisito.png", "x": 703, "y": 1175, "width": 290, "height": 225 },
+    { "name": "id", "file": "components/normalized/tag-id.png", "x": 425, "y": 1442, "width": 200, "height": 51 }
+  ]
+}

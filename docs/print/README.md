@@ -8,6 +8,10 @@ Arquivos prontos para protótipo e envio à gráfica. Abra no **Chrome** ou **Ed
 |---------|----------|
 | [index.html](index.html) | Índice do kit |
 | [microprototipo-v0.2.html](microprototipo-v0.2.html) | **Kit atual:** 70 cartas + Verba Real |
+| [hd-raster-v0.5/README.md](hd-raster-v0.5/README.md) | **Modelo HD atual:** frentes raster montadas em camadas ilustradas |
+| [hd-raster-v0.5/exports/conjunto-frentes-v0.5.png](hd-raster-v0.5/exports/conjunto-frentes-v0.5.png) | Prancha com as seis frentes concluídas |
+| [hd-components-v0.4/GUIA-COMPONENTES.md](hd-components-v0.4/GUIA-COMPONENTES.md) | Protótipo HTML/CSS anterior, preservado como referência de anatomia |
+| [hd-v0.3/GUIA-VISUAL.md](hd-v0.3/GUIA-VISUAL.md) | Modelo HD anterior, preservado como referência |
 | [playmat-mercado-v0.2.html](playmat-mercado-v0.2.html) | Playmat de mercado e Tesouro |
 | [prototipo-racas-v0.2.html](prototipo-racas-v0.2.html) | Esboço anterior das cartas de Raça |
 | [cartas.html](cartas.html) | Cartas v0.1 arquivadas |

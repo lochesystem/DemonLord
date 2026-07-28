@@ -1,0 +1,12 @@
+{
+  "canvas": { "width": 1050, "height": 1500 },
+  "layers": [
+    { "name": "parchment", "file": "components/pergaminho-base.png", "x": 0, "y": 0, "width": 1050, "height": 1500 },
+    { "name": "art", "file": "art/{card-id}.png", "x": 87, "y": 95, "width": 876, "height": 1260 },
+    { "name": "frame", "file": "components/normalized/borda-raca.png", "x": 0, "y": 0, "width": 1050, "height": 1500 },
+    { "name": "type", "file": "components/normalized/banner-item.png", "x": 270, "y": 35, "width": 510, "height": 92 },
+    { "name": "name", "file": "components/normalized/placa-nome.png", "x": 155, "y": 112, "width": 740, "height": 190 },
+    { "name": "effect", "file": "components/normalized/caixa-efeito.png", "x": 95, "y": 1114, "width": 860, "height": 250 },
+    { "name": "id", "file": "components/normalized/tag-id.png", "x": 425, "y": 1442, "width": 200, "height": 51 }
+  ]
+}

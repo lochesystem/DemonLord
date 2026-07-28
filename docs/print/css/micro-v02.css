@@ -63,12 +63,22 @@
 
 .micro-id {
   position: absolute;
-  right: 2.2mm;
-  bottom: 1.4mm;
+  left: 50%;
+  right: auto;
+  bottom: 0.75mm;
+  transform: translateX(-50%);
   z-index: 9;
   font-size: 1.7mm;
   font-weight: 700;
-  opacity: 0.62;
+  min-width: 11mm;
+  padding: 0.45mm 2.2mm;
+  color: #f2e3bf;
+  background: #1c1a18;
+  border: 0.3mm double #b98a31;
+  clip-path: polygon(9% 0, 91% 0, 100% 50%, 91% 100%, 9% 100%, 0 50%);
+  text-align: center;
+  line-height: 1;
+  opacity: 1;
 }
 
 .micro-muted {
@@ -232,11 +242,6 @@
   font-size: 2.15mm;
   line-height: 1.25;
   font-weight: 650;
-}
-
-.micro-race .micro-id {
-  color: #f5e8c6;
-  opacity: 0.75;
 }
 
 /* Itens */

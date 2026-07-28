@@ -26,7 +26,7 @@ function renderMicroRace(card) {
       <small>ARTE PROVISÓRIA</small>
     </div>
     <footer class="micro-race-footer">
-      <span class="micro-trait">${card.trait}</span>
+      <span class="micro-trait">${card.trait} · ${card.sex}</span>
       <p>${effect}</p>
     </footer>
     <span class="micro-id">${card.id}</span>

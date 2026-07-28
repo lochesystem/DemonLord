@@ -31,7 +31,7 @@ Documento mestre de design alinhado ao feedback do PO (Hugo Rezende).
 
 ### Elevator pitch
 
-O **Makai** está em guerra com o Reino Humano. O Rei Demônio tem pouco ouro e convoca seus generais: cada um recebe um **Decreto secreto** — monte um exército com atributos específicos dentro do **orçamento** concedido. O Tesouro Real adianta moedas para firmar contratos com os monstros, mas o Rei só aprova a operação se o exército cumprir o Decreto sem estourar a verba. Jogue cartas para transformar o terreno, manipular o mercado, sabotar exércitos e expor os planos dos rivais. Negocie como em *Munchkin*, trapaceie como um general sem escrúpulos e vença com o exército mais eficiente.
+O **Makai** está em guerra com o Reino Humano. O Rei Demônio tem pouco ouro e convoca seus generais: cada um recebe um **Decreto secreto** — monte um exército com atributos específicos dentro do **orçamento** concedido. O Tesouro Real adianta moedas para firmar contratos com os monstros, mas o Rei só aprova a operação se o exército cumprir o Decreto sem estourar a verba. Jogue cartas para transformar o terreno, manipular o mercado, sabotar exércitos e expor os planos dos rivais. Negocie, blefe como um general sem escrúpulos e vença com o exército mais eficiente.
 
 ### Gênero
 
@@ -152,7 +152,9 @@ Layout **v0.2.1** — esboço PO (23/07): ícones **pequenos** à esquerda, **ar
 | **ATK (✦)** | Soma ao total de força |
 | **INT** | Soma ao total de inteligência |
 | **Contrato (◆)** | Quantidade de Verba Real comprometida ao recrutar a raça |
+| **Identificador** | Código de catálogo no padrão `R00`, `I00` ou `D00`; usa o mesmo estilo neutro em todos os tipos |
 | **Traço** | Tag para requisitos do Decreto (Voador, Nadador, Bruto, Furtivo, Arcano…) — exibida no rodapé |
+| **Sexo** | Característica impressa: Masculino, Feminino ou Neutro; usada somente quando um efeito citar essa característica |
 | **Efeito de entrada** | Opcional: dispara quando a raça entra em um exército, inclusive por troca, roubo ou transferência |
 | **Habilidade passiva** | Opcional: efeito contínuo enquanto a raça está no exército |
 | **Efeito de saída** | Opcional: dispara quando a raça deixa um exército |
@@ -163,6 +165,16 @@ Layout **v0.2.1** — esboço PO (23/07): ícones **pequenos** à esquerda, **ar
 **Dono e controlador:** dono é quem iniciou a partida com a carta em seu baralho/conjunto; controlador é o jogador em cujo exército ela está. Habilidades passivas e penalidades afetam o controlador atual, salvo quando a carta disser o contrário.
 
 **Variedade de traços:** nenhum traço importante deve depender de uma única espécie. O conjunto completo deve oferecer pelo menos 3 espécies diferentes para traços recorrentes como **Voador**, **Nadador**, **Bruto**, **Furtivo** e **Arcano**.
+
+**Sexo das Raças:** cada carta exibe discretamente **Masculino**, **Feminino** ou **Neutro** junto ao traço. Uma Raça Neutra não é considerada Masculina nem Feminina. Essa característica não produz efeito sozinha e só importa quando uma habilidade a mencionar.
+
+**Código e símbolo de Verba:** todo identificador usa a mesma tag hexagonal
+curta encaixada no centro da borda inferior: fundo carvão, filete duplo em ouro
+antigo, texto marfim e a mesma tipografia e escala em Raças, Itens e Decretos.
+A tag nunca recebe a cor do tipo; somente o código muda. O símbolo mecânico `◆` representa sempre
+**Verba/contrato** e deve ser dourado em todas as cartas. Rubis vermelhos e
+acentos azuis, verdes ou roxos pertencem apenas à decoração e não possuem efeito
+mecânico.
 
 Protótipo visual: `docs/print/prototipo-racas-v0.2.html`
 
@@ -362,7 +374,7 @@ O Tesouro Real adianta a Verba necessária para cada contratação. As moedas n�
 
 ## 9. Negociação e trapaça
 
-### Negociação (estilo Munchkin)
+### Negociação livre
 
 - Jogadores podem trocar: itens, raças do exército, "favores" futuros.
 - **Nada é obrigatório** — mentir e quebrar acordo é permitido.
@@ -448,25 +460,25 @@ Baseado nos esboços PO (23/07):
 
 O protótipo expandido usa cópias dessas espécies para alcançar 36–48 cartas sem exigir uma arte exclusiva por carta. Cada traço recorrente deve aparecer em pelo menos 3 espécies, permitindo que efeitos atinjam uma família de monstros em vez de depender apenas de Harpias ou de outra raça específica.
 
-| Raça | PV | ATK | INT | ◆ | Traço | Habilidade |
-|------|----|----|-----|---|-------|------------|
-| Harpia | 3 | 4 | 2 | 4 | Voador | — |
-| Gárgula | 5 | 3 | 1 | 4 | Voador | *Enquanto estiver:* +1 PV sob Terreno urbano |
-| Morcego Infernal | 2 | 2 | 3 | 2 | Voador | *Ao entrar:* olhe a próxima raça do baralho |
-| Mantícora | 4 | 5 | 2 | 5 | Voador | *Ao entrar:* expulse do exército alvo 1 raça com PV 2 ou menos |
-| Golem | 6 | 5 | 1 | 5 | Bruto | *Enquanto estiver:* +1 PV se INT total ≤5 |
-| Goblin | 2 | 2 | 3 | 2 | Furtivo | — |
-| Gremlin Fiscal | 2 | 1 | 4 | 2 | Furtivo | *Enquanto estiver:* mantenha +1◆ de Verba sobre cada outra raça; pode ser transferido |
-| Ogro | 5 | 6 | 1 | 5 | Bruto | — |
-| Súcubo | 3 | 3 | 5 | 4 | Arcano | *Ao entrar:* roube 1 item |
-| Tritão | 4 | 3 | 2 | 3 | Nadador | — |
-| Kobold | 2 | 1 | 4 | 2 | Furtivo | +1 INT |
-| Minotauro | 5 | 5 | 2 | 5 | Bruto | — |
-| Espectro | 2 | 2 | 4 | 3 | Arcano | Ignora penalidades de Terreno físico |
-| Slime | 4 | 2 | 1 | 2 | Nadador | — |
-| Lagáxido | 3 | 2 | 3 | 3 | Nadador | *Ao entrar:* inunda vilarejo goblin (−2 ATK Goblins no mercado, rodada) |
-| Diabrete | 2 | 3 | 3 | 3 | Arcano | — |
-| Centauro | 4 | 4 | 2 | 4 | — | *Enquanto estiver:* suas outras raças recebem +1 ATK na rodada em que entram |
+| ID | Raça | Sexo | PV | ATK | INT | ◆ | Traço | Habilidade |
+|----|------|------|----|-----|-----|---|-------|------------|
+| R01 | Harpia | Feminino | 3 | 4 | 2 | 4 | Voador | — |
+| R02 | Gárgula | Neutro | 5 | 3 | 1 | 4 | Voador | *Enquanto estiver:* +1 PV sob Terreno urbano |
+| R03 | Morcego Infernal | Masculino | 2 | 2 | 3 | 2 | Voador | *Ao entrar:* olhe a próxima raça do baralho |
+| R04 | Mantícora | Feminino | 4 | 5 | 2 | 5 | Voador | *Ao entrar:* expulse do exército alvo 1 raça com PV 2 ou menos |
+| R05 | Golem | Neutro | 6 | 5 | 1 | 5 | Bruto | *Enquanto estiver:* +1 PV se INT total ≤5 |
+| R06 | Goblin | Masculino | 2 | 2 | 3 | 2 | Furtivo | — |
+| R07 | Gremlin Fiscal | Masculino | 2 | 1 | 4 | 2 | Furtivo | *Enquanto estiver:* mantenha +1◆ de Verba sobre cada outra raça; pode ser transferido |
+| R08 | Ogro | Masculino | 5 | 6 | 1 | 5 | Bruto | — |
+| R09 | Súcubo | Feminino | 3 | 3 | 5 | 4 | Arcano | *Ao entrar:* transfira para seu exército 1 Raça Masculina de contrato 3◆ ou menos controlada por um rival |
+| R10 | Tritão | Masculino | 4 | 3 | 2 | 3 | Nadador | — |
+| R11 | Kobold | Masculino | 2 | 1 | 4 | 2 | Furtivo | +1 INT |
+| R12 | Minotauro | Masculino | 5 | 5 | 2 | 5 | Bruto | — |
+| R13 | Espectro | Neutro | 2 | 2 | 4 | 3 | Arcano | Ignora penalidades de Terreno físico |
+| R14 | Slime | Neutro | 4 | 2 | 1 | 2 | Nadador | — |
+| R15 | Lagáxido | Masculino | 3 | 2 | 3 | 3 | Nadador | *Ao entrar:* inunda vilarejo goblin (−2 ATK Goblins no mercado, rodada) |
+| R16 | Diabrete | Masculino | 2 | 3 | 3 | 3 | Arcano | — |
+| R17 | Centauro | Masculino | 4 | 4 | 2 | 4 | — | *Enquanto estiver:* suas outras raças recebem +1 ATK na rodada em que entram |
 
 ### Decretos (8 para playtest)
 
@@ -489,7 +501,6 @@ Os valores acima são pontos de partida mais exigentes, não números balanceado
 
 | Jogo / mídia | O que absorvemos |
 |--------------|------------------|
-| **Munchkin** | Negociação, trapaça, combinações absurdas |
 | **Makai** (folclore JP) | Nome e tom do reino demoníaco |
 | Layout PO (esboços 23/07) | Carta: arte grande, stats discretos; mercado 2×3 + campo global + influência individual |
 | v0.1 DemonLord | Decretos ocultos, tom de corte (mecânica substituída) |

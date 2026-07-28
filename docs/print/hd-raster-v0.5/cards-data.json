@@ -1,0 +1,88 @@
+[
+  {
+    "kind": "race",
+    "id": "R01",
+    "name": "HARPIA",
+    "art": "art/harpia-r01.png",
+    "artFocusY": 0.5,
+    "cost": 4,
+    "pv": 3,
+    "atk": 4,
+    "int": 2,
+    "sex": "♀",
+    "trait": "VOADOR",
+    "effect": "ENQUANTO ESTIVER: RECEBE +1 ATK SE VOCÊ CONTROLAR OUTRO VOADOR."
+  },
+  {
+    "kind": "race",
+    "id": "R03",
+    "name": "MORCEGO INFERNAL",
+    "art": "art/morcego-infernal-r03.png",
+    "artFocusY": 1,
+    "cost": 2,
+    "pv": 2,
+    "atk": 2,
+    "int": 3,
+    "sex": "♂",
+    "trait": "VOADOR",
+    "effect": "AO ENTRAR: OLHE A PRÓXIMA RAÇA; DEVOLVA AO TOPO OU AO FUNDO."
+  },
+  {
+    "kind": "race",
+    "id": "R04",
+    "name": "MANTÍCORA",
+    "art": "art/manticora-r04.png",
+    "artFocusY": 0.52,
+    "cost": 5,
+    "pv": 4,
+    "atk": 5,
+    "int": 2,
+    "sex": "♀",
+    "trait": "VOADOR",
+    "effect": "AO ENTRAR: EXPULSE DO EXÉRCITO ALVO 1 RAÇA COM PV 2 OU MENOS."
+  },
+  {
+    "kind": "race",
+    "id": "R09",
+    "name": "SÚCUBO",
+    "art": "art/sucubo-r09.png",
+    "artFocusY": 0.48,
+    "variants": [
+      {
+        "suffix": "alternativa-escrachada",
+        "art": "art/sucubo-r09-alternativa-escrachada.png",
+        "artFocusY": 0.48
+      }
+    ],
+    "cost": 4,
+    "pv": 3,
+    "atk": 3,
+    "int": 5,
+    "sex": "♀",
+    "trait": "ARCANO",
+    "effect": "AO ENTRAR: TRANSFIRA PARA SEU EXÉRCITO 1 RAÇA MASCULINA DE CONTRATO 3◆ OU MENOS CONTROLADA POR UM RIVAL."
+  },
+  {
+    "kind": "item",
+    "id": "I04",
+    "type": "CAMPO INDIVIDUAL",
+    "name": "AUDITORIA INFERNAL",
+    "art": "art/auditoria-infernal-i04.png",
+    "artFocusY": 0.45,
+    "effect": "ADICIONE +1◆ A CADA CONTRATO DO ALVO. REMOVA AO DESCARTAR ESTE CAMPO."
+  },
+  {
+    "kind": "decree",
+    "id": "D01",
+    "type": "DECRETO SECRETO",
+    "name": "LEGIÃO DOS CÉUS",
+    "art": "art/legiao-dos-ceus-d01.png",
+    "artFocusY": 0.4,
+    "budget": 18,
+    "requirements": [
+      { "value": "3+", "label": "VOADOR" },
+      { "value": "12+", "label": "PV TOTAL" },
+      { "value": "8+", "label": "INT TOTAL" }
+    ]
+  }
+]

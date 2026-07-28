@@ -16,6 +16,8 @@ Board game competitivo de cartas: generais usam Crédito de Guerra para montar e
 | [design/RULEBOOK.md](design/RULEBOOK.md) | Livro de regras v0.1 (desatualizado) |
 | [docs/](docs/) | Site GitHub Pages |
 | [docs/print/microprototipo-v0.2.html](docs/print/microprototipo-v0.2.html) | Print & Play v0.2 — 70 cartas + Verba Real |
+| [docs/print/hd-raster-v0.5/README.md](docs/print/hd-raster-v0.5/README.md) | Modelo visual HD v0.5 — frentes raster montadas em camadas ilustradas |
+| [docs/print/hd-raster-v0.5/exports/conjunto-frentes-v0.5.png](docs/print/hd-raster-v0.5/exports/conjunto-frentes-v0.5.png) | Prancha com as seis cartas em alta fidelidade |
 
 ## Pitch rápido
 

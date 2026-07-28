@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DemonLord — Sistema de cartas v0.4</title>
+  <link rel="stylesheet" href="cards.css">
+</head>
+<body>
+  <header class="page-head">
+    <div>
+      <p class="eyebrow">DemonLord · sistema visual v0.4</p>
+      <h1>Cartas montadas por componentes</h1>
+      <p>Ilustração e interface são camadas independentes. Moldura, tipografia, atributos, sexo, traço e identificador têm medidas fixas.</p>
+    </div>
+    <div class="legend">
+      <span><i class="resource">◆</i> Verba</span>
+      <span><i>♂ / ♀</i> sexo discreto</span>
+      <span><i class="id-mini">R01</i> ID universal</span>
+    </div>
+  </header>
+
+  <main id="card-grid" class="card-grid" aria-label="Modelos de cartas"></main>
+
+  <template id="race-template">
+    <article class="card card--race">
+      <div class="frame frame--outer"></div>
+      <div class="frame frame--inner"></div>
+      <div class="corner-gem corner-gem--tl"></div>
+      <div class="corner-gem corner-gem--tr"></div>
+      <div class="corner-gem corner-gem--bl"></div>
+      <div class="corner-gem corner-gem--br"></div>
+
+      <div class="art-window"><div class="art-layer"></div></div>
+      <div class="cost"><strong></strong><span class="resource">◆</span></div>
+      <h2 class="name-plaque"></h2>
+      <div class="stats" aria-label="Atributos">
+        <div class="stat"><b>PV</b><strong data-stat="pv"></strong></div>
+        <div class="stat"><b>ATK</b><strong data-stat="atk"></strong></div>
+        <div class="stat"><b>INT</b><strong data-stat="int"></strong></div>
+      </div>
+      <div class="effect-box"></div>
+      <span class="sex-symbol" aria-label="Sexo"></span>
+      <div class="trait-bar"></div>
+      <div class="card-id"></div>
+    </article>
+  </template>
+
+  <template id="item-template">
+    <article class="card card--item">
+      <div class="frame frame--outer"></div>
+      <div class="frame frame--inner"></div>
+      <div class="corner-gem corner-gem--tl"></div>
+      <div class="corner-gem corner-gem--tr"></div>
+      <div class="corner-gem corner-gem--bl"></div>
+      <div class="corner-gem corner-gem--br"></div>
+      <div class="type-banner"></div>
+      <h2 class="item-name"></h2>
+      <div class="item-art"><div class="art-layer"></div></div>
+      <div class="item-effect"></div>
+      <div class="card-id"></div>
+    </article>
+  </template>
+
+  <template id="decree-template">
+    <article class="card card--decree">
+      <div class="frame frame--outer"></div>
+      <div class="frame frame--inner"></div>
+      <div class="corner-gem corner-gem--tl"></div>
+      <div class="corner-gem corner-gem--tr"></div>
+      <div class="corner-gem corner-gem--bl"></div>
+      <div class="corner-gem corner-gem--br"></div>
+      <div class="type-banner"></div>
+      <h2 class="decree-name"></h2>
+      <div class="decree-art"><div class="art-layer"></div></div>
+      <div class="budget"><small>ORÇAMENTO</small><strong></strong><span class="resource">◆</span></div>
+      <div class="requirements"></div>
+      <div class="card-id"></div>
+    </article>
+  </template>
+
+  <script src="cards-data.js"></script>
+  <script src="cards.js"></script>
+</body>
+</html>
