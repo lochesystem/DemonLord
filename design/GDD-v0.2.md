@@ -31,7 +31,7 @@ Documento mestre de design alinhado ao feedback do PO (Hugo Rezende).
 
 ### Elevator pitch
 
-O **Makai** está em guerra com o Reino Humano. O Rei Demônio tem pouco ouro e convoca seus generais: cada um recebe um **Decreto secreto** — monte um exército com atributos específicos dentro do **orçamento** concedido. No mercado de monstros, raças têm **PV, ATK e Inteligência**; jogue cartas para transformar o terreno, manipular o mercado, sabotar exércitos e expor os planos dos rivais. Negocie como em *Munchkin*, trapaceie como um general sem escrúpulos e vença cumprindo o Decreto com o exército mais eficiente.
+O **Makai** está em guerra com o Reino Humano. O Rei Demônio tem pouco ouro e convoca seus generais: cada um recebe um **Decreto secreto** — monte um exército com atributos específicos dentro do **orçamento** concedido. O Tesouro Real adianta moedas para firmar contratos com os monstros, mas o Rei só aprova a operação se o exército cumprir o Decreto sem estourar a verba. Jogue cartas para transformar o terreno, manipular o mercado, sabotar exércitos e expor os planos dos rivais. Negocie como em *Munchkin*, trapaceie como um general sem escrúpulos e vença com o exército mais eficiente.
 
 ### Gênero
 
@@ -67,7 +67,7 @@ Você é um general demônio com missão secreta e orçamento apertado. Recruta 
 
 | Pilar | Na mesa |
 |-------|---------|
-| **Orçamento como puzzle** | Cada ◆ conta; raça cara vs raça fraca é escolha real |
+| **Crédito de Guerra** | Cada ◆ é Verba Real comprometida; contratos fortes pressionam o orçamento secreto |
 | **Mundo manipulável** | Cartas alteram terreno, mercado, custos e exércitos — oportunidade ou sabotagem |
 | **Informação oculta** | Decreto escondido até alguém forçar revelação |
 | **Interação direta** | Roubar raça, roubar carta, trocar com jogador |
@@ -79,10 +79,11 @@ Você é um general demônio com missão secreta e orçamento apertado. Recruta 
 flowchart TB
   D[Decreto oculto] -->|exige| E[Exército ideal]
   M[Mercado comum] -->|recruta| E
+  T[Tesouro Real] -->|adianta Verba| E
   I[Itens na mão] -->|manipula| M
   I -->|sabota| E
   N[Negociação] --> E
-  B[Orçamento máximo] -->|limita| E
+  D -->|limita Verba comprometida| E
 ```
 
 ---
@@ -97,10 +98,11 @@ flowchart TB
 | Cartas de **Item** | 50–64 | Principal baralho de interação |
 | Cartas de **Decreto** | 16–20 | 1 por jogador, ocultas |
 | Tabuleiro / playmat | 1 | Mercado 6 slots + referência |
+| Moedas de **Verba Real** | Pool central | Denominações sugeridas: 1◆, 3◆ e 5◆ |
 
 **Meta inicial de produto:** aproximadamente **110–120 cartas** no formato grande. Uma distribuição de referência para protótipo expandido é **42 Raças + 60 Itens + 18 Decretos = 120 cartas**. A quantidade final depende dos playtests e pode usar cópias de uma mesma espécie para reduzir a necessidade de artes exclusivas.
 
-O MVP não usa marcador dedicado de rodada nem trilha individual de orçamento. Caso o playtest escolha dinheiro físico, moedas ou cartas de dinheiro entram como componente condicional — ver [§14](#14-riscos-e-perguntas-em-aberto).
+O MVP não usa marcador dedicado de rodada nem trilha individual de orçamento. As próprias moedas colocadas sobre as Raças mostram publicamente quanto cada general comprometeu. No primeiro protótipo, o Tesouro Real é considerado ilimitado; a quantidade física exata será dimensionada após medir o pico de moedas em mesa.
 
 ### Zonas por jogador
 
@@ -110,7 +112,7 @@ O MVP não usa marcador dedicado de rodada nem trilha individual de orçamento. 
 | **Mão** | Privada | Cartas de terreno, mercado, equipamento, intriga, roubo e armadilha |
 | **Exército** | Pública | Raças recrutadas (cartas em campo) |
 | **Influência individual** | Pública | Campo jogado contra este jogador (máx. 1?) |
-| **Custos das raças** | Pública | Valores impressos e modificadores visíveis; forma de pagamento depende do modelo econômico em teste |
+| **Verba comprometida** | Pública | Moedas de Verba Real permanecem sobre as Raças contratadas |
 
 ### Zonas compartilhadas
 
@@ -149,7 +151,7 @@ Layout **v0.2.1** — esboço PO (23/07): ícones **pequenos** à esquerda, **ar
 | **PV (♥)** | Soma ao total de vida do exército |
 | **ATK (✦)** | Soma ao total de força |
 | **INT** | Soma ao total de inteligência |
-| **Custo (◆)** | Valor-base público da raça; uso exato depende do modelo econômico |
+| **Contrato (◆)** | Quantidade de Verba Real comprometida ao recrutar a raça |
 | **Traço** | Tag para requisitos do Decreto (Voador, Nadador, Bruto, Furtivo, Arcano…) — exibida no rodapé |
 | **Efeito de entrada** | Opcional: dispara quando a raça entra em um exército, inclusive por troca, roubo ou transferência |
 | **Habilidade passiva** | Opcional: efeito contínuo enquanto a raça está no exército |
@@ -164,7 +166,12 @@ Layout **v0.2.1** — esboço PO (23/07): ícones **pequenos** à esquerda, **ar
 
 Protótipo visual: `docs/print/prototipo-racas-v0.2.html`
 
-**Regra de custo:** o valor ◆ de cada raça é sempre público. Se ele representa pagamento imediato ou valor contratual acumulado é uma decisão de playtest — ver [§14](#14-riscos-e-perguntas-em-aberto).
+**Regra de contrato:** ao recrutar, pegue do Tesouro Real a quantidade de moedas indicada e coloque-a sobre a Raça. Essas moedas representam o adiantamento reservado para seu contrato e permanecem visíveis enquanto ela estiver no exército.
+
+- O valor contratado fica fixado no recrutamento, mesmo que o preço do mercado mude depois.
+- Efeitos que alteram contratos existentes devem dizer explicitamente **“adicione Verba”** ou **“remova Verba”**.
+- Ao dispensar uma Raça, devolva ao Tesouro todas as moedas colocadas sobre ela.
+- Ao roubar, trocar ou transferir uma Raça, suas moedas acompanham a carta e o novo controlador assume o contrato.
 
 ### 4.2 Carta de Decreto (oculta)
 
@@ -186,7 +193,7 @@ Tipos (podem compartilhar baralho com ícone):
 | Tipo | Ícone | Onde fica | Exemplo |
 |------|-------|-----------|---------|
 | **Terreno / Campo de mercado** | 🏴 | Slot abaixo do grid 2×3 — afeta **todos** | Pântano reduz PV de Nadadores; tempestade altera Voadores |
-| **Campo individual** | 🎯 | Slot na área de **1 jogador** — afeta só ele | Raças no exército do alvo contam como +1◆ |
+| **Campo individual** | 🎯 | Slot na área de **1 jogador** — afeta só ele | Adicione 1◆ de Verba a cada contrato do alvo enquanto este Campo permanecer |
 | Equipamento | ⚙ | Exército do dono | +2 ATK em 1 raça Bruta |
 | Armadilha | ⚡ | Mão / campo oculto | Cancela recrutamento rival |
 | Intriga | 🎭 | Resolve e descarta | Revela ou troca decreto |
@@ -199,7 +206,7 @@ Tipos (podem compartilhar baralho com ícone):
 | **Alvo** | Todos os jogadores | 1 jogador escolhido ao jogar |
 | **Posição** | Abaixo do mercado central | Na zona do jogador alvo |
 | **Efeito típico** | Preço/stats de raças no grid | Penalidade/bônus só para o alvo |
-| **Exemplo PO** | "Tempestade: Voadores −1 ATK" | "Cada raça no exército do alvo conta como +1◆" |
+| **Exemplo PO** | "Tempestade: Voadores −1 ATK" | "Auditoria: +1◆ de Verba em cada contrato do alvo" |
 
 ---
 
@@ -214,10 +221,12 @@ Tipos (podem compartilhar baralho com ícone):
 ### Recrutar (ação principal)
 
 1. Escolha 1 raça do mercado.
-2. Resolva o **custo em ◆** conforme o modelo econômico em teste e aplique modificadores de terreno, mercado e campo individual.
-3. Resolva o efeito **Ao entrar** da raça, se houver (ex.: Lagáxido inunda vilarejo goblin).
-4. Coloque a raça no seu **exército** (campo público).
-5. Repõe o slot vazio do mercado.
+2. Calcule o **valor do contrato** aplicando modificadores de preço ativos no mercado.
+3. Pegue esse valor em moedas do **Tesouro Real** e coloque-as sobre a Raça.
+4. Coloque a Raça no seu **exército** e resolva seu efeito **Ao entrar**, se houver.
+5. Reponha o slot vazio do mercado.
+
+O general pode assumir contratos acima do limite secreto de seu Decreto, mas não pode declarar vitória enquanto a Verba comprometida ultrapassar esse limite.
 
 ### Volatilidade
 
@@ -225,17 +234,17 @@ Cartas de **Terreno / Campo de mercado** (slot central) e **Campo individual** (
 
 | Modificador | Exemplo |
 |-------------|---------|
-| Custo ±N◆ | Praga: Harpias −1◆ |
+| Contrato inicial ±N◆ | Praga: Harpias entram com −1◆ de Verba |
 | PV ±N | Frio: Brutos −2 PV |
 | ATK ±N | Cidade destruída: Harpias −2 ATK |
 | INT ±N | Biblioteca queimada: Arcanos −3 INT |
 | Indisponível | Raça X não pode ser recrutada nesta rodada |
 
-Modificadores são **públicos** e empilham. Quando uma carta de campo sai de jogo, o modificador termina.
+Modificadores são **públicos** e empilham. Alterações de preço do mercado afetam somente contratos firmados enquanto o efeito estiver ativo; não recalculam contratos anteriores. Efeitos sobre contratos existentes adicionam ou removem moedas fisicamente e informam no texto quando a alteração termina.
 
 ### Exemplo PO
 
-> Jogador X investiu em Harpias. Jogador Y joga *Cidade Natal Destruída* → Harpias −2 ATK e −1◆ no mercado. X pode comprar barato mas falhar no requisito de ATK do decreto.
+> Jogador X investiu em Harpias. Jogador Y joga *Cidade Natal Destruída* → enquanto a carta estiver ativa, Harpias têm −2 ATK e novos contratos de Harpia exigem −1◆ de Verba. X pode contratar barato, mas corre o risco de falhar no requisito de ATK do Decreto.
 
 ---
 
@@ -251,7 +260,7 @@ Distribuídos no setup — **1 por jogador**, ocultos.
 | **Stat máximo** | INT total ≤6 (exército bruto) |
 | **Traço** | ≥2 **Nadador**, ≥3 **Voador** |
 | **Composição** | 5 raças, máx. 2 do mesmo traço |
-| **Orçamento** | Gastar no máximo 16◆ |
+| **Orçamento** | Manter no máximo 16◆ de Verba comprometida |
 
 ### Interação com decretos alheios
 
@@ -279,10 +288,10 @@ Jogador **declara** cumprimento quando acredita ter atingido todos os requisitos
 Estes 16 efeitos validam as categorias antes da expansão para 50–64 cartas. O baralho completo pode combinar cópias, variações numéricas e novas cartas, com maior concentração de Itens do que de Decretos.
 
 **Terreno / Campo (4)**  
-- Cidade Natal Destruída (Harpia −2 ATK, −1◆)  
+- Cidade Natal Destruída (Harpias ficam −2 ATK; novos contratos recebem −1◆ de Verba)  
 - Praga no Pântano (Nadador −2 PV)  
-- Forja Abissal aberta (Bruto +1 ATK, +1◆)  
-- Mercado negro (todas raças +1◆)
+- Forja Abissal aberta (Brutos ficam +1 ATK; novos contratos recebem +1◆ de Verba)  
+- Auditoria Infernal (enquanto permanecer, adicione 1◆ de Verba a cada contrato do alvo)
 
 **Roubo (4)**  
 - Suborno de clã (roube 1 raça do exército alvo)  
@@ -293,7 +302,7 @@ Estes 16 efeitos validam as categorias antes da expansão para 50–64 cartas. O
 **Intriga (4)**  
 - Interrogatório real (revela decreto)  
 - Realocar missão (troca decreto)  
-- Contrato falso (a próxima raça do alvo conta como +2◆ para fins de orçamento)  
+- Contrato falso (a próxima raça recrutada pelo alvo recebe +2◆ de Verba)  
 - Propaganda (copie o traço de 1 raça sua para contar em dobro nesta rodada)
 
 **Buff / Armadilha (4)**  
@@ -311,7 +320,7 @@ Estes 16 efeitos validam as categorias antes da expansão para 50–64 cartas. O
 1. Cada jogador recebe 1 **Decreto** (oculto).
 2. Comprar **3 itens** iniciais.
 3. Revelar **6 raças** no mercado.
-4. Preparar moedas somente se o playtest usar o modelo de dinheiro físico.
+4. Colocar as moedas de **Verba Real** no Tesouro, ao alcance de todos.
 
 ### Turno do general
 
@@ -322,7 +331,7 @@ Estes 16 efeitos validam as categorias antes da expansão para 50–64 cartas. O
 
 **Lista de ações (escolhe 2):**
 
-- **Recrutar** — mercado → exército (resolve o custo conforme o modelo econômico em teste)
+- **Recrutar** — mercado → exército; pegue Verba do Tesouro e coloque sobre a Raça
 - **Jogar item** — resolve e descarta (ou campo permanece)
 - **Negociar** — troca com jogador (não vinculante até confirmar)
 - **Declarar vitória** — valida decreto
@@ -332,16 +341,20 @@ Estes 16 efeitos validam as categorias antes da expansão para 50–64 cartas. O
 
 Quando todos jogaram: limpar modificadores "até fim da rodada". O jogador à esquerda de quem iniciou começa a próxima rodada; não é necessário registrar o número da rodada.
 
-### Custo e orçamento
+### Crédito de Guerra e orçamento
 
 ```
-Valor do exército = soma dos custos atuais de todas as raças no exército
-                  + modificadores de terreno, mercado e campo individual
+Verba comprometida = soma das moedas colocadas sobre todas as raças
+                   + ajustes temporários de Campo ainda ativos
 ```
 
-O valor ◆ das cartas e todos os modificadores em campo são públicos. O limite concedido pelo Rei permanece oculto no Decreto.
+O Tesouro Real adianta a Verba necessária para cada contratação. As moedas não representam patrimônio do general: representam contratos que o Rei poderá aprovar ao final.
 
-O jogo não elimina definitivamente quem ultrapassa ou calcula incorretamente o orçamento. O tratamento exato depende da escolha entre **dinheiro físico** e **orçamento contratual**, descrita nas hipóteses de playtest do [§14](#14-riscos-e-perguntas-em-aberto).
+- A Verba comprometida é pública porque fica sobre as cartas.
+- O limite aprovado permanece oculto no Decreto.
+- O jogador pode ultrapassar seu limite, mas não pode declarar vitória enquanto estiver acima dele.
+- Para liberar Verba, pode dispensar, trocar ou transferir Raças, ou usar cartas que renegociem contratos.
+- O jogo nunca elimina definitivamente quem estoura o orçamento.
 
 ---
 
@@ -356,7 +369,7 @@ O jogo não elimina definitivamente quem ultrapassa ou calcula incorretamente o 
 ### Roubo
 
 - Itens de roubo resolvem contra exército ou mão.
-- Raça roubada vai para o exército do ladrão, que se torna seu controlador e resolve efeitos de transferência. O tratamento do custo depende do modelo econômico — ver §14.
+- Raça roubada vai para o exército do ladrão, que se torna seu controlador e resolve efeitos de transferência. Todas as moedas sobre a carta acompanham a Raça; o ladrão assume o contrato e o antigo controlador libera aquela Verba.
 
 ### Trapaça de mercado
 
@@ -372,7 +385,7 @@ O jogo não elimina definitivamente quem ultrapassa ou calcula incorretamente o 
 | Modo | Regra |
 |------|-------|
 | **Padrão provisório** | Jogadores declaram e validam o Decreto dentro da janela de vitória testada |
-| **Desempate por eficiência** | Se 2+ cumprirem na mesma janela: menor valor ◆ do exército vence |
+| **Desempate por eficiência** | Se 2+ cumprirem na mesma janela: menor Verba comprometida vence |
 | **Fim por baralho** | Se mercado esgotar 2×: maior cumprimento parcial vence |
 
 O menor custo **não é um bônus escrito no Decreto**; é somente critério de desempate. O playtest deve comparar vitória imediata com uma janela até o fim da rodada, pois o desempate só é relevante se mais de um jogador puder concluir antes da resolução.
@@ -383,7 +396,7 @@ Falhar na validação ou exceder o orçamento nunca retira o jogador definitivam
 
 1. Jogador revela Decreto.
 2. Conta PV, ATK, INT, traços, nº de raças no exército.
-3. Verifica orçamento.
+3. Soma as moedas sobre suas Raças e verifica o limite do orçamento.
 4. Aplica modificadores temporários se ainda ativos.
 
 ---
@@ -441,7 +454,7 @@ O protótipo expandido usa cópias dessas espécies para alcançar 36–48 carta
 | Mantícora | 4 | 5 | 2 | 5 | Voador | *Ao entrar:* expulse do exército alvo 1 raça com PV 2 ou menos |
 | Golem | 6 | 5 | 1 | 5 | Bruto | *Enquanto estiver:* +1 PV se INT total ≤5 |
 | Goblin | 2 | 2 | 3 | 2 | Furtivo | — |
-| Gremlin Fiscal | 2 | 1 | 4 | 2 | Furtivo | *Enquanto estiver:* suas outras raças contam como +1◆; pode ser transferido |
+| Gremlin Fiscal | 2 | 1 | 4 | 2 | Furtivo | *Enquanto estiver:* mantenha +1◆ de Verba sobre cada outra raça; pode ser transferido |
 | Ogro | 5 | 6 | 1 | 5 | Bruto | — |
 | Súcubo | 3 | 3 | 5 | 4 | Arcano | *Ao entrar:* roube 1 item |
 | Tritão | 4 | 3 | 2 | 3 | Nadador | — |
@@ -461,7 +474,7 @@ O protótipo expandido usa cópias dessas espécies para alcançar 36–48 carta
 | D02 | Tritões do Abismo | 15◆ | ≥2 Nadador, ATK≥10, ≥3 raças |
 | D03 | Punho de Pedra | 20◆ | ≥2 Bruto, ATK≥16, INT≤6 |
 | D04 | Esquadra Mista | 16◆ | ≥4 raças diferentes, PV≥14, ATK≥12 |
-| D05 | Companhia Econômica | 12◆ | ≥4 raças, custo médio ≤3◆, INT≥10 |
+| D05 | Companhia Econômica | 12◆ | ≥4 raças, Verba média ≤3◆, INT≥10 |
 | D06 | Corte Arcana | 18◆ | ≥2 Arcano, INT≥16, PV≥10 |
 | D07 | Força Bruta | 17◆ | ATK≥20, PV≥14, INT≤10 |
 | D08 | Exército Equilibrado | 16◆ | PV≥12, ATK≥12, INT≥12, ≥4 raças |
@@ -483,34 +496,30 @@ Os valores acima são pontos de partida mais exigentes, não números balanceado
 
 ## 14. Riscos e perguntas em aberto
 
-### Hipótese A — orçamento contratual
+### Modelo econômico adotado — Crédito de Guerra
 
-- O Rei aprova o exército e só paga após o cumprimento do Decreto.
-- Recrutar não consome moedas; o jogador soma o valor atual das raças que controla.
-- Terrenos, campos e habilidades alteram o valor contabilizado do exército.
-- O limite permanece secreto e é conferido na declaração.
-- Estar acima do limite impede a vitória, mas não elimina: o jogador pode reorganizar o exército.
+O jogo unifica orçamento secreto e dinheiro físico:
 
-### Hipótese B — dinheiro físico
+1. O Tesouro Real adianta moedas quando um general recruta uma Raça.
+2. As moedas permanecem sobre a carta como **Verba comprometida**.
+3. O preço do mercado define o contrato inicial e fica travado no recrutamento.
+4. Apenas cartas que adicionam ou removem Verba alteram contratos existentes.
+5. Moedas acompanham Raças roubadas, trocadas ou transferidas.
+6. O jogador pode estourar o orçamento, mas precisa reorganizar o exército antes de declarar vitória.
+7. Ao revelar o Decreto, o Rei aprova o exército somente se requisitos e limite de Verba forem atendidos.
 
-- Cada jogador recebe moedas e paga ao recrutar no mercado.
-- Alterações de preço são imediatas e intuitivas.
-- O limite do Decreto pode funcionar como verba inicial ou condição adicional.
-- Exige moedas, cartas de dinheiro ou outro componente de controle.
-
-O próximo playtest deve comparar os dois modelos. Até essa decisão, cartas devem preferir textos compatíveis com ambos, como **“esta raça conta como +2◆”**, evitando depender de “pagar” ou “receber” dinheiro.
+O primeiro playtest usa Tesouro ilimitado. Deve registrar a maior quantidade simultânea de moedas para dimensionar o componente físico final.
 
 ### Decisões necessárias
 
 | # | Pergunta | Impacto |
 |---|----------|---------|
-| 1 | O jogo usa orçamento contratual ou dinheiro físico? | Define recrutamento, componentes e textos das cartas |
-| 2 | No modelo físico, o Decreto concede verba inicial ou também impõe teto final? | Economia e condição de vitória |
-| 3 | Qual consequência recuperável ocorre ao declarar incorretamente ou exceder o limite? | Tensão sem eliminação |
-| 4 | A vitória é imediata ou existe janela até o fim da rodada? | Torna o desempate por menor custo relevante |
-| 5 | Mercado 6 fixo ou escala com jogadores? | Componentes |
-| 6 | Campo individual aceita no máximo 1 carta? | Legibilidade e acúmulo de penalidades |
-| 7 | Mercado esgotar 2× encerra mesmo a partida? | Duração e desempate parcial |
+| 1 | Qual consequência recuperável ocorre ao declarar incorretamente? | Tensão sem eliminação |
+| 2 | A vitória é imediata ou existe janela até o fim da rodada? | Torna o desempate por menor Verba relevante |
+| 3 | Mercado 6 fixo ou escala com jogadores? | Componentes |
+| 4 | Campo individual aceita no máximo 1 carta? | Legibilidade e acúmulo de penalidades |
+| 5 | Mercado esgotar 2× encerra mesmo a partida? | Duração e desempate parcial |
+| 6 | O Tesouro deve continuar ilimitado ou a escassez global adiciona decisões interessantes? | Balanceamento e quantidade de moedas |
 
 ---
 
@@ -518,7 +527,7 @@ O próximo playtest deve comparar os dois modelos. Até essa decisão, cartas de
 
 | Fase | Entrega |
 |------|---------|
-| **Agora** | Validar com o PO: modelo econômico, consequência de falha e janela de vitória |
+| **Agora** | Prototipar Crédito de Guerra; validar consequência de falha e janela de vitória |
 | **+1** | RULEBOOK v0.2 |
 | **+2** | Print: carta de raça novo layout + 17 espécies de teste |
 | **+3** | Playtest papel com 4 jogadores |
