@@ -45,12 +45,12 @@
     "kind": "race",
     "id": "R09",
     "name": "SÚCUBO",
-    "art": "art/sucubo-r09.png",
+    "art": "art/sucubo-r09-alternativa-escrachada.png",
     "artFocusY": 0.48,
     "variants": [
       {
-        "suffix": "alternativa-escrachada",
-        "art": "art/sucubo-r09-alternativa-escrachada.png",
+        "suffix": "versao-anterior",
+        "art": "art/sucubo-r09.png",
         "artFocusY": 0.48
       }
     ],

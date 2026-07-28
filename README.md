@@ -11,6 +11,11 @@ Board game competitivo de cartas: generais usam Crédito de Guerra para montar e
 | [design/GDD-v0.2.md](design/GDD-v0.2.md) | **GDD atual** — mercado de raças, decretos, itens |
 | [design/RULEBOOK-v0.2.md](design/RULEBOOK-v0.2.md) | **Regras do microprotótipo** — Crédito de Guerra |
 | [design/PLAYTEST-v0.2.md](design/PLAYTEST-v0.2.md) | Ficha para registrar as primeiras partidas |
+| [simulation/reports/baseline.md](simulation/reports/baseline.md) | Relatório automático — viabilidade dos Decretos e 30 mil partidas-bot |
+| [design/BALANCE-v0.2.1.md](design/BALANCE-v0.2.1.md) | Candidato de balanceamento — novos monstros, Decretos e ritmo de recrutamento |
+| [simulation/reports/candidate-v0.2.1.md](simulation/reports/candidate-v0.2.1.md) | Resultado automático do candidato v0.2.1 |
+| [simulation/reports/negotiation-v0.2.1.md](simulation/reports/negotiation-v0.2.1.md) | Comparação pareada com e sem negociação |
+| [simulation/README.md](simulation/README.md) | Como executar e ampliar o simulador |
 | [design/DESIGN-PIVOT-v0.2.md](design/DESIGN-PIVOT-v0.2.md) | O que mudou após feedback do PO |
 | [design/GDD.md](design/GDD.md) | GDD v0.1 arquivado (semi-coop / Cofre) |
 | [design/RULEBOOK.md](design/RULEBOOK.md) | Livro de regras v0.1 (desatualizado) |

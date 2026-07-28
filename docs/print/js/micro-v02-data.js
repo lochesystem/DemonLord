@@ -70,3 +70,14 @@ const MICRO_COUNTS = {
   decrees: MICRO_DECREES.length,
   total: MICRO_RACES.length + MICRO_ITEMS.length + MICRO_DECREES.length,
 };
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    MICRO_RACES_BASE,
+    MICRO_RACES,
+    MICRO_ITEMS_BASE,
+    MICRO_ITEMS,
+    MICRO_DECREES,
+    MICRO_COUNTS,
+  };
+}

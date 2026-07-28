@@ -1,0 +1,331 @@
+{
+  "profile": "v0.2.1",
+  "generatedAt": "2026-07-28T18:59:13.079Z",
+  "runsPerPlayerCount": 20000,
+  "feasibility": [
+    {
+      "id": "D01",
+      "name": "Legião dos Céus",
+      "budget": 18,
+      "solutions": 4339,
+      "minCost": 10,
+      "minCards": 4,
+      "example": [
+        "Gárgula",
+        "Morcego Infernal",
+        "Morcego Infernal",
+        "Slime"
+      ],
+      "closestDistance": 0,
+      "closest": {
+        "cost": 10,
+        "cards": 4,
+        "pv": 14,
+        "atk": 9,
+        "int": 8,
+        "races": [
+          "Gárgula",
+          "Morcego Infernal",
+          "Morcego Infernal",
+          "Slime"
+        ]
+      },
+      "feasible": true
+    },
+    {
+      "id": "D02",
+      "name": "Tritões do Abismo",
+      "budget": 15,
+      "solutions": 1252,
+      "minCost": 10,
+      "minCards": 4,
+      "example": [
+        "Slime",
+        "Slime",
+        "Lagáxido",
+        "Cão Infernal"
+      ],
+      "closestDistance": 0,
+      "closest": {
+        "cost": 10,
+        "cards": 4,
+        "pv": 16,
+        "atk": 11,
+        "int": 6,
+        "races": [
+          "Slime",
+          "Slime",
+          "Lagáxido",
+          "Cão Infernal"
+        ]
+      },
+      "feasible": true
+    },
+    {
+      "id": "D03",
+      "name": "Punho de Pedra",
+      "budget": 20,
+      "solutions": 2627,
+      "minCost": 11,
+      "minCards": 3,
+      "example": [
+        "Orc Berserker",
+        "Orc Berserker",
+        "Cão Infernal"
+      ],
+      "closestDistance": 0,
+      "closest": {
+        "cost": 11,
+        "cards": 3,
+        "pv": 9,
+        "atk": 17,
+        "int": 1,
+        "races": [
+          "Orc Berserker",
+          "Orc Berserker",
+          "Cão Infernal"
+        ]
+      },
+      "feasible": true
+    },
+    {
+      "id": "D04",
+      "name": "Esquadra Mista",
+      "budget": 16,
+      "solutions": 18592,
+      "minCost": 10,
+      "minCards": 4,
+      "example": [
+        "Goblin",
+        "Tritão",
+        "Slime",
+        "Cão Infernal"
+      ],
+      "closestDistance": 0,
+      "closest": {
+        "cost": 10,
+        "cards": 4,
+        "pv": 15,
+        "atk": 12,
+        "int": 7,
+        "races": [
+          "Goblin",
+          "Tritão",
+          "Slime",
+          "Cão Infernal"
+        ]
+      },
+      "feasible": true
+    },
+    {
+      "id": "D05",
+      "name": "Companhia Econômica",
+      "budget": 12,
+      "solutions": 42,
+      "minCost": 10,
+      "minCards": 4,
+      "example": [
+        "Gremlin Fiscal",
+        "Kobold",
+        "Espectro",
+        "Diabrete"
+      ],
+      "closestDistance": 0,
+      "closest": {
+        "cost": 10,
+        "cards": 4,
+        "pv": 8,
+        "atk": 7,
+        "int": 17,
+        "races": [
+          "Gremlin Fiscal",
+          "Kobold",
+          "Espectro",
+          "Diabrete"
+        ]
+      },
+      "feasible": true
+    },
+    {
+      "id": "D06",
+      "name": "Corte Arcana",
+      "budget": 18,
+      "solutions": 12831,
+      "minCost": 11,
+      "minCards": 4,
+      "example": [
+        "Tritão",
+        "Kobold",
+        "Espectro",
+        "Diabrete"
+      ],
+      "closestDistance": 0,
+      "closest": {
+        "cost": 11,
+        "cards": 4,
+        "pv": 10,
+        "atk": 9,
+        "int": 14,
+        "races": [
+          "Tritão",
+          "Kobold",
+          "Espectro",
+          "Diabrete"
+        ]
+      },
+      "feasible": true
+    },
+    {
+      "id": "D07",
+      "name": "Força Bruta",
+      "budget": 18,
+      "solutions": 8226,
+      "minCost": 13,
+      "minCards": 3,
+      "example": [
+        "Ogro",
+        "Cão Infernal",
+        "Troll de Guerra"
+      ],
+      "closestDistance": 0,
+      "closest": {
+        "cost": 13,
+        "cards": 4,
+        "pv": 14,
+        "atk": 17,
+        "int": 7,
+        "races": [
+          "Diabrete",
+          "Centauro",
+          "Cão Infernal",
+          "Cão Infernal"
+        ]
+      },
+      "feasible": true
+    },
+    {
+      "id": "D08",
+      "name": "Exército Equilibrado",
+      "budget": 16,
+      "solutions": 19063,
+      "minCost": 11,
+      "minCards": 4,
+      "example": [
+        "Goblin",
+        "Kobold",
+        "Centauro",
+        "Cão Infernal"
+      ],
+      "closestDistance": 0,
+      "closest": {
+        "cost": 11,
+        "cards": 4,
+        "pv": 12,
+        "atk": 12,
+        "int": 11,
+        "races": [
+          "Goblin",
+          "Kobold",
+          "Centauro",
+          "Cão Infernal"
+        ]
+      },
+      "feasible": true
+    }
+  ],
+  "simulations": [
+    {
+      "playerCount": 3,
+      "runs": 20000,
+      "completionRate": 0.94525,
+      "rounds": {
+        "median": 2,
+        "p90": 2,
+        "mean": 2.065220841047342
+      },
+      "noRecruitRoundRate": 0.0562,
+      "winsByDecree": {
+        "D01": 1645,
+        "D02": 1871,
+        "D03": 3426,
+        "D04": 2762,
+        "D05": 1779,
+        "D06": 1948,
+        "D07": 2785,
+        "D08": 2689
+      },
+      "appearancesByDecree": {
+        "D01": 7493,
+        "D02": 7656,
+        "D03": 7601,
+        "D04": 7510,
+        "D05": 7571,
+        "D06": 7339,
+        "D07": 7448,
+        "D08": 7382
+      }
+    },
+    {
+      "playerCount": 4,
+      "runs": 20000,
+      "completionRate": 0.98955,
+      "rounds": {
+        "median": 2,
+        "p90": 2,
+        "mean": 2.0269314334798647
+      },
+      "noRecruitRoundRate": 0.0107,
+      "winsByDecree": {
+        "D01": 1728,
+        "D02": 2793,
+        "D03": 3597,
+        "D04": 2297,
+        "D05": 2809,
+        "D06": 1915,
+        "D07": 2367,
+        "D08": 2285
+      },
+      "appearancesByDecree": {
+        "D01": 10082,
+        "D02": 10074,
+        "D03": 10000,
+        "D04": 9975,
+        "D05": 9982,
+        "D06": 10035,
+        "D07": 9939,
+        "D08": 9913
+      }
+    },
+    {
+      "playerCount": 5,
+      "runs": 20000,
+      "completionRate": 0.9982,
+      "rounds": {
+        "median": 2,
+        "p90": 2,
+        "mean": 2.009567220997796
+      },
+      "noRecruitRoundRate": 0.0018,
+      "winsByDecree": {
+        "D01": 1748,
+        "D02": 3648,
+        "D03": 3381,
+        "D04": 1757,
+        "D05": 3913,
+        "D06": 1922,
+        "D07": 1758,
+        "D08": 1837
+      },
+      "appearancesByDecree": {
+        "D01": 12416,
+        "D02": 12480,
+        "D03": 12624,
+        "D04": 12529,
+        "D05": 12506,
+        "D06": 12455,
+        "D07": 12436,
+        "D08": 12554
+      }
+    }
+  ]
+}

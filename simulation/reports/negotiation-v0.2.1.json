@@ -1,0 +1,90 @@
+{
+  "profile": "v0.2.1",
+  "runs": 20000,
+  "assumptions": [
+    "Bots conhecem o valor que cada Raça possui para o outro jogador durante a proposta.",
+    "Somente trocas de uma Raça por uma Raça são consideradas.",
+    "A troca custa uma ação do jogador ativo e é limitada a uma por turno.",
+    "Ambos só aceitam quando seu progresso estimado melhora."
+  ],
+  "withoutNegotiation": {
+    "completionRate": 0.98855,
+    "meanRounds": 2.0277173638156896,
+    "gamesWithTradeRate": 0,
+    "meanTrades": 0,
+    "winnerTradedRate": 0,
+    "comebackRate": 0.6419503312933084,
+    "leadChangeRate": 0.74665,
+    "decreeWinRates": {
+      "D01": 0.16910520553399025,
+      "D02": 0.2791654127796168,
+      "D03": 0.34896249002394253,
+      "D04": 0.23304278128444045,
+      "D05": 0.2902935889754344,
+      "D06": 0.19853604732778501,
+      "D07": 0.22447552447552446,
+      "D08": 0.2335203366058906
+    }
+  },
+  "withNegotiation": {
+    "completionRate": 0.9937,
+    "meanRounds": 2.0225420146925632,
+    "gamesWithTradeRate": 0.15425,
+    "meanTrades": 0.1712,
+    "winnerTradedRate": 0.06153768743081413,
+    "comebackRate": 0.6466740464929053,
+    "leadChangeRate": 0.7482,
+    "decreeWinRates": {
+      "D01": 0.1717925748979795,
+      "D02": 0.2844818938710001,
+      "D03": 0.36851556264964086,
+      "D04": 0.22112012824366295,
+      "D05": 0.2920910724985021,
+      "D06": 0.19683144490123333,
+      "D07": 0.21728271728271728,
+      "D08": 0.2352234021238229
+    }
+  },
+  "changedWinnerRate": 0.05301229197227983,
+  "oneRecruitPerTurn": {
+    "withoutNegotiation": {
+      "completionRate": 0.99145,
+      "meanRounds": 3.677139543093449,
+      "gamesWithTradeRate": 0,
+      "meanTrades": 0,
+      "winnerTradedRate": 0,
+      "comebackRate": 0.5800090776135962,
+      "leadChangeRate": 0.63615,
+      "decreeWinRates": {
+        "D01": 0.17248930028864337,
+        "D02": 0.24596248369946835,
+        "D03": 0.50658419792498,
+        "D04": 0.18404969441939686,
+        "D05": 0.22788096664669463,
+        "D06": 0.172064574350747,
+        "D07": 0.2696303696303696,
+        "D08": 0.20356641955519936
+      }
+    },
+    "withNegotiation": {
+      "completionRate": 0.9946,
+      "meanRounds": 3.601447818218379,
+      "gamesWithTradeRate": 0.5268,
+      "meanTrades": 0.77505,
+      "winnerTradedRate": 0.30067363764327365,
+      "comebackRate": 0.5372511562437161,
+      "leadChangeRate": 0.59765,
+      "decreeWinRates": {
+        "D01": 0.17129491390464816,
+        "D02": 0.26291503661350185,
+        "D03": 0.5781125299281724,
+        "D04": 0.12102995691814447,
+        "D05": 0.2218893549031356,
+        "D06": 0.1737691767772987,
+        "D07": 0.2932067932067932,
+        "D08": 0.165998797836105
+      }
+    },
+    "changedWinnerRate": 0.19617538725465464
+  }
+}

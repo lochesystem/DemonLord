@@ -1,0 +1,328 @@
+{
+  "profile": "v0.2",
+  "generatedAt": "2026-07-28T18:52:13.869Z",
+  "runsPerPlayerCount": 10000,
+  "feasibility": [
+    {
+      "id": "D01",
+      "name": "Legião dos Céus",
+      "budget": 18,
+      "solutions": 3225,
+      "minCost": 10,
+      "minCards": 4,
+      "example": [
+        "Gárgula",
+        "Morcego Infernal",
+        "Morcego Infernal",
+        "Slime"
+      ],
+      "closestDistance": 0,
+      "closest": {
+        "cost": 10,
+        "cards": 4,
+        "pv": 13,
+        "atk": 9,
+        "int": 8,
+        "races": [
+          "Gárgula",
+          "Morcego Infernal",
+          "Morcego Infernal",
+          "Slime"
+        ]
+      },
+      "feasible": true
+    },
+    {
+      "id": "D02",
+      "name": "Tritões do Abismo",
+      "budget": 15,
+      "solutions": 3422,
+      "minCost": 9,
+      "minCards": 3,
+      "example": [
+        "Ogro",
+        "Slime",
+        "Slime"
+      ],
+      "closestDistance": 0,
+      "closest": {
+        "cost": 9,
+        "cards": 3,
+        "pv": 13,
+        "atk": 10,
+        "int": 3,
+        "races": [
+          "Ogro",
+          "Slime",
+          "Slime"
+        ]
+      },
+      "feasible": true
+    },
+    {
+      "id": "D03",
+      "name": "Punho de Pedra",
+      "budget": 20,
+      "solutions": 188,
+      "minCost": 14,
+      "minCards": 3,
+      "example": [
+        "Ogro",
+        "Ogro",
+        "Centauro"
+      ],
+      "closestDistance": 0,
+      "closest": {
+        "cost": 14,
+        "cards": 3,
+        "pv": 14,
+        "atk": 16,
+        "int": 4,
+        "races": [
+          "Ogro",
+          "Ogro",
+          "Centauro"
+        ]
+      },
+      "feasible": true
+    },
+    {
+      "id": "D04",
+      "name": "Esquadra Mista",
+      "budget": 16,
+      "solutions": 9477,
+      "minCost": 12,
+      "minCards": 4,
+      "example": [
+        "Tritão",
+        "Slime",
+        "Diabrete",
+        "Centauro"
+      ],
+      "closestDistance": 0,
+      "closest": {
+        "cost": 12,
+        "cards": 4,
+        "pv": 14,
+        "atk": 12,
+        "int": 8,
+        "races": [
+          "Tritão",
+          "Slime",
+          "Diabrete",
+          "Centauro"
+        ]
+      },
+      "feasible": true
+    },
+    {
+      "id": "D05",
+      "name": "Companhia Econômica",
+      "budget": 12,
+      "solutions": 1934,
+      "minCost": 8,
+      "minCards": 4,
+      "example": [
+        "Kobold",
+        "Kobold",
+        "Slime",
+        "Slime"
+      ],
+      "closestDistance": 0,
+      "closest": {
+        "cost": 8,
+        "cards": 4,
+        "pv": 12,
+        "atk": 6,
+        "int": 10,
+        "races": [
+          "Kobold",
+          "Kobold",
+          "Slime",
+          "Slime"
+        ]
+      },
+      "feasible": true
+    },
+    {
+      "id": "D06",
+      "name": "Corte Arcana",
+      "budget": 18,
+      "solutions": 7285,
+      "minCost": 12,
+      "minCards": 4,
+      "example": [
+        "Súcubo",
+        "Kobold",
+        "Espectro",
+        "Lagáxido"
+      ],
+      "closestDistance": 0,
+      "closest": {
+        "cost": 12,
+        "cards": 5,
+        "pv": 12,
+        "atk": 9,
+        "int": 16,
+        "races": [
+          "Kobold",
+          "Kobold",
+          "Espectro",
+          "Slime",
+          "Diabrete"
+        ]
+      },
+      "feasible": true
+    },
+    {
+      "id": "D07",
+      "name": "Força Bruta",
+      "budget": 17,
+      "solutions": 0,
+      "minCost": null,
+      "minCards": null,
+      "example": null,
+      "closestDistance": 0.05,
+      "closest": {
+        "cost": 17,
+        "cards": 4,
+        "pv": 16,
+        "atk": 19,
+        "int": 7,
+        "races": [
+          "Ogro",
+          "Ogro",
+          "Diabrete",
+          "Centauro"
+        ]
+      },
+      "feasible": false
+    },
+    {
+      "id": "D08",
+      "name": "Exército Equilibrado",
+      "budget": 16,
+      "solutions": 9165,
+      "minCost": 12,
+      "minCards": 5,
+      "example": [
+        "Goblin",
+        "Goblin",
+        "Slime",
+        "Diabrete",
+        "Diabrete"
+      ],
+      "closestDistance": 0,
+      "closest": {
+        "cost": 12,
+        "cards": 5,
+        "pv": 12,
+        "atk": 12,
+        "int": 13,
+        "races": [
+          "Goblin",
+          "Goblin",
+          "Slime",
+          "Diabrete",
+          "Diabrete"
+        ]
+      },
+      "feasible": true
+    }
+  ],
+  "simulations": [
+    {
+      "playerCount": 3,
+      "runs": 10000,
+      "completionRate": 0.969,
+      "rounds": {
+        "median": 2,
+        "p90": 3,
+        "mean": 2.1852425180598556
+      },
+      "noRecruitRoundRate": 0.0382,
+      "winsByDecree": {
+        "D01": 914,
+        "D02": 2400,
+        "D03": 525,
+        "D04": 1432,
+        "D05": 3238,
+        "D06": 558,
+        "D07": 0,
+        "D08": 623
+      },
+      "appearancesByDecree": {
+        "D01": 3758,
+        "D02": 3732,
+        "D03": 3673,
+        "D04": 3777,
+        "D05": 3777,
+        "D06": 3720,
+        "D07": 3751,
+        "D08": 3812
+      }
+    },
+    {
+      "playerCount": 4,
+      "runs": 10000,
+      "completionRate": 0.9941,
+      "rounds": {
+        "median": 2,
+        "p90": 2,
+        "mean": 2.081078362337793
+      },
+      "noRecruitRoundRate": 0.0084,
+      "winsByDecree": {
+        "D01": 753,
+        "D02": 2979,
+        "D03": 260,
+        "D04": 1189,
+        "D05": 3975,
+        "D06": 345,
+        "D07": 0,
+        "D08": 440
+      },
+      "appearancesByDecree": {
+        "D01": 5069,
+        "D02": 4994,
+        "D03": 4965,
+        "D04": 5068,
+        "D05": 4983,
+        "D06": 4994,
+        "D07": 4999,
+        "D08": 4928
+      }
+    },
+    {
+      "playerCount": 5,
+      "runs": 10000,
+      "completionRate": 0.9988,
+      "rounds": {
+        "median": 2,
+        "p90": 2,
+        "mean": 2.026732078494193
+      },
+      "noRecruitRoundRate": 0.0013,
+      "winsByDecree": {
+        "D01": 604,
+        "D02": 3415,
+        "D03": 110,
+        "D04": 753,
+        "D05": 4694,
+        "D06": 143,
+        "D07": 0,
+        "D08": 269
+      },
+      "appearancesByDecree": {
+        "D01": 6244,
+        "D02": 6356,
+        "D03": 6185,
+        "D04": 6192,
+        "D05": 6288,
+        "D06": 6197,
+        "D07": 6274,
+        "D08": 6264
+      }
+    }
+  ]
+}
