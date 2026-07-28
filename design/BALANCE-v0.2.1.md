@@ -1,7 +1,7 @@
-# DemonLord — candidato de balanceamento v0.2.1
+# DemonLord — balanceamento v0.2.1
 
-Este documento descreve um perfil experimental. Ele não substitui o GDD v0.2
-até ser validado por simulação e playtest.
+Este perfil foi promovido ao GDD e ao Print & Play para o **playtest controlado
+v0.2.1**. Seus valores continuam provisórios até a validação com jogadores.
 
 ## Objetivo
 

@@ -1,4 +1,4 @@
-# GDD — DemonLord v0.2
+# GDD — DemonLord v0.2.1
 
 Documento mestre de design alinhado ao feedback do PO (Hugo Rezende).
 
@@ -187,12 +187,15 @@ Protótipo visual: `docs/print/prototipo-racas-v0.2.html`
 
 ### 4.2 Carta de Decreto (oculta)
 
-| Campo | Exemplo |
+Os campos abaixo mostram a anatomia possível. Um Decreto usa somente os campos
+necessários à sua missão; a coluna exemplifica a carta **D01 — Legião dos Céus**.
+
+| Campo | Exemplo D01 |
 |-------|---------|
 | Orçamento máximo | 18◆ |
-| Requisitos de stat | PV total ≥14, ATK ≥10, INT ≥8 |
+| Requisitos de stat | PV total ≥12, INT ≥8 |
 | Requisitos de traço | ≥3 raças com **Voador** |
-| Requisitos de composição | ≥4 raças diferentes |
+| Requisitos de composição | Não possui |
 
 Os Decretos **não possuem bônus de otimização separado**. Cumprir requisitos com menor custo já representa maior eficiência e pode servir como desempate quando mais de um jogador concluir na mesma janela de vitória.
 
@@ -351,6 +354,10 @@ Estes 16 efeitos validam as categorias antes da expansão para 50–64 cartas. O
 - **Negociar** — troca com jogador (não vinculante até confirmar)
 - **Declarar vitória** — valida decreto
 
+Cada ação pode ser repetida, exceto **Recrutar**, que pode ser realizado no
+máximo **1 vez por turno**. Essa limitação mantém a segunda ação relevante para
+Itens, negociação, dispensa e declaração.
+
 ### Fim de rodada
 
 Quando todos jogaram: limpar modificadores "até fim da rodada". O jogador à esquerda de quem iniciou começa a próxima rodada; não é necessário registrar o número da rodada.
@@ -379,6 +386,7 @@ O Tesouro Real adianta a Verba necessária para cada contratação. As moedas n�
 - Jogadores podem trocar: itens, raças do exército, "favores" futuros.
 - **Nada é obrigatório** — mentir e quebrar acordo é permitido.
 - Trocas simultâneas: revelar o que entregam ao mesmo tempo.
+- Concluir uma troca custa 1 ação do jogador ativo e só pode ocorrer uma vez por turno.
 
 ### Roubo
 
@@ -456,44 +464,49 @@ Baseado nos esboços PO (23/07):
 
 ## 12. Conteúdo MVP — catálogo inicial
 
-### Raças (17 espécies para playtest)
+### Raças (20 espécies para playtest)
 
 O protótipo expandido usa cópias dessas espécies para alcançar 36–48 cartas sem exigir uma arte exclusiva por carta. Cada traço recorrente deve aparecer em pelo menos 3 espécies, permitindo que efeitos atinjam uma família de monstros em vez de depender apenas de Harpias ou de outra raça específica.
 
 | ID | Raça | Sexo | PV | ATK | INT | ◆ | Traço | Habilidade |
 |----|------|------|----|-----|-----|---|-------|------------|
-| R01 | Harpia | Feminino | 3 | 4 | 2 | 4 | Voador | — |
+| R01 | Harpia | Feminino | 3 | 4 | 2 | 4 | Voador | +1 ATK se controlar outro Voador |
 | R02 | Gárgula | Neutro | 5 | 3 | 1 | 4 | Voador | *Enquanto estiver:* +1 PV sob Terreno urbano |
 | R03 | Morcego Infernal | Masculino | 2 | 2 | 3 | 2 | Voador | *Ao entrar:* olhe a próxima raça do baralho |
 | R04 | Mantícora | Feminino | 4 | 5 | 2 | 5 | Voador | *Ao entrar:* expulse do exército alvo 1 raça com PV 2 ou menos |
 | R05 | Golem | Neutro | 6 | 5 | 1 | 5 | Bruto | *Enquanto estiver:* +1 PV se INT total ≤5 |
-| R06 | Goblin | Masculino | 2 | 2 | 3 | 2 | Furtivo | — |
+| R06 | Goblin | Masculino | 2 | 2 | 3 | 2 | Furtivo | +1 ATK se controlar outro Goblin |
 | R07 | Gremlin Fiscal | Masculino | 2 | 1 | 4 | 2 | Furtivo | *Enquanto estiver:* mantenha +1◆ de Verba sobre cada outra raça; pode ser transferido |
-| R08 | Ogro | Masculino | 5 | 6 | 1 | 5 | Bruto | — |
+| R08 | Ogro | Masculino | 5 | 6 | 1 | 5 | Bruto | +1 ATK se controlar outro Bruto |
 | R09 | Súcubo | Feminino | 3 | 3 | 5 | 4 | Arcano | *Ao entrar:* transfira para seu exército 1 Raça Masculina de contrato 3◆ ou menos controlada por um rival |
-| R10 | Tritão | Masculino | 4 | 3 | 2 | 3 | Nadador | — |
-| R11 | Kobold | Masculino | 2 | 1 | 4 | 2 | Furtivo | +1 INT |
-| R12 | Minotauro | Masculino | 5 | 5 | 2 | 5 | Bruto | — |
+| R10 | Tritão | Masculino | 4 | 3 | 2 | 3 | Nadador | +1 PV se controlar outro Nadador |
+| R11 | Kobold | Masculino | 2 | 1 | 4 | 2 | Furtivo | +1 INT se controlar outro Furtivo |
+| R12 | Minotauro | Masculino | 5 | 5 | 2 | 5 | Bruto | +1 PV se controlar outro Bruto |
 | R13 | Espectro | Neutro | 2 | 2 | 4 | 3 | Arcano | Ignora penalidades de Terreno físico |
-| R14 | Slime | Neutro | 4 | 2 | 1 | 2 | Nadador | — |
+| R14 | Slime | Neutro | 4 | 2 | 1 | 2 | Nadador | +1 PV se controlar outro Nadador |
 | R15 | Lagáxido | Masculino | 3 | 2 | 3 | 3 | Nadador | *Ao entrar:* inunda vilarejo goblin (−2 ATK Goblins no mercado, rodada) |
-| R16 | Diabrete | Masculino | 2 | 3 | 3 | 3 | Arcano | — |
-| R17 | Centauro | Masculino | 4 | 4 | 2 | 4 | — | *Enquanto estiver:* suas outras raças recebem +1 ATK na rodada em que entram |
+| R16 | Diabrete | Masculino | 2 | 3 | 3 | 3 | Arcano | +1 INT se controlar outro Arcano |
+| R17 | Centauro | Masculino | 4 | 4 | 2 | 4 | Batedor | *Enquanto estiver:* suas outras raças recebem +1 ATK na rodada em que entram |
+| R18 | Orc Berserker | Masculino | 3 | 6 | 0 | 4 | Bruto | +1 ATK se controlar outro Bruto |
+| R19 | Cão Infernal | Neutro | 3 | 5 | 1 | 3 | Batedor | +1 PV se controlar outro Batedor |
+| R20 | Troll de Guerra | Masculino | 6 | 5 | 0 | 5 | Bruto | +1 PV se controlar outro Bruto |
 
 ### Decretos (8 para playtest)
 
 | ID | Nome | Orçamento | Requisito resumido |
 |----|------|-----------|-------------------|
 | D01 | Legião dos Céus | 18◆ | ≥3 Voador, PV≥12, INT≥8 |
-| D02 | Tritões do Abismo | 15◆ | ≥2 Nadador, ATK≥10, ≥3 raças |
+| D02 | Tritões do Abismo | 15◆ | ≥3 Nadador, ATK≥10, ≥3 raças |
 | D03 | Punho de Pedra | 20◆ | ≥2 Bruto, ATK≥16, INT≤6 |
 | D04 | Esquadra Mista | 16◆ | ≥4 raças diferentes, PV≥14, ATK≥12 |
-| D05 | Companhia Econômica | 12◆ | ≥4 raças, Verba média ≤3◆, INT≥10 |
-| D06 | Corte Arcana | 18◆ | ≥2 Arcano, INT≥16, PV≥10 |
-| D07 | Força Bruta | 17◆ | ATK≥20, PV≥14, INT≤10 |
-| D08 | Exército Equilibrado | 16◆ | PV≥12, ATK≥12, INT≥12, ≥4 raças |
+| D05 | Companhia Econômica | 12◆ | ≥4 raças diferentes, ≥2 Arcano, ≥2 Furtivo, Verba média ≤3◆, INT≥12 |
+| D06 | Corte Arcana | 18◆ | ≥2 Arcano, INT≥14, PV≥10 |
+| D07 | Força Bruta | 18◆ | ATK≥17, PV≥14, INT≤10 |
+| D08 | Exército Equilibrado | 16◆ | PV≥12, ATK≥12, INT≥10, ≥4 raças |
 
-Os valores acima são pontos de partida mais exigentes, não números balanceados finais. O playtest deve medir quantidade média de turnos para cumprir cada Decreto e evitar combinações muito fáceis ou impossíveis.
+Os valores acima formam o candidato balanceado v0.2.1. Todos são
+matematicamente possíveis; o playtest físico ainda deve validar duração,
+negociação, sabotagem e compreensão dos requisitos.
 
 ---
 
@@ -531,7 +544,7 @@ O primeiro playtest usa Tesouro ilimitado. Deve registrar a maior quantidade sim
 | 2 | A janela até o fim da rodada cria interação ou frustração excessiva? | Ritmo e sabotagem |
 | 3 | Mercado fixo com 6 cartas oferece variedade suficiente em 3–5 jogadores? | Fluxo do mercado |
 | 4 | Limite de 1 Campo individual por jogador reduz acúmulo sem eliminar combos? | Legibilidade |
-| 5 | Dois esgotamentos do baralho produzem duração adequada? | Fim de partida |
+| 5 | Um recrutamento por turno produz duração e espaço de negociação adequados? | Ritmo |
 | 6 | O Tesouro deve continuar ilimitado ou a escassez global adiciona decisões interessantes? | Balanceamento e quantidade de moedas |
 
 ---
@@ -541,11 +554,11 @@ O primeiro playtest usa Tesouro ilimitado. Deve registrar a maior quantidade sim
 | Fase | Entrega |
 |------|---------|
 | **Agora** | Prototipar Crédito de Guerra; validar consequência de falha e janela de vitória |
-| **+1** | RULEBOOK v0.2 |
-| **+2** | Print: carta de raça novo layout + 17 espécies de teste |
-| **+3** | Playtest papel com 4 jogadores |
-| **+4** | Site: banner "v0.2 em design" + pivot doc público |
+| **+1** | RULEBOOK v0.2.1 |
+| **+2** | Print: 20 espécies, 8 Decretos e 28 Itens |
+| **+3** | Playtest controlado com 3, 4 e 5 jogadores |
+| **+4** | Site: publicar resultados do playtest v0.2.1 |
 
 ---
 
-*GDD v0.2 — feedback do PO incorporado até 27/07/2026.*
+*GDD v0.2.1 — balanceamento automático e feedback do PO incorporados até 28/07/2026.*

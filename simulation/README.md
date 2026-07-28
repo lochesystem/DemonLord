@@ -29,7 +29,8 @@ Os resultados são gravados em:
 
 ## Escopo atual
 
-- 17 espécies, com até duas cópias de cada;
+- perfil histórico v0.2 com 17 espécies;
+- perfil candidato v0.2.1 com 20 espécies e duas cópias de cada;
 - oito Decretos;
 - orçamento e Verba comprometida;
 - mercado com seis espaços e reposição imediata;

@@ -1,4 +1,4 @@
-# DemonLord — Livro de Regras v0.2
+# DemonLord — Livro de Regras v0.2.1
 
 **Microprotótipo Crédito de Guerra** · 3–5 jogadores · 45–75 min · 14+
 
@@ -26,7 +26,7 @@ Se mais de um jogador cumprir o Decreto na mesma rodada, vence quem comprometeu 
 
 | Componente | Quantidade |
 |---|---:|
-| Cartas de Raça | 34 — 17 espécies × 2 |
+| Cartas de Raça | 40 — 20 espécies × 2 |
 | Cartas de Item | 28 |
 | Cartas de Decreto | 8 |
 | Mercado | 6 espaços |
@@ -98,7 +98,8 @@ Se o baralho de Itens acabar, embaralhe o descarte e forme um novo baralho.
 
 ### Durante o turno
 
-Realize **até 2 ações**. Você pode repetir uma ação, salvo quando uma carta disser o contrário.
+Realize **até 2 ações**. Você pode repetir uma ação, salvo quando uma carta
+disser o contrário. **Recrutar pode ser realizado no máximo uma vez por turno.**
 
 ### Fim da rodada
 
@@ -115,6 +116,8 @@ Não é necessário registrar o número da rodada.
 ## 6. Ações
 
 ### 6.1 Recrutar
+
+Você pode realizar esta ação **no máximo uma vez por turno**.
 
 1. Escolha uma Raça visível no mercado.
 2. Calcule seu contrato aplicando descontos ou aumentos ativos no mercado.
@@ -160,6 +163,8 @@ Podem ser trocados:
 Uma Raça transferida leva consigo todas as moedas e Equipamentos anexados. O novo jogador se torna seu controlador e resolve efeitos **Ao ser transferido**.
 
 Promessas futuras não são obrigatórias. Uma troca já executada não pode ser desfeita sem novo acordo.
+
+O jogador ativo pode concluir no máximo **uma troca por turno**.
 
 ### 6.5 Declarar vitória
 
@@ -226,7 +231,7 @@ Some os valores atuais de todas as Raças controladas. Modificadores podem aumen
 
 ### Traços
 
-Voador, Nadador, Bruto, Furtivo e Arcano são tags usadas por Decretos, Terrenos e habilidades.
+Voador, Nadador, Bruto, Furtivo, Arcano e Batedor são tags usadas por Decretos, Terrenos e habilidades.
 
 ### Sexo das Raças
 
@@ -342,7 +347,7 @@ Tesouro → 6 Raças no mercado → 3 Itens por jogador → 1 Decreto secreto �
 
 1. Compre 1 Item.
 2. Faça até 2 ações:
-   - Recrutar;
+   - Recrutar — máximo 1 vez por turno;
    - Jogar Item;
    - Dispensar;
    - Negociar/trocar;
@@ -372,4 +377,4 @@ Cumprir requisitos + Verba dentro do orçamento + declarar durante o turno.
 
 ---
 
-*Rulebook v0.2 — microprotótipo Crédito de Guerra · 28/07/2026.*
+*Rulebook v0.2.1 — microprotótipo Crédito de Guerra · 28/07/2026.*

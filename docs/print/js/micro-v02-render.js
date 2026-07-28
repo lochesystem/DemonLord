@@ -1,5 +1,5 @@
 /**
- * Renderizador do microprotótipo DemonLord v0.2.
+ * Renderizador do microprotótipo DemonLord v0.2.1.
  */
 
 function microCardShell(kind, body) {
