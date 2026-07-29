@@ -1,6 +1,6 @@
 {
   "profile": "v0.2",
-  "generatedAt": "2026-07-28T18:52:13.869Z",
+  "generatedAt": "2026-07-29T22:45:28.977Z",
   "runsPerPlayerCount": 10000,
   "feasibility": [
     {
@@ -40,7 +40,7 @@
       "minCost": 9,
       "minCards": 3,
       "example": [
-        "Ogro",
+        "Orc Gordo",
         "Slime",
         "Slime"
       ],
@@ -52,7 +52,7 @@
         "atk": 10,
         "int": 3,
         "races": [
-          "Ogro",
+          "Orc Gordo",
           "Slime",
           "Slime"
         ]
@@ -67,8 +67,8 @@
       "minCost": 14,
       "minCards": 3,
       "example": [
-        "Ogro",
-        "Ogro",
+        "Orc Gordo",
+        "Orc Gordo",
         "Centauro"
       ],
       "closestDistance": 0,
@@ -79,8 +79,8 @@
         "atk": 16,
         "int": 4,
         "races": [
-          "Ogro",
-          "Ogro",
+          "Orc Gordo",
+          "Orc Gordo",
           "Centauro"
         ]
       },
@@ -190,8 +190,8 @@
         "atk": 19,
         "int": 7,
         "races": [
-          "Ogro",
-          "Ogro",
+          "Orc Gordo",
+          "Orc Gordo",
           "Diabrete",
           "Centauro"
         ]

@@ -32,7 +32,7 @@ const RESOURCES = (() => {
 const MARKET = [
   { id: 'K10', name: 'Escória', subtype: 'Raça', cost: '1◆', effect: '+1 ⚔', copies: 4 },
   { id: 'K01', name: 'Goblins', subtype: 'Raça', cost: '2◆', effect: '+2 ⚔', copies: 4 },
-  { id: 'K02', name: 'Ogros', subtype: 'Raça', cost: '3◆ 1♣', effect: '+4 ⚔', copies: 2 },
+  { id: 'K02', name: 'Orcs Gordos', subtype: 'Raça', cost: '3◆ 1♣', effect: '+4 ⚔', copies: 2 },
   { id: 'K03', name: 'Súcubos', subtype: 'Raça', cost: '2◆ 1⚔', effect: 'Alvo −1 Influência', copies: 2 },
   { id: 'K05', name: 'Forja Abissal', subtype: 'Edifício', cost: '4◆', effect: '+1 ⚔ permanente ao Contribuir', copies: 2 },
   { id: 'K06', name: 'Banquete dos Clãs', subtype: 'Ritual', cost: '2◆', effect: '+3 ♣', copies: 2 },

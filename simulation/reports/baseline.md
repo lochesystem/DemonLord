@@ -1,6 +1,6 @@
 # DemonLord — relatório automático v0.2
 
-Gerado em 2026-07-28T18:52:13.869Z.
+Gerado em 2026-07-29T22:45:28.977Z.
 
 > Escopo: atributos, contratos, orçamento, mercado de 6 Raças e recrutamento por bots.
 > Táticas, habilidades de Raça, negociação, sabotagem e leitura humana ainda não entram nesta linha de base.
@@ -10,12 +10,12 @@ Gerado em 2026-07-28T18:52:13.869Z.
 | Decreto | Possível | Soluções | Menor Verba | Menos Raças | Exemplo mínimo |
 |---|---:|---:|---:|---:|---|
 | D01 — Legião dos Céus | Sim | 3.225 | 10◆ | 4 | Gárgula, Morcego Infernal, Morcego Infernal, Slime |
-| D02 — Tritões do Abismo | Sim | 3.422 | 9◆ | 3 | Ogro, Slime, Slime |
-| D03 — Punho de Pedra | Sim | 188 | 14◆ | 3 | Ogro, Ogro, Centauro |
+| D02 — Tritões do Abismo | Sim | 3.422 | 9◆ | 3 | Orc Gordo, Slime, Slime |
+| D03 — Punho de Pedra | Sim | 188 | 14◆ | 3 | Orc Gordo, Orc Gordo, Centauro |
 | D04 — Esquadra Mista | Sim | 9.477 | 12◆ | 4 | Tritão, Slime, Diabrete, Centauro |
 | D05 — Companhia Econômica | Sim | 1.934 | 8◆ | 4 | Kobold, Kobold, Slime, Slime |
 | D06 — Corte Arcana | Sim | 7.285 | 12◆ | 4 | Súcubo, Kobold, Espectro, Lagáxido |
-| D07 — Força Bruta | NÃO | 0 | —◆ | — | Ogro, Ogro, Diabrete, Centauro (17◆; PV 16, ATK 19, INT 7) |
+| D07 — Força Bruta | NÃO | 0 | —◆ | — | Orc Gordo, Orc Gordo, Diabrete, Centauro (17◆; PV 16, ATK 19, INT 7) |
 | D08 — Exército Equilibrado | Sim | 9.165 | 12◆ | 5 | Goblin, Goblin, Slime, Diabrete, Diabrete |
 
 ## Partidas-bot

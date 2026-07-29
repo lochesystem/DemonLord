@@ -6,6 +6,12 @@
     "front": "exports/r01-harpia.png"
   },
   {
+    "id": "R02",
+    "name": "Gárgula",
+    "kind": "race",
+    "front": "exports/r02-gargula.png"
+  },
+  {
     "id": "R03",
     "name": "Morcego Infernal",
     "kind": "race",
@@ -18,10 +24,94 @@
     "front": "exports/r04-manticora.png"
   },
   {
+    "id": "R05",
+    "name": "Golem",
+    "kind": "race",
+    "front": "exports/r05-golem.png"
+  },
+  {
+    "id": "R06",
+    "name": "Goblin",
+    "kind": "race",
+    "front": "exports/r06-goblin.png"
+  },
+  {
+    "id": "R07",
+    "name": "Gremlin Fiscal",
+    "kind": "race",
+    "front": "exports/r07-gremlin-fiscal.png"
+  },
+  {
+    "id": "R08",
+    "name": "Orc Gordo",
+    "kind": "race",
+    "front": "exports/r08-orc-gordo.png"
+  },
+  {
     "id": "R09",
     "name": "Súcubo",
     "kind": "race",
     "front": "exports/r09-sucubo.png"
+  },
+  {
+    "id": "R10",
+    "name": "Tritão",
+    "kind": "race",
+    "front": "exports/r10-tritao.png"
+  },
+  {
+    "id": "R11",
+    "name": "Kobold",
+    "kind": "race",
+    "front": "exports/r11-kobold.png"
+  },
+  {
+    "id": "R12",
+    "name": "Minotauro",
+    "kind": "race",
+    "front": "exports/r12-minotauro.png"
+  },
+  {
+    "id": "R13",
+    "name": "Espectro",
+    "kind": "race",
+    "front": "exports/r13-espectro.png"
+  },
+  {
+    "id": "R14",
+    "name": "Slime",
+    "kind": "race",
+    "front": "exports/r14-slime.png"
+  },
+  {
+    "id": "R15",
+    "name": "Lagáxido",
+    "kind": "race",
+    "front": "exports/r15-lagaxido.png"
+  },
+  {
+    "id": "R16",
+    "name": "Diabrete",
+    "kind": "race",
+    "front": "exports/r16-diabrete.png"
+  },
+  {
+    "id": "R17",
+    "name": "Centauro",
+    "kind": "race",
+    "front": "exports/r17-centauro.png"
+  },
+  {
+    "id": "R18",
+    "name": "Orc Berserker",
+    "kind": "race",
+    "front": "exports/r18-orc-berserker.png"
+  },
+  {
+    "id": "R19",
+    "name": "Cão Infernal",
+    "kind": "race",
+    "front": "exports/r19-cao-infernal.png"
   },
   {
     "id": "T04",

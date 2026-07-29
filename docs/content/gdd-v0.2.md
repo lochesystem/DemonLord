@@ -481,7 +481,7 @@ O protótipo expandido usa cópias dessas espécies para alcançar 36–48 carta
 | R05 | Golem | Neutro | 6 | 5 | 1 | 5 | Bruto | *Enquanto estiver:* +1 PV se INT total ≤5 |
 | R06 | Goblin | Masculino | 2 | 2 | 3 | 2 | Furtivo | +1 ATK se controlar outro Goblin |
 | R07 | Gremlin Fiscal | Masculino | 2 | 1 | 4 | 2 | Furtivo | *Enquanto estiver:* mantenha +1◆ de Verba sobre cada outra raça; pode ser transferido |
-| R08 | Ogro | Masculino | 5 | 6 | 1 | 5 | Bruto | +1 ATK se controlar outro Bruto |
+| R08 | Orc Gordo | Masculino | 5 | 6 | 1 | 5 | Bruto | +1 ATK se controlar outro Bruto |
 | R09 | Súcubo | Feminino | 3 | 3 | 5 | 4 | Arcano | *Ao entrar:* transfira para seu exército 1 Raça Masculina de contrato 3◆ ou menos controlada por um rival |
 | R10 | Tritão | Masculino | 4 | 3 | 2 | 3 | Nadador | +1 PV se controlar outro Nadador |
 | R11 | Kobold | Masculino | 2 | 1 | 4 | 2 | Furtivo | +1 INT se controlar outro Furtivo |

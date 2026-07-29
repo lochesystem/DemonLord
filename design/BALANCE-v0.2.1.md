@@ -59,7 +59,7 @@ Cada espécie entra com duas cópias no perfil experimental. O baralho passa de
 |---|---|---|
 | R01 | Harpia | +1 ATK se controlar outro Voador |
 | R06 | Goblin | +1 ATK se controlar outro Goblin |
-| R08 | Ogro | +1 ATK se controlar outro Bruto |
+| R08 | Orc Gordo | +1 ATK se controlar outro Bruto |
 | R10 | Tritão | +1 PV se controlar outro Nadador |
 | R12 | Minotauro | +1 PV se controlar outro Bruto |
 | R14 | Slime | +1 PV se controlar outro Nadador |

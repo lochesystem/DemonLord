@@ -11,7 +11,7 @@ const MICRO_RACES_BASE = [
   { id: 'R05', name: 'Golem', sex: 'Neutro', pv: 6, atk: 5, int: 1, cost: 5, trait: 'Bruto', art: '🪨', effect: 'Enquanto estiver: +1 PV se sua INT total for 5 ou menos.' },
   { id: 'R06', name: 'Goblin', sex: 'Masculino', pv: 2, atk: 2, int: 3, cost: 2, trait: 'Furtivo', art: '👺', effect: '—' },
   { id: 'R07', name: 'Gremlin Fiscal', sex: 'Masculino', pv: 2, atk: 1, int: 4, cost: 2, trait: 'Furtivo', art: '🧾', effect: 'Enquanto estiver: mantenha +1◆ sobre cada outra Raça sua.' },
-  { id: 'R08', name: 'Ogro', sex: 'Masculino', pv: 5, atk: 6, int: 1, cost: 5, trait: 'Bruto', art: '👹', effect: '—' },
+  { id: 'R08', name: 'Orc Gordo', sex: 'Masculino', pv: 5, atk: 6, int: 1, cost: 5, trait: 'Bruto', art: '👹', effect: '—' },
   { id: 'R09', name: 'Súcubo', sex: 'Feminino', pv: 3, atk: 3, int: 5, cost: 4, trait: 'Arcano', art: '😈', effect: 'Ao entrar: transfira para seu exército 1 Raça Masculina de contrato 3◆ ou menos controlada por um rival.' },
   { id: 'R10', name: 'Tritão', sex: 'Masculino', pv: 4, atk: 3, int: 2, cost: 3, trait: 'Nadador', art: '🔱', effect: '—' },
   { id: 'R11', name: 'Kobold', sex: 'Masculino', pv: 2, atk: 1, int: 4, cost: 2, trait: 'Furtivo', art: '🐲', effect: 'Enquanto estiver: +1 INT se controlar outro Furtivo.' },

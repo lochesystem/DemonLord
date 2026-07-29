@@ -570,7 +570,7 @@ Cada missão tem 3 fases. Jogue uma missão por partida.
 |-------|-------|--------|
 | Escória | 1 Ouro | +1 Militar |
 | Goblins | 2 Ouro | +2 Militar |
-| Ogros | 3 Ouro, 1 Comida | +4 Militar |
+| Orcs Gordos | 3 Ouro, 1 Comida | +4 Militar |
 | Súcubos | 2 Ouro, 1 Militar | Alvo perde 1 Influência |
 
 ### Edifícios

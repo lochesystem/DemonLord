@@ -1,21 +1,22 @@
-# DemonLord — kit raster em camadas v0.5
+# DemonLord — kit raster em camadas v0.5 / conjunto visual v0.6
 
 Este modelo não desenha a carta com CSS. Cada elemento visual é uma imagem raster independente e reutilizável.
 
 ## Cartas concluídas
 
-- R01 — Harpia
-- R03 — Morcego Infernal
-- R04 — Mantícora
-- R09 — Súcubo
+- R01 a R19 — catálogo completo de Raças
 - T04 — Auditoria Infernal
 - D01 — Legião dos Céus
 
-Todas são exportadas em `1050 × 1500 px` dentro de `exports/`.
+As 21 frentes são exportadas em `1050 × 1500 px` dentro de `exports/`.
+As Raças seguem a direção documentada em
+`../../../design/ART-DIRECTION-RACES-v0.6.md`: cenário completo em três
+planos, foco no personagem e zonas protegidas para os componentes da carta.
 
 A prancha `conjunto-completo-frentes-e-versos-v0.5.png` apresenta cada
 carta ao lado do verso correspondente ao seu baralho: Raças, Táticas ou
-Decretos. A prancha anterior somente com as frentes continua disponível.
+Decretos. A prancha `conjunto-racas-frentes-v0.6.png` reúne exclusivamente as
+19 Raças para revisão de consistência visual.
 
 ## Versos componentizados
 
@@ -63,7 +64,7 @@ Os arquivos em `components/chroma/` são as gerações originais. Os arquivos em
 - `layers-race.json`
 - `layers-item.json` — nome técnico legado; representa o template de Tática
 - `layers-decree.json`
-- `cards-data.json` — conteúdo variável das seis cartas.
+- `cards-data.json` — conteúdo variável das 21 cartas em alta fidelidade.
 
 ## Regerar
 
@@ -76,6 +77,7 @@ node build-back-label-components.mjs
 node assemble-backs.mjs
 node render-back-library.mjs
 node render-set.mjs
+node build-gallery-thumbnails.mjs
 ```
 
 `extract-back-components.mjs` e `process-back-components.mjs` só precisam ser

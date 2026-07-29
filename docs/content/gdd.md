@@ -230,7 +230,7 @@ flowchart TD
 
 | Subtipo | Exemplo | Efeito |
 |---------|---------|--------|
-| **Raça** | Ogros, Goblins, Súcubos | +Militar; algumas exigem Comida contínua |
+| **Raça** | Orcs Gordos, Goblins, Súcubos | +Militar; algumas exigem Comida contínua |
 | **Edifício** | Forja Abissal | Bônus permanente ao contribuir Militar |
 | **Ritual** | Chuva de Cinzas | Converte Comida em Militar em massa (1 uso) |
 | **Suborno** | Ouro sob a mesa | Rouba 2 Ouro de outro jogador (ação disputada) |
@@ -495,7 +495,7 @@ Mais Influência → mais Ouro pessoal → contribuição total ao Cofre na últ
 | ID | Nome | Custo | Efeito |
 |----|------|-------|--------|
 | K01 | Goblins | 2 Ouro | +2 Militar |
-| K02 | Ogros | 3 Ouro, 1 Comida | +4 Militar |
+| K02 | Orcs Gordos | 3 Ouro, 1 Comida | +4 Militar |
 | K03 | Súcubos | 2 Ouro, 1 Militar | Rouba 1 Influência de alvo |
 | K04 | Caravanas | 1 Militar | +3 Ouro; −1 Moral |
 | K05 | Forja Abissal | 4 Ouro | +1 Militar permanente ao contribuir |
