@@ -244,15 +244,15 @@
   font-weight: 650;
 }
 
-/* Itens */
+/* Táticas */
 
-.micro-item {
+.micro-tactic {
   background:
     radial-gradient(circle at 50% 36%, rgba(255,255,255,0.25), transparent 36%),
     var(--micro-paper);
 }
 
-.micro-item-head {
+.micro-tactic-head {
   margin: 2.5mm 2.5mm 0;
   min-height: 17mm;
   padding: 1.5mm 2mm;
@@ -263,7 +263,7 @@
   z-index: 3;
 }
 
-.micro-item-type {
+.micro-tactic-type {
   display: inline-block;
   margin-bottom: 1mm;
   padding: 0.6mm 1.5mm;
@@ -275,13 +275,13 @@
   text-transform: uppercase;
 }
 
-.micro-item-head h3 {
+.micro-tactic-head h3 {
   margin: 0;
   font: 700 4.2mm/1.05 "Cormorant Garamond", Georgia, serif;
   text-transform: uppercase;
 }
 
-.micro-item-art {
+.micro-tactic-art {
   height: 38mm;
   margin: 2mm 3mm;
   border: 0.5mm solid var(--micro-ink);
@@ -294,12 +294,12 @@
   justify-content: center;
 }
 
-.micro-item-art span {
+.micro-tactic-art span {
   font-size: 22mm;
   line-height: 1;
 }
 
-.micro-item-art small {
+.micro-tactic-art small {
   margin-top: 1.5mm;
   font-size: 1.7mm;
   font-weight: 900;
@@ -325,11 +325,10 @@
   text-align: center;
 }
 
-.item-terreno .micro-item-type { background: var(--micro-green); }
-.item-campo-individual .micro-item-type { background: var(--micro-red); }
-.item-roubo .micro-item-type { background: #66503e; }
-.item-armadilha .micro-item-type { background: #9b622a; }
-.item-equipamento .micro-item-type { background: var(--micro-blue); }
+.tactic-terreno .micro-tactic-type { background: var(--micro-green); }
+.tactic-influencia .micro-tactic-type { background: var(--micro-red); }
+.tactic-intriga .micro-tactic-type { background: #66503e; }
+.tactic-equipamento .micro-tactic-type { background: var(--micro-blue); }
 
 /* Decretos */
 

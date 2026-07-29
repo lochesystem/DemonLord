@@ -131,7 +131,7 @@ const lines = [
   '',
   ...report.assumptions.map((assumption) => `- ${assumption}`),
   '',
-  'Este é um teto otimista para acordos racionais. Blefe, promessas, Itens e kingmaking ainda exigem playtest humano.',
+  'Este é um teto otimista para acordos racionais. Blefe, promessas, Táticas e kingmaking ainda exigem playtest humano.',
   '',
 ];
 

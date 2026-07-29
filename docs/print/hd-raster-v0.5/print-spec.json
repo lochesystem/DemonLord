@@ -1,0 +1,27 @@
+{
+  "format": "Poker",
+  "dpi": 600,
+  "trimMm": {
+    "width": 63.5,
+    "height": 88.9
+  },
+  "bleedMm": 3,
+  "safeMm": 3,
+  "frameProtectionMm": 2.5,
+  "canvasPx": {
+    "width": 1642,
+    "height": 2242
+  },
+  "trimPx": {
+    "width": 1500,
+    "height": 2100
+  },
+  "bleedPx": 71,
+  "safePx": 71,
+  "colorSpace": "sRGB IEC61966-2.1",
+  "notes": [
+    "A conversão CMYK deve usar o perfil ICC fornecido pela gráfica.",
+    "Não redimensionar as páginas do PDF ao imprimir.",
+    "As artes são reenquadradas proporcionalmente e nunca esticadas."
+  ]
+}

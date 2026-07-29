@@ -7,7 +7,7 @@ Este diretório separa a **ilustração** da **interface da carta**. A imagem ge
 - Prancheta lógica: `700 × 1000`.
 - Área segura da borda: `37 px`.
 - Identificador universal: `150 × 34`, centralizado em `x=275`, `bottom=12`.
-- A tag de ID é idêntica em Raça, Item e Decreto: carvão, contorno duplo ouro-antigo e texto marfim.
+- A tag de ID é idêntica em Raça, Tática e Decreto: carvão, contorno duplo ouro-antigo e texto marfim.
 - A faixa de traço da Raça termina em `bottom=51`; não compartilha área com a tag.
 - Símbolo de sexo: `42 × 42`, discreto, em coordenada própria. Não pertence à coluna de atributos.
 - Verba/contrato/orçamento usa sempre `◆` dourado. Rubis e outras gemas são somente decoração da moldura.
@@ -33,5 +33,5 @@ A nova arte mostra um morcego infernal com anatomia animal, pendurado em uma gá
 - R03 — Morcego Infernal
 - R04 — Mantícora
 - R09 — Súcubo
-- I04 — Auditoria Infernal
+- T04 — Auditoria Infernal
 - D01 — Legião dos Céus

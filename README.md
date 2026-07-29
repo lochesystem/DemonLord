@@ -8,7 +8,7 @@ Board game competitivo de cartas: generais usam Crédito de Guerra para montar e
 
 | Documento | Descrição |
 |-----------|-----------|
-| [design/GDD-v0.2.md](design/GDD-v0.2.md) | **GDD atual** — mercado de raças, decretos, itens |
+| [design/GDD-v0.2.md](design/GDD-v0.2.md) | **GDD atual** — mercado de raças, decretos, táticas |
 | [design/RULEBOOK-v0.2.md](design/RULEBOOK-v0.2.md) | **Regras do microprotótipo** — Crédito de Guerra |
 | [design/PLAYTEST-v0.2.md](design/PLAYTEST-v0.2.md) | Ficha para registrar as primeiras partidas |
 | [simulation/reports/baseline.md](simulation/reports/baseline.md) | Relatório automático — viabilidade dos Decretos e 30 mil partidas-bot |
@@ -30,7 +30,7 @@ Board game competitivo de cartas: generais usam Crédito de Guerra para montar e
 
 ## Status
 
-**Microprotótipo v0.2.1 pronto para playtest** — 40 Raças, 28 Itens, 8 Decretos e moedas de Verba Real.
+**Microprotótipo v0.2.1 pronto para playtest** — 40 Raças, 28 Táticas, 8 Decretos e moedas de Verba Real.
 
 ## Jogar (resumo)
 

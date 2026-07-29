@@ -33,15 +33,20 @@ function renderMicroRace(card) {
   `);
 }
 
-function renderMicroItem(card) {
-  return microCardShell(`micro-item item-${card.type.toLowerCase().replace(/\s+/g, '-')}`, `
-    <header class="micro-item-head">
-      <span class="micro-item-type">${card.type}</span>
+function renderMicroTactic(card) {
+  const typeClass = card.type
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, '-');
+  return microCardShell(`micro-tactic tactic-${typeClass}`, `
+    <header class="micro-tactic-head">
+      <span class="micro-tactic-type">${card.type} · ${card.timing}</span>
       <h3>${card.name}</h3>
     </header>
-    <div class="micro-item-art">
+    <div class="micro-tactic-art">
       <span>${card.icon}</span>
-      <small>ITEM</small>
+      <small>TÁTICA</small>
     </div>
     <div class="micro-rules">
       <p>${card.effect}</p>
@@ -135,11 +140,11 @@ function renderMicroPrototype(targetId) {
 
   const count = document.getElementById('micro-count');
   if (count) {
-    count.textContent = `${MICRO_COUNTS.total} cartas: ${MICRO_COUNTS.races} Raças, ${MICRO_COUNTS.items} Itens e ${MICRO_COUNTS.decrees} Decretos`;
+    count.textContent = `${MICRO_COUNTS.total} cartas: ${MICRO_COUNTS.races} Raças, ${MICRO_COUNTS.tactics} Táticas e ${MICRO_COUNTS.decrees} Decretos`;
   }
 
   renderMicroSheets(root, 'Raças', MICRO_RACES, renderMicroRace);
-  renderMicroSheets(root, 'Itens', MICRO_ITEMS, renderMicroItem);
+  renderMicroSheets(root, 'Táticas', MICRO_TACTICS, renderMicroTactic);
   renderMicroSheets(root, 'Decretos', MICRO_DECREES, renderMicroDecree);
   renderMoneySheet(root);
 }

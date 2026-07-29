@@ -32,5 +32,5 @@ Com o ritmo reduzido, a negociação mudou o vencedor em **19.6%** dos pares com
 - A troca custa uma ação do jogador ativo e é limitada a uma por turno.
 - Ambos só aceitam quando seu progresso estimado melhora.
 
-Este é um teto otimista para acordos racionais. Blefe, promessas, Itens e kingmaking ainda exigem playtest humano.
+Este é um teto otimista para acordos racionais. Blefe, promessas, Táticas e kingmaking ainda exigem playtest humano.
 

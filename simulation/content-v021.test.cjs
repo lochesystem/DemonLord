@@ -18,7 +18,7 @@ function loadPrintData() {
   vm.runInContext(fs.readFileSync(patchPath, 'utf8'), context);
   return JSON.parse(
     vm.runInContext(
-      'JSON.stringify({ races: MICRO_RACES, decrees: MICRO_DECREES, counts: MICRO_COUNTS })',
+      'JSON.stringify({ races: MICRO_RACES, tactics: MICRO_TACTICS, decrees: MICRO_DECREES, counts: MICRO_COUNTS })',
       context
     )
   );
@@ -28,7 +28,7 @@ test('Print & Play v0.2.1 possui 76 cartas e nenhuma Raça sem habilidade', () =
   const print = loadPrintData();
   assert.deepEqual(print.counts, {
     races: 40,
-    items: 28,
+    tactics: 28,
     decrees: 8,
     total: 76,
   });
@@ -36,6 +36,20 @@ test('Print & Play v0.2.1 possui 76 cartas e nenhuma Raça sem habilidade', () =
   assert.equal(
     print.races.filter((race) => !race.effect || race.effect === '—').length,
     0
+  );
+  assert.equal(new Set(print.tactics.map((tactic) => tactic.id.split('-')[0])).size, 16);
+  assert.equal(print.tactics.every((tactic) => /^T\d{2}-\d$/.test(tactic.id)), true);
+  assert.equal(
+    print.tactics.every((tactic) =>
+      ['Terreno', 'Influência', 'Equipamento', 'Intriga'].includes(tactic.type)
+    ),
+    true
+  );
+  assert.equal(
+    print.tactics.every((tactic) =>
+      ['Permanente', 'Instantânea', 'Reação'].includes(tactic.timing)
+    ),
+    true
   );
 });
 

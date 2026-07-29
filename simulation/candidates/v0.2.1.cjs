@@ -236,7 +236,7 @@ function applyCandidate() {
 
   MICRO_COUNTS.races = MICRO_RACES.length;
   MICRO_COUNTS.total =
-    MICRO_COUNTS.races + MICRO_COUNTS.items + MICRO_COUNTS.decrees;
+    MICRO_COUNTS.races + MICRO_COUNTS.tactics + MICRO_COUNTS.decrees;
 }
 
 module.exports = { applyCandidate, EFFECTS, NEW_RACES };

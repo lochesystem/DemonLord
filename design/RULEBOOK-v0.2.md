@@ -27,7 +27,7 @@ Se mais de um jogador cumprir o Decreto na mesma rodada, vence quem comprometeu 
 | Componente | Quantidade |
 |---|---:|
 | Cartas de Raça | 40 — 20 espécies × 2 |
-| Cartas de Item | 28 |
+| Cartas de Tática | 28 |
 | Cartas de Decreto | 8 |
 | Mercado | 6 espaços |
 | Campo de mercado | 1 espaço |
@@ -75,13 +75,13 @@ Habilidades e penalidades afetam o controlador atual, salvo quando a carta disse
 1. Coloque todas as moedas no centro da mesa: esse é o **Tesouro Real**.
 2. Embaralhe as Raças e forme o baralho de Raças.
 3. Revele **6 Raças** para formar o mercado.
-4. Embaralhe os Itens. Cada jogador compra **3 Itens**.
+4. Embaralhe as Táticas. Cada jogador compra **3 Táticas**.
 5. Embaralhe os Decretos. Cada jogador recebe **1 Decreto**, olha em segredo e o mantém virado para baixo.
 6. Deixe um espaço abaixo do mercado para o **Campo de mercado**.
 7. Reserve um espaço de **Campo individual** diante de cada jogador.
 8. Escolha aleatoriamente o primeiro jogador.
 
-Os Decretos e Itens restantes formam seus respectivos baralhos. A partida segue em sentido horário.
+Os Decretos e Táticas restantes formam seus respectivos baralhos. A partida segue em sentido horário.
 
 ---
 
@@ -91,10 +91,10 @@ Uma rodada termina depois que todos tiverem realizado um turno.
 
 ### Início do turno
 
-1. Compre 1 Item.
+1. Compre 1 Tática.
 2. Resolva efeitos que indiquem “no início do seu turno”.
 
-Se o baralho de Itens acabar, embaralhe o descarte e forme um novo baralho.
+Se o baralho de Táticas acabar, embaralhe o descarte e forme um novo baralho.
 
 ### Durante o turno
 
@@ -106,7 +106,7 @@ disser o contrário. **Recrutar pode ser realizado no máximo uma vez por turno.
 1. Resolva todas as declarações de vitória.
 2. Aplique penalidades de declarações incorretas, se a partida não tiver terminado.
 3. Encerre efeitos “até o fim da rodada”.
-4. Cada jogador descarta até ficar com no máximo **5 Itens**.
+4. Cada jogador descarta até ficar com no máximo **5 Táticas**.
 5. O jogador à esquerda de quem iniciou começa a próxima rodada.
 
 Não é necessário registrar o número da rodada.
@@ -129,17 +129,31 @@ Você pode realizar esta ação **no máximo uma vez por turno**.
 
 Você pode recrutar mesmo que o contrato faça sua Verba ultrapassar o orçamento. Porém, não poderá vencer enquanto permanecer acima do limite.
 
-### 6.2 Jogar Item
+### 6.2 Jogar Tática
 
-Jogue 1 Item da mão e siga seu texto.
+Jogue 1 Tática da mão e siga seu texto. Toda Tática apresenta um **subtipo**
+e uma **resolução**.
 
-- **Instantâneo:** resolva e descarte.
-- **Terreno / Campo de mercado:** coloque no espaço central. Só pode haver 1; descarte o anterior antes de aplicar o novo.
-- **Campo individual:** coloque na zona do alvo. Cada jogador pode ter no máximo 1; descarte o anterior antes de aplicar o novo.
-- **Equipamento:** anexe a uma Raça. Se ela sair do exército, descarte o Equipamento.
-- **Armadilha:** pode ser jogada como reação ao gatilho descrito e não consome ação no turno de quem reagiu.
+#### Subtipos
 
-Ao remover um Campo, reverta imediatamente moedas e modificadores indicados como temporários.
+- **Terreno:** coloque no Campo de Mercado. Afeta todos os jogadores. Só pode
+  haver 1; descarte o anterior antes de aplicar o novo.
+- **Influência:** coloque no Campo Individual do alvo. Cada jogador pode ter no
+  máximo 1; descarte a anterior antes de aplicar a nova.
+- **Equipamento:** anexe a uma Raça. Se ela sair do exército, descarte o
+  Equipamento.
+- **Intriga:** execute a sabotagem, negociação ou manobra descrita.
+
+#### Resolução
+
+- **Permanente:** permanece em sua zona até ser substituída ou removida.
+- **Instantânea:** resolva e descarte.
+- **Reação:** pode ser jogada quando o gatilho descrito ocorrer e não consome
+  ação no turno de quem reagiu.
+
+Roubo, transferência, bônus e penalidade são efeitos, não subtipos. Ao remover
+um Terreno ou uma Influência, reverta imediatamente moedas e modificadores
+indicados como temporários.
 
 ### 6.3 Dispensar
 
@@ -156,7 +170,7 @@ Conversar, blefar e prometer favores é livre. Concluir uma troca custa 1 ação
 
 Podem ser trocados:
 
-- Itens da mão;
+- Táticas da mão;
 - Raças dos exércitos;
 - Promessas sem garantia.
 
@@ -341,14 +355,14 @@ Vence quem tiver mais pontos. Empates usam menor Verba, depois menos Raças e, p
 
 ### Preparação
 
-Tesouro → 6 Raças no mercado → 3 Itens por jogador → 1 Decreto secreto → primeiro jogador.
+Tesouro → 6 Raças no mercado → 3 Táticas por jogador → 1 Decreto secreto → primeiro jogador.
 
 ### Turno
 
-1. Compre 1 Item.
+1. Compre 1 Tática.
 2. Faça até 2 ações:
    - Recrutar — máximo 1 vez por turno;
-   - Jogar Item;
+   - Jogar Tática;
    - Dispensar;
    - Negociar/trocar;
    - Declarar vitória.
@@ -370,7 +384,7 @@ Cumprir requisitos + Verba dentro do orçamento + declarar durante o turno.
 - Momento da primeira declaração;
 - Quantas declarações falharam;
 - Quantas vezes alguém estourou o orçamento;
-- Itens pouco usados ou difíceis de entender;
+- Táticas pouco usadas ou difíceis de entender;
 - Mercado travado ou sem opções relevantes;
 - Dúvidas de timing;
 - Momento mais divertido e momento mais frustrante.

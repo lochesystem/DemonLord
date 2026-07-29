@@ -64,12 +64,12 @@
   },
   {
     "kind": "item",
-    "id": "I04",
-    "type": "CAMPO INDIVIDUAL",
+    "id": "T04",
+    "type": "INFLUÊNCIA · PERMANENTE",
     "name": "AUDITORIA INFERNAL",
     "art": "art/auditoria-infernal-i04.png",
     "artFocusY": 0.45,
-    "effect": "ADICIONE +1◆ A CADA CONTRATO DO ALVO. REMOVA AO DESCARTAR ESTE CAMPO."
+    "effect": "ADICIONE +1◆ A CADA CONTRATO DO ALVO. REMOVA AO DESCARTAR ESTA INFLUÊNCIA."
   },
   {
     "kind": "decree",

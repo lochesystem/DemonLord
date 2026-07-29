@@ -23,7 +23,7 @@ Todas as frentes usam exatamente o mesmo componente no centro da borda inferior:
 - mesma escala e alinhamento;
 - nenhuma cor específica do tipo.
 
-Somente o conteúdo muda: `R00` para Raça, `I00` para Item e `D00` para Decreto.
+Somente o conteúdo muda: `R00` para Raça, `T00` para Tática e `D00` para Decreto.
 Em Raças, a placa do traço sobe o necessário e a tag se encaixa abaixo dela sem
 invadir o texto nem a área de corte.
 
@@ -35,7 +35,7 @@ esquerda da habilidade. Nunca substitui um atributo.
 
 ## Versos
 
-`verso-raca.png` é o mestre de composição. Item e Decreto mantêm a mesma placa
+`verso-raca.png` é o mestre de composição. Tática e Decreto mantêm a mesma placa
 `DEMONLORD`, tipografia, escala e geometria, variando somente cor secundária,
 brasão e nome do tipo.
 
@@ -44,12 +44,17 @@ brasão e nome do tipo.
 - `frente-raca-morcego-infernal-r03.png`
 - `frente-raca-manticora-r04.png`
 - `frente-raca-sucubo-r09.png`
-- `frente-item-auditoria-infernal-i04.png`
+- `t04-auditoria-infernal.png`
 - `frente-decreto-legiao-dos-ceus-d01.png`
 - `verso-raca.png`
-- `verso-item.png`
+- `verso-tatica.png`
 - `verso-decreto.png`
 
 As imagens são mestres de aparência. No baralho completo, tag, textos, ícones e
 moldura devem ser montados como camadas determinísticas no template para
 garantir repetição pixel a pixel.
+
+Os versos oficiais agora são exportados pelo montador raster
+`../hd-raster-v0.5/assemble-backs.mjs`. As três artes, a moldura universal e a
+placa vazia ficam separadas em `components/backs/`; o texto do tipo vem de
+`back-data.json`.

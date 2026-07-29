@@ -847,7 +847,7 @@ img { max-width: 100%; height: auto; display: block; }
   background: var(--gold-soft);
 }
 
-.hd-card-type.type-item {
+.hd-card-type.type-tactic {
   color: #72b6ad;
   background: rgba(72, 144, 136, 0.14);
 }

@@ -15,7 +15,7 @@ Documento mestre de design alinhado ao feedback do PO (Hugo Rezende).
 4. [Anatomia das cartas](#4-anatomia-das-cartas)
 5. [O mercado de raças](#5-o-mercado-de-raças)
 6. [Decretos do Rei](#6-decretos-do-rei)
-7. [Cartas de item](#7-cartas-de-item)
+7. [Cartas de Tática](#7-cartas-de-tatica)
 8. [Estrutura de turno e rodada](#8-estrutura-de-turno-e-rodada)
 9. [Negociação e trapaça](#9-negociação-e-trapaça)
 10. [Vitória e fim de jogo](#10-vitória-e-fim-de-jogo)
@@ -80,8 +80,8 @@ flowchart TB
   D[Decreto oculto] -->|exige| E[Exército ideal]
   M[Mercado comum] -->|recruta| E
   T[Tesouro Real] -->|adianta Verba| E
-  I[Itens na mão] -->|manipula| M
-  I -->|sabota| E
+  C[Táticas na mão] -->|manipula| M
+  C -->|sabota| E
   N[Negociação] --> E
   D -->|limita Verba comprometida| E
 ```
@@ -95,12 +95,12 @@ flowchart TB
 | Componente | Qtd | Notas |
 |------------|-----|-------|
 | Cartas de **Raça** | 36–48 | Mercado + baralho de reposição; espécies podem ter cópias |
-| Cartas de **Item** | 50–64 | Principal baralho de interação |
+| Cartas de **Tática** | 50–64 | Principal baralho de interação |
 | Cartas de **Decreto** | 16–20 | 1 por jogador, ocultas |
 | Tabuleiro / playmat | 1 | Mercado 6 slots + referência |
 | Moedas de **Verba Real** | Pool central | Denominações sugeridas: 1◆, 3◆ e 5◆ |
 
-**Meta inicial de produto:** aproximadamente **110–120 cartas** no formato grande. Uma distribuição de referência para protótipo expandido é **42 Raças + 60 Itens + 18 Decretos = 120 cartas**. A quantidade final depende dos playtests e pode usar cópias de uma mesma espécie para reduzir a necessidade de artes exclusivas.
+**Meta inicial de produto:** aproximadamente **110–120 cartas** no formato grande. Uma distribuição de referência para protótipo expandido é **42 Raças + 60 Táticas + 18 Decretos = 120 cartas**. A quantidade final depende dos playtests e pode usar cópias de uma mesma espécie para reduzir a necessidade de artes exclusivas.
 
 O MVP não usa marcador dedicado de rodada nem trilha individual de orçamento. As próprias moedas colocadas sobre as Raças mostram publicamente quanto cada general comprometeu. No primeiro protótipo, o Tesouro Real é considerado ilimitado; a quantidade física exata será dimensionada após medir o pico de moedas em mesa.
 
@@ -109,7 +109,7 @@ O MVP não usa marcador dedicado de rodada nem trilha individual de orçamento. 
 | Zona | Visível | Conteúdo |
 |------|---------|----------|
 | **Decreto** | Só o dono | Missão do Rei: requisitos + orçamento |
-| **Mão** | Privada | Cartas de terreno, mercado, equipamento, intriga, roubo e armadilha |
+| **Mão** | Privada | Cartas de Tática: Terreno, Influência, Equipamento e Intriga |
 | **Exército** | Pública | Raças recrutadas (cartas em campo) |
 | **Influência individual** | Pública | Campo jogado contra este jogador (máx. 1) |
 | **Verba comprometida** | Pública | Moedas de Verba Real permanecem sobre as Raças contratadas |
@@ -120,9 +120,9 @@ O MVP não usa marcador dedicado de rodada nem trilha individual de orçamento. 
 |------|--------|
 | **Mercado** | 6 raças visíveis para recrutar (grid 2×3 central) |
 | **Campo de mercado** | 1 slot abaixo do mercado — carta que afeta todos |
-| **Descarte** | Itens usados, raças removidas |
+| **Descarte** | Táticas usadas, raças removidas |
 | **Baralho de raças** | Repõe mercado |
-| **Baralho de itens** | Compra ou compra inicial por rodada |
+| **Baralho de táticas** | Compra ou compra inicial por rodada |
 
 ---
 
@@ -152,7 +152,7 @@ Layout **v0.2.1** — esboço PO (23/07): ícones **pequenos** à esquerda, **ar
 | **ATK (✦)** | Soma ao total de força |
 | **INT** | Soma ao total de inteligência |
 | **Contrato (◆)** | Quantidade de Verba Real comprometida ao recrutar a raça |
-| **Identificador** | Código de catálogo no padrão `R00`, `I00` ou `D00`; usa o mesmo estilo neutro em todos os tipos |
+| **Identificador** | Código de catálogo no padrão `R00`, `T00` ou `D00`; usa o mesmo estilo neutro em todos os tipos |
 | **Traço** | Tag para requisitos do Decreto (Voador, Nadador, Bruto, Furtivo, Arcano…) — exibida no rodapé |
 | **Sexo** | Característica impressa: Masculino, Feminino ou Neutro; usada somente quando um efeito citar essa característica |
 | **Efeito de entrada** | Opcional: dispara quando a raça entra em um exército, inclusive por troca, roubo ou transferência |
@@ -170,7 +170,7 @@ Layout **v0.2.1** — esboço PO (23/07): ícones **pequenos** à esquerda, **ar
 
 **Código e símbolo de Verba:** todo identificador usa a mesma tag hexagonal
 curta encaixada no centro da borda inferior: fundo carvão, filete duplo em ouro
-antigo, texto marfim e a mesma tipografia e escala em Raças, Itens e Decretos.
+antigo, texto marfim e a mesma tipografia e escala em Raças, Táticas e Decretos.
 A tag nunca recebe a cor do tipo; somente o código muda. O símbolo mecânico `◆` representa sempre
 **Verba/contrato** e deve ser dourado em todas as cartas. Rubis vermelhos e
 acentos azuis, verdes ou roxos pertencem apenas à decoração e não possuem efeito
@@ -201,22 +201,33 @@ Os Decretos **não possuem bônus de otimização separado**. Cumprir requisitos
 
 Cada Decreto deve combinar pelo menos **dois eixos de exigência** — atributos, traços, composição ou restrições — para evitar objetivos triviais. **INT** deve aparecer com frequência comparável a PV e ATK.
 
-### 4.3 Carta de Item (mão)
+### 4.3 Carta de Tática (mão)
 
-Tipos (podem compartilhar baralho com ícone):
+**Tática** é o nome do baralho de interação. Cada carta combina um **subtipo**,
+que informa onde ela atua, com uma **resolução**, que informa por quanto tempo
+permanece em jogo.
 
-| Tipo | Ícone | Onde fica | Exemplo |
-|------|-------|-----------|---------|
-| **Terreno / Campo de mercado** | 🏴 | Slot abaixo do grid 2×3 — afeta **todos** | Pântano reduz PV de Nadadores; tempestade altera Voadores |
-| **Campo individual** | 🎯 | Slot na área de **1 jogador** — afeta só ele | Adicione 1◆ de Verba a cada contrato do alvo enquanto este Campo permanecer |
-| Equipamento | ⚙ | Exército do dono | +2 ATK em 1 raça Bruta |
-| Armadilha | ⚡ | Mão / campo oculto | Cancela recrutamento rival |
-| Intriga | 🎭 | Resolve e descarta | Revela ou troca decreto |
-| Roubo | 🗡 | Resolve e descarta | Rouba raça ou carta |
+| Subtipo | Ícone | Onde atua | Exemplo |
+|---------|-------|-----------|---------|
+| **Terreno** | 🏴 | Campo de Mercado — afeta **todos** | Pântano reduz PV de Nadadores |
+| **Influência** | 🎯 | Campo Individual de **1 jogador** | Auditoria aumenta a Verba dos contratos do alvo |
+| **Equipamento** | ⚙ | Anexado a uma Raça | Forja Portátil concede +2 ATK a um Bruto |
+| **Intriga** | 🎭 | Resolve um plano, sabotagem ou negociação | Revelar Decreto, roubar ou cancelar recrutamento |
 
-**Campo de mercado vs individual**
+| Resolução | Funcionamento |
+|-----------|---------------|
+| **Permanente** | Permanece em sua zona até ser substituída ou removida |
+| **Instantânea** | Resolve o texto e vai para o descarte |
+| **Reação** | Pode ser jogada quando seu gatilho ocorrer e não consome uma ação |
 
-| | Terreno / Campo de mercado | Campo individual (influência) |
+**Roubo**, **transferência**, **bônus** e **penalidade** descrevem efeitos, não
+subtipos. “Campo de Mercado” e “Campo Individual” são zonas da mesa: as cartas
+colocadas nelas são, respectivamente, Táticas de **Terreno** e de
+**Influência**.
+
+**Campo de Mercado vs Campo Individual**
+
+| | Terreno | Influência |
 |--|------------------|--------------------------------|
 | **Alvo** | Todos os jogadores | 1 jogador escolhido ao jogar |
 | **Posição** | Abaixo do mercado central | Na zona do jogador alvo |
@@ -279,7 +290,7 @@ Distribuídos no setup — **1 por jogador**, ocultos.
 
 ### Interação com decretos alheios
 
-| Item | Efeito |
+| Tática | Efeito |
 |------|--------|
 | Interrogatório real | Alvo revela Decreto |
 | Realocar missão | Alvo descarta Decreto e compra outro |
@@ -293,40 +304,33 @@ Se a declaração estiver incorreta, o Decreto permanece revelado e o jogador de
 
 ---
 
-## 7. Cartas de item
+## 7. Cartas de Tática
 
 ### Compra e mão
 
-- Início do turno: comprar **1 Item**.
+- Início do turno: comprar **1 Tática**.
 - Limite de mão: **5** (descarte no fim se exceder).
 
-### Catálogo do microprotótipo (16 efeitos)
+### Catálogo do microprotótipo (16 modelos, 28 cartas)
 
-Estes 16 efeitos validam as categorias antes da expansão para 50–64 cartas. O baralho completo pode combinar cópias, variações numéricas e novas cartas, com maior concentração de Itens do que de Decretos.
-
-**Terreno / Campo (4)**  
-- Cidade Natal Destruída (Harpias ficam −2 ATK; novos contratos recebem −1◆ de Verba)  
-- Praga no Pântano (Nadador −2 PV)  
-- Forja Abissal aberta (Brutos ficam +1 ATK; novos contratos recebem +1◆ de Verba)  
-- Auditoria Infernal (enquanto permanecer, adicione 1◆ de Verba a cada contrato do alvo)
-
-**Roubo (4)**  
-- Suborno de clã (roube 1 raça do exército alvo)  
-- Espionagem (roube 1 carta da mão)  
-- Transferência compulsória (mova 1 raça do seu exército para o exército alvo; ele se torna o controlador)  
-- Deserção (devolva 1 raça sua ao mercado)
-
-**Intriga (4)**  
-- Interrogatório real (revela decreto)  
-- Realocar missão (troca decreto)  
-- Contrato falso (a próxima raça recrutada pelo alvo recebe +2◆ de Verba)  
-- Propaganda (copie o traço de 1 raça sua para contar em dobro nesta rodada)
-
-**Buff / Armadilha (4)**  
-- Forja portátil (+2 ATK em 1 raça Bruta sua)  
-- Armadilha: laço (cancela recrutamento de 1 rival)  
-- Treinamento real (+1 INT em todas suas raças)  
-- Escudo de pedra (+3 PV em 1 raça)
+| ID | Nome | Subtipo | Resolução | Efeito resumido |
+|----|------|---------|-----------|-----------------|
+| T01 | Cidade Natal Destruída | Terreno | Permanente | Harpias −2 ATK; novos contratos de Harpia −1◆ |
+| T02 | Praga no Pântano | Terreno | Permanente | Nadadores −2 PV |
+| T03 | Forja Abissal Aberta | Terreno | Permanente | Brutos +1 ATK; novos contratos de Bruto +1◆ |
+| T04 | Auditoria Infernal | Influência | Permanente | Adicione +1◆ a cada contrato do alvo |
+| T05 | Suborno de Clã | Intriga | Instantânea | Roube uma Raça de contrato 3◆ ou menos |
+| T06 | Espionagem | Intriga | Instantânea | Roube uma Tática aleatória da mão de um rival |
+| T07 | Transferência Compulsória | Intriga | Instantânea | Transfira uma Raça sua e seu contrato para o alvo |
+| T08 | Deserção Planejada | Intriga | Instantânea | Dispense uma Raça sem gastar ação e compre uma Tática |
+| T09 | Interrogatório Real | Intriga | Instantânea | Revele o Decreto de um rival até o fim da rodada |
+| T10 | Realocar Missão | Intriga | Instantânea | Troque o Decreto de um jogador que ainda não declarou |
+| T11 | Contrato Falso | Intriga | Reação | O próximo contrato do alvo recebe +2◆ |
+| T12 | Propaganda de Guerra | Intriga | Instantânea | Um traço seu conta duas vezes na rodada |
+| T13 | Forja Portátil | Equipamento | Permanente | Uma Raça Bruta recebe +2 ATK |
+| T14 | Armadilha de Laço | Intriga | Reação | Cancele um recrutamento rival |
+| T15 | Treinamento Real | Intriga | Instantânea | Suas Raças recebem +1 INT na rodada |
+| T16 | Escudo de Pedra | Equipamento | Permanente | Uma Raça recebe +3 PV |
 
 ---
 
@@ -335,7 +339,7 @@ Estes 16 efeitos validam as categorias antes da expansão para 50–64 cartas. O
 ### Setup partida
 
 1. Cada jogador recebe 1 **Decreto** (oculto).
-2. Comprar **3 itens** iniciais.
+2. Comprar **3 táticas** iniciais.
 3. Revelar **6 raças** no mercado.
 4. Colocar as moedas de **Verba Real** no Tesouro, ao alcance de todos.
 
@@ -343,20 +347,20 @@ Estes 16 efeitos validam as categorias antes da expansão para 50–64 cartas. O
 
 | # | Ação | Detalhe |
 |---|------|---------|
-| 1 | **Comprar item** (opcional) | 1 do baralho |
+| 1 | **Comprar tática** (opcional) | 1 do baralho |
 | 2 | **Até 2 ações** da lista abaixo | Qualquer combinação |
 
 **Lista de ações (escolhe 2):**
 
 - **Recrutar** — mercado → exército; pegue Verba do Tesouro e coloque sobre a Raça
-- **Jogar item** — resolve e descarta (ou campo permanece)
+- **Jogar tática** — resolve e descarta (ou campo permanece)
 - **Dispensar** — devolva 1 Raça ao descarte e sua Verba ao Tesouro
 - **Negociar** — troca com jogador (não vinculante até confirmar)
 - **Declarar vitória** — valida decreto
 
 Cada ação pode ser repetida, exceto **Recrutar**, que pode ser realizado no
 máximo **1 vez por turno**. Essa limitação mantém a segunda ação relevante para
-Itens, negociação, dispensa e declaração.
+Táticas, negociação, dispensa e declaração.
 
 ### Fim de rodada
 
@@ -383,14 +387,14 @@ O Tesouro Real adianta a Verba necessária para cada contratação. As moedas n�
 
 ### Negociação livre
 
-- Jogadores podem trocar: itens, raças do exército, "favores" futuros.
+- Jogadores podem trocar: táticas, raças do exército, "favores" futuros.
 - **Nada é obrigatório** — mentir e quebrar acordo é permitido.
 - Trocas simultâneas: revelar o que entregam ao mesmo tempo.
 - Concluir uma troca custa 1 ação do jogador ativo e só pode ocorrer uma vez por turno.
 
 ### Roubo
 
-- Itens de roubo resolvem contra exército ou mão.
+- Táticas de roubo resolvem contra exército ou mão.
 - Raça roubada vai para o exército do ladrão, que se torna seu controlador e resolve efeitos de transferência. Todas as moedas sobre a carta acompanham a Raça; o ladrão assume o contrato e o antigo controlador libera aquela Verba.
 
 ### Trapaça de mercado
@@ -555,7 +559,7 @@ O primeiro playtest usa Tesouro ilimitado. Deve registrar a maior quantidade sim
 |------|---------|
 | **Agora** | Prototipar Crédito de Guerra; validar consequência de falha e janela de vitória |
 | **+1** | RULEBOOK v0.2.1 |
-| **+2** | Print: 20 espécies, 8 Decretos e 28 Itens |
+| **+2** | Print: 20 espécies, 8 Decretos e 28 Táticas |
 | **+3** | Playtest controlado com 3, 4 e 5 jogadores |
 | **+4** | Site: publicar resultados do playtest v0.2.1 |
 

@@ -61,10 +61,10 @@ const CARD_DATA = [
   },
   {
     kind: "item",
-    id: "I04",
-    type: "Campo individual",
+    id: "T04",
+    type: "Influência · Permanente",
     name: "Auditoria Infernal",
-    effect: "ADICIONE +1<span class=\"resource\">◆</span> A CADA CONTRATO DO ALVO.<br>REMOVA AO DESCARTAR ESTE CAMPO.",
+    effect: "ADICIONE +1<span class=\"resource\">◆</span> A CADA CONTRATO DO ALVO.<br>REMOVA AO DESCARTAR ESTA INFLUÊNCIA.",
     art: "assets/fonte-auditoria-i04.png",
     artClass: "art--auditoria"
   },

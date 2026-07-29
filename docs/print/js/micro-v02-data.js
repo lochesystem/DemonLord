@@ -1,6 +1,6 @@
 /**
  * DemonLord — microprotótipo Crédito de Guerra v0.2
- * 34 Raças + 28 Itens + 8 Decretos = 70 cartas
+ * 34 Raças + 28 Táticas + 8 Decretos = 70 cartas
  */
 
 const MICRO_RACES_BASE = [
@@ -27,29 +27,29 @@ const MICRO_RACES = MICRO_RACES_BASE.flatMap((race) =>
   [1, 2].map((copy) => ({ ...race, id: `${race.id}-${copy}` }))
 );
 
-const MICRO_ITEMS_BASE = [
-  { id: 'I01', name: 'Cidade Natal Destruída', type: 'Terreno', icon: '🏚', copies: 2, effect: 'Harpias ficam −2 ATK. Novos contratos de Harpia recebem −1◆.' },
-  { id: 'I02', name: 'Praga no Pântano', type: 'Terreno', icon: '☣', copies: 2, effect: 'Raças Nadadoras ficam −2 PV enquanto este Terreno estiver ativo.' },
-  { id: 'I03', name: 'Forja Abissal Aberta', type: 'Terreno', icon: '⚒', copies: 2, effect: 'Brutos ficam +1 ATK. Novos contratos de Bruto recebem +1◆.' },
-  { id: 'I04', name: 'Auditoria Infernal', type: 'Campo individual', icon: '📜', copies: 2, effect: 'Adicione +1◆ a cada contrato do alvo. Remova ao descartar este Campo.' },
-  { id: 'I05', name: 'Suborno de Clã', type: 'Roubo', icon: '🤝', copies: 2, effect: 'Roube 1 Raça de contrato 3◆ ou menos. Suas moedas acompanham a carta.' },
-  { id: 'I06', name: 'Espionagem', type: 'Roubo', icon: '👁', copies: 1, effect: 'Roube 1 Item aleatório da mão de um rival.' },
-  { id: 'I07', name: 'Transferência Compulsória', type: 'Intriga', icon: '↔', copies: 1, effect: 'Mova 1 Raça sua para o exército alvo. Ele assume a carta e o contrato.' },
-  { id: 'I08', name: 'Deserção Planejada', type: 'Intriga', icon: '🏃', copies: 2, effect: 'Dispense 1 Raça sua sem gastar ação e compre 1 Item.' },
-  { id: 'I09', name: 'Interrogatório Real', type: 'Intriga', icon: '❓', copies: 1, effect: 'Um rival revela seu Decreto até o fim da rodada.' },
-  { id: 'I10', name: 'Realocar Missão', type: 'Intriga', icon: '✉', copies: 1, effect: 'Alvo que ainda não declarou coloca o Decreto no fundo e compra outro.' },
-  { id: 'I11', name: 'Contrato Falso', type: 'Armadilha', icon: '⚠', copies: 2, effect: 'Reação: a próxima Raça recrutada pelo alvo recebe +2◆ de Verba.' },
-  { id: 'I12', name: 'Propaganda de Guerra', type: 'Intriga', icon: '📣', copies: 2, effect: 'Escolha 1 Raça sua: seu traço conta duas vezes até o fim da rodada.' },
-  { id: 'I13', name: 'Forja Portátil', type: 'Equipamento', icon: '⚙', copies: 2, effect: 'Anexe a uma Raça Bruta: ela recebe +2 ATK.' },
-  { id: 'I14', name: 'Armadilha de Laço', type: 'Armadilha', icon: '🪤', copies: 2, effect: 'Reação: cancele um recrutamento. A Raça permanece no mercado.' },
-  { id: 'I15', name: 'Treinamento Real', type: 'Buff', icon: '📚', copies: 2, effect: 'Suas Raças recebem +1 INT até o fim da rodada.' },
-  { id: 'I16', name: 'Escudo de Pedra', type: 'Equipamento', icon: '🛡', copies: 2, effect: 'Anexe a 1 Raça: ela recebe +3 PV.' },
+const MICRO_TACTICS_BASE = [
+  { id: 'T01', name: 'Cidade Natal Destruída', type: 'Terreno', timing: 'Permanente', icon: '🏚', copies: 2, effect: 'Harpias ficam −2 ATK. Novos contratos de Harpia recebem −1◆.' },
+  { id: 'T02', name: 'Praga no Pântano', type: 'Terreno', timing: 'Permanente', icon: '☣', copies: 2, effect: 'Raças Nadadoras ficam −2 PV enquanto este Terreno estiver ativo.' },
+  { id: 'T03', name: 'Forja Abissal Aberta', type: 'Terreno', timing: 'Permanente', icon: '⚒', copies: 2, effect: 'Brutos ficam +1 ATK. Novos contratos de Bruto recebem +1◆.' },
+  { id: 'T04', name: 'Auditoria Infernal', type: 'Influência', timing: 'Permanente', icon: '📜', copies: 2, effect: 'Adicione +1◆ a cada contrato do alvo. Remova ao descartar esta Influência.' },
+  { id: 'T05', name: 'Suborno de Clã', type: 'Intriga', timing: 'Instantânea', icon: '🤝', copies: 2, effect: 'Roube 1 Raça de contrato 3◆ ou menos. Suas moedas acompanham a carta.' },
+  { id: 'T06', name: 'Espionagem', type: 'Intriga', timing: 'Instantânea', icon: '👁', copies: 1, effect: 'Roube 1 Tática aleatória da mão de um rival.' },
+  { id: 'T07', name: 'Transferência Compulsória', type: 'Intriga', timing: 'Instantânea', icon: '↔', copies: 1, effect: 'Mova 1 Raça sua para o exército alvo. Ele assume a carta e o contrato.' },
+  { id: 'T08', name: 'Deserção Planejada', type: 'Intriga', timing: 'Instantânea', icon: '🏃', copies: 2, effect: 'Dispense 1 Raça sua sem gastar ação e compre 1 Tática.' },
+  { id: 'T09', name: 'Interrogatório Real', type: 'Intriga', timing: 'Instantânea', icon: '❓', copies: 1, effect: 'Um rival revela seu Decreto até o fim da rodada.' },
+  { id: 'T10', name: 'Realocar Missão', type: 'Intriga', timing: 'Instantânea', icon: '✉', copies: 1, effect: 'Alvo que ainda não declarou coloca o Decreto no fundo e compra outro.' },
+  { id: 'T11', name: 'Contrato Falso', type: 'Intriga', timing: 'Reação', icon: '⚠', copies: 2, effect: 'A próxima Raça recrutada pelo alvo recebe +2◆ de Verba.' },
+  { id: 'T12', name: 'Propaganda de Guerra', type: 'Intriga', timing: 'Instantânea', icon: '📣', copies: 2, effect: 'Escolha 1 Raça sua: seu traço conta duas vezes até o fim da rodada.' },
+  { id: 'T13', name: 'Forja Portátil', type: 'Equipamento', timing: 'Permanente', icon: '⚙', copies: 2, effect: 'Anexe a uma Raça Bruta: ela recebe +2 ATK.' },
+  { id: 'T14', name: 'Armadilha de Laço', type: 'Intriga', timing: 'Reação', icon: '🪤', copies: 2, effect: 'Cancele um recrutamento. A Raça permanece no mercado.' },
+  { id: 'T15', name: 'Treinamento Real', type: 'Intriga', timing: 'Instantânea', icon: '📚', copies: 2, effect: 'Suas Raças recebem +1 INT até o fim da rodada.' },
+  { id: 'T16', name: 'Escudo de Pedra', type: 'Equipamento', timing: 'Permanente', icon: '🛡', copies: 2, effect: 'Anexe a 1 Raça: ela recebe +3 PV.' },
 ];
 
-const MICRO_ITEMS = MICRO_ITEMS_BASE.flatMap((item) =>
-  Array.from({ length: item.copies }, (_, index) => ({
-    ...item,
-    id: `${item.id}-${index + 1}`,
+const MICRO_TACTICS = MICRO_TACTICS_BASE.flatMap((tactic) =>
+  Array.from({ length: tactic.copies }, (_, index) => ({
+    ...tactic,
+    id: `${tactic.id}-${index + 1}`,
   }))
 );
 
@@ -66,17 +66,17 @@ const MICRO_DECREES = [
 
 const MICRO_COUNTS = {
   races: MICRO_RACES.length,
-  items: MICRO_ITEMS.length,
+  tactics: MICRO_TACTICS.length,
   decrees: MICRO_DECREES.length,
-  total: MICRO_RACES.length + MICRO_ITEMS.length + MICRO_DECREES.length,
+  total: MICRO_RACES.length + MICRO_TACTICS.length + MICRO_DECREES.length,
 };
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
     MICRO_RACES_BASE,
     MICRO_RACES,
-    MICRO_ITEMS_BASE,
-    MICRO_ITEMS,
+    MICRO_TACTICS_BASE,
+    MICRO_TACTICS,
     MICRO_DECREES,
     MICRO_COUNTS,
   };

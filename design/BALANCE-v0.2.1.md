@@ -77,7 +77,7 @@ Cada espécie entra com duas cópias no perfil experimental. O baralho passa de
 
 No perfil v0.2.1, um jogador continua realizando até duas ações, mas pode usar
 **Recrutar no máximo uma vez por turno**. A segunda ação permanece disponível
-para Item, negociação, dispensa ou declaração.
+para Tática, negociação, dispensa ou declaração.
 
 Esse limite não reduz as decisões do turno; ele impede que contratar duas vezes
 seja quase sempre superior a negociar.
@@ -96,4 +96,4 @@ Em 20.000 partidas por quantidade de jogadores:
 - a negociação mudou o vencedor em 19,6% dos pares simulados.
 
 O limite de um recrutamento por turno é, portanto, parte recomendada do
-playtest v0.2.1. Ainda precisa ser validado com Itens, blefe e jogadores reais.
+playtest v0.2.1. Ainda precisa ser validado com Táticas, blefe e jogadores reais.

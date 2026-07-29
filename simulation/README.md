@@ -38,6 +38,6 @@ Os resultados são gravados em:
 - partidas com 3, 4 e 5 jogadores;
 - invariantes de recrutamento, transferência, dispensa e Auditoria.
 
-Ainda não são simulados Itens, habilidades das Raças, negociação, blefe,
+Ainda não são simulados Táticas, habilidades das Raças, negociação, blefe,
 reações ou interpretação humana dos textos. Esses sistemas devem entrar
 incrementalmente depois que a linha de base matemática estiver estável.

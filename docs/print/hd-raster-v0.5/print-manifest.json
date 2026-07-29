@@ -1,0 +1,38 @@
+[
+  {
+    "id": "R01",
+    "name": "Harpia",
+    "kind": "race",
+    "front": "exports/r01-harpia.png"
+  },
+  {
+    "id": "R03",
+    "name": "Morcego Infernal",
+    "kind": "race",
+    "front": "exports/r03-morcego-infernal.png"
+  },
+  {
+    "id": "R04",
+    "name": "Mantícora",
+    "kind": "race",
+    "front": "exports/r04-manticora.png"
+  },
+  {
+    "id": "R09",
+    "name": "Súcubo",
+    "kind": "race",
+    "front": "exports/r09-sucubo.png"
+  },
+  {
+    "id": "T04",
+    "name": "Auditoria Infernal",
+    "kind": "tactic",
+    "front": "exports/t04-auditoria-infernal.png"
+  },
+  {
+    "id": "D01",
+    "name": "Legião dos Céus",
+    "kind": "decree",
+    "front": "exports/d01-legiao-dos-ceus.png"
+  }
+]

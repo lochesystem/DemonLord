@@ -48,7 +48,7 @@ O final de `microprototipo-v0.2.html` contém 48 moedas: 24× 1◆, 16× 3◆ e 
 | Tipo | Quantidade |
 |------|------------|
 | Raças | 40 — 20 espécies × 2 |
-| Itens | 28 |
+| Táticas | 28 |
 | Decretos | 8 |
 | **Total** | **76 cartas** |
 | Moedas de Verba Real | 48 |

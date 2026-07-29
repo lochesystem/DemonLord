@@ -158,7 +158,7 @@ function buildMarkdown(report) {
     `Gerado em ${report.generatedAt}.`,
     '',
     '> Escopo: atributos, contratos, orçamento, mercado de 6 Raças e recrutamento por bots.',
-    '> Itens, habilidades de Raça, negociação, sabotagem e leitura humana ainda não entram nesta linha de base.',
+    '> Táticas, habilidades de Raça, negociação, sabotagem e leitura humana ainda não entram nesta linha de base.',
     '',
     '## Viabilidade exata dos Decretos',
     '',

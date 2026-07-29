@@ -1,0 +1,17 @@
+[
+  {
+    "id": "race",
+    "label": "RAÇAS",
+    "source": "components/backs/source/master-race.png"
+  },
+  {
+    "id": "tactic",
+    "label": "TÁTICAS",
+    "source": "components/backs/source/master-tactic.png"
+  },
+  {
+    "id": "decree",
+    "label": "DECRETOS",
+    "source": "components/backs/source/master-decree.png"
+  }
+]

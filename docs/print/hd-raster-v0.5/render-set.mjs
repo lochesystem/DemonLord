@@ -59,8 +59,8 @@ const backs = {
     file: "../hd-v0.3/verso-raca.png"
   },
   item: {
-    label: "VERSO · ITENS",
-    file: "../hd-v0.3/verso-item.png"
+    label: "VERSO · TÁTICAS",
+    file: "../hd-v0.3/verso-tatica.png"
   },
   decree: {
     label: "VERSO · DECRETOS",

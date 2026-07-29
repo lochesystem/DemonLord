@@ -27,7 +27,7 @@ O jogo é um **carteado de trapaça**: manipulação de campo, mercado volátil,
 | Economia = **orçamento pessoal** + custo das raças | Três recursos abstratos (Ouro, Comida, Militar) |
 | **Mercado de monstros** visível com stats (PV, ATK, INT) | Mercado de cartas de efeito genérico |
 | Raças têm **atributos e traços** (voa, nada, bruto) | Raças davam "+Militar" ao pool |
-| Cartas na mão = **itens** (roubar, sabotar mercado, revelar decreto) | Intriga/acusação/golpe político |
+| Cartas na mão = **táticas** (roubar, sabotar mercado, revelar decreto) | Intriga/acusação/golpe político |
 | Raças em campo = **exército do jogador** | Recursos iam para cofre da mesa |
 | Mercado **volátil** (doença, cidade destruída, preço muda) | Eventos afetavam requisito da fase |
 | Negociação e troca livre entre jogadores | Negociação sem sistema de troca de cartas/raças |
@@ -40,7 +40,7 @@ O jogo é um **carteado de trapaça**: manipulação de campo, mercado volátil,
 - Generais do Rei Demônio com **objetivo secreto** (agora = Decreto, não mandato paralelo)
 - **Negociação** e desconfiança na mesa
 - **Traição** via cartas que revelam ou trocam decreto alheio
-- **Rejogabilidade** por combinação de decretos + mercado + itens
+- **Rejogabilidade** por combinação de decretos + mercado + táticas
 - Tom de intriga na corte demoníaca
 - Referências úteis: jogos de objetivo oculto, negociação aberta e economia volátil
 
@@ -48,7 +48,7 @@ O jogo é um **carteado de trapaça**: manipulação de campo, mercado volátil,
 
 ## Novo modelo em uma frase
 
-> Cada jogador recruta monstros do mercado para montar um exército que cumpre o **Decreto secreto** do Rei, enquanto usa **itens** para manipular o mercado, sabotar rivais e negociar — tudo dentro do **orçamento** da missão.
+> Cada jogador recruta monstros do mercado para montar um exército que cumpre o **Decreto secreto** do Rei, enquanto usa **táticas** para manipular o mercado, sabotar rivais e negociar — tudo dentro do **orçamento** da missão.
 
 ---
 
@@ -57,7 +57,7 @@ O jogo é um **carteado de trapaça**: manipulação de campo, mercado volátil,
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  OCULTO          │  MÃO              │  CAMPO (público) │
-│  Decreto do Rei  │  Cartas de Item   │  Raças / Exército│
+│  Decreto do Rei  │  Cartas de Tática   │  Raças / Exército│
 │  (só o dono vê)  │  (manipulação)    │  + Mercado comum │
 └─────────────────────────────────────────────────────────┘
 ```
@@ -65,7 +65,7 @@ O jogo é um **carteado de trapaça**: manipulação de campo, mercado volátil,
 | Zona | Visibilidade | Função |
 |------|--------------|--------|
 | **Decreto** | Oculto | Missão individual: requisitos de exército + orçamento máximo |
-| **Mão** | Privada | Itens: roubar, buff, armadilha, campo, revelar/trocar decreto |
+| **Mão** | Privada | Táticas: Terreno, Influência, Equipamento e Intriga |
 | **Campo** | Pública | Exército recrutado + mercado compartilhado de raças |
 
 ---
@@ -110,18 +110,18 @@ Baseado no layout enviado pelo PO:
 
 ---
 
-## Itens (categorias PO)
+## Táticas (categorias PO)
 
-| Categoria | Exemplo | Efeito |
+| Subtipo · Resolução | Exemplo | Efeito |
 |-----------|---------|--------|
-| **Campo** | Cidade natal destruída | Raças Harpia −2 ATK e −1◆ de custo no mercado |
-| **Campo** | Praga no pântano | Raças **Nada** ficam doentes: −2 PV |
-| **Roubo** | Suborno de clã | Roube 1 raça do exército de um jogador |
-| **Roubo** | Espionagem | Roube 1 carta da mão de um jogador |
-| **Intriga** | Interrogatório real | Alvo revela o Decreto |
-| **Intriga** | Realocar missão | Alvo troca Decreto por outro do baralho |
-| **Buff** | Forja de guerra | +1 ATK em todas as suas raças Bruto |
-| **Armadilha** | Contrato falso | Quem recrutar neste turno paga +2◆ |
+| **Terreno · Permanente** | Cidade natal destruída | Raças Harpia −2 ATK e −1◆ de custo no mercado |
+| **Terreno · Permanente** | Praga no pântano | Raças **Nada** ficam doentes: −2 PV |
+| **Intriga · Instantânea** | Suborno de clã | Roube 1 raça do exército de um jogador |
+| **Intriga · Instantânea** | Espionagem | Roube 1 carta da mão de um jogador |
+| **Intriga · Instantânea** | Interrogatório real | Alvo revela o Decreto |
+| **Intriga · Instantânea** | Realocar missão | Alvo troca Decreto por outro do baralho |
+| **Equipamento · Permanente** | Forja de guerra | +1 ATK em uma raça Bruto |
+| **Intriga · Reação** | Contrato falso | O próximo contrato do alvo recebe +2◆ |
 
 ---
 
@@ -130,12 +130,12 @@ Baseado no layout enviado pelo PO:
 ```mermaid
 flowchart LR
   M[Mercado comum] -->|recrutar| E[Exército do jogador]
-  I[Item de campo] -->|modifica| M
-  I -->|rouba| E
+  T[Tática] -->|modifica| M
+  T -->|rouba| E
   D[Decreto oculto] -->|define| R[Requisitos + orçamento]
   E -->|conta para| R
   N[Negociação] --> E
-  N --> I
+  N --> T
 ```
 
 **Exemplo na mesa:** Jogador A investiu em Harpias. Jogador B joga *Cidade Natal Destruída* → Harpias no mercado ficam mais baratas mas perdem ATK. A pode se beneficiar do preço ou estar ferrado nos requisitos de ATK.
@@ -147,7 +147,7 @@ flowchart LR
 1. [ ] Validar GDD v0.2 com PO
 2. [ ] Reescrever RULEBOOK v0.2
 3. [ ] Atualizar templates de impressão (carta de raça nova)
-4. [ ] Protótipo mínimo: 12 raças, 8 decretos, 16 itens, mercado 6 slots
+4. [ ] Protótipo mínimo: 12 raças, 8 decretos, 16 táticas, mercado 6 slots
 5. [ ] Playtest: mercado volátil é divertido ou frustrante demais?
 
 ---

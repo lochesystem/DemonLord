@@ -1,0 +1,36 @@
+{
+  "canvas": { "width": 1050, "height": 1498 },
+  "layers": [
+    {
+      "name": "arte variável do tipo",
+      "file": "components/backs/types/artwork-{tipo}.png",
+      "x": 0,
+      "y": 0,
+      "width": 1050,
+      "height": 1498
+    },
+    {
+      "name": "placa de tipo vazia",
+      "file": "components/backs/common/type-plaque-blank.png",
+      "x": 165,
+      "y": 1202,
+      "width": 720,
+      "height": 222
+    },
+    {
+      "name": "rótulo raster do tipo",
+      "file": "components/backs/labels/label-{tipo}.png",
+      "x": 525,
+      "y": 1297,
+      "anchor": "optical-center"
+    },
+    {
+      "name": "moldura universal",
+      "file": "components/backs/common/frame-universal.png",
+      "x": 0,
+      "y": 0,
+      "width": 1050,
+      "height": 1498
+    }
+  ]
+}

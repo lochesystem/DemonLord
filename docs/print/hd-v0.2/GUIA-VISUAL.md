@@ -17,7 +17,7 @@ template HTML/CSS.
   `♀` ou neutro) na área livre de pergaminho abaixo da coluna de atributos e à
   esquerda da caixa de habilidade. Não usar texto, medalhão ou moldura. O traço
   permanece sozinho e perfeitamente centralizado na placa inferior.
-- Toda frente possui identificador no formato `R00`, `I00` ou `D00`. Ele fica
+- Toda frente possui identificador no formato `R00`, `T00` ou `D00`. Ele fica
   pequeno e centralizado em uma faixa neutra de pergaminho imediatamente acima
   da borda inferior, sempre na mesma coordenada vertical. Usa tinta preta, a
   mesma tipografia e o mesmo tamanho em todos os tipos. Não usar placas,
@@ -37,7 +37,7 @@ template HTML/CSS.
 | Tipo | Cor secundária | Símbolo principal | Função visual do verso |
 | --- | --- | --- | --- |
 | Raça | Roxo empoeirado e vinho | Monstro alado com chifres | Identificar o mercado/baralho de monstros |
-| Item | Verde-petróleo e turquesa escuro | Contrato, ábaco e adaga | Identificar cartas de manipulação |
+| Tática | Verde-petróleo e turquesa escuro | Contrato, ábaco e adaga | Identificar cartas de manipulação |
 | Decreto | Carmesim e ouro | Coroa, pergaminho e selo | Identificar a missão secreta |
 
 As diferenças entre os versos ficam restritas à cor secundária, ao brasão
@@ -50,13 +50,13 @@ central e ao nome do tipo. O aro preto, o ouro, os rubis, a placa de
 - `frente-raca-manticora-efeito.png`
 - `frente-raca-sucubo-r09.png`
 - `frente-raca-sucubo-r09-v2.png` — posição aprovada para o símbolo de sexo
-- `frente-item-auditoria-infernal.png`
+- `frente-tática-auditoria-infernal.png`
 - `frente-decreto-legiao-dos-ceus-v2.png`
 - `verso-raca.png` — mestre oficial dos versos
-- `verso-item-v2.png`
+- `verso-tatica-v2.png`
 - `verso-decreto-v2.png`
 
-Os arquivos de Item e Decreto sem o sufixo `v2` ficam preservados apenas como
+Os arquivos de Tática e Decreto sem o sufixo `v2` ficam preservados apenas como
 histórico de exploração e não devem ser usados no baralho.
 
 ## Preparação para impressão
