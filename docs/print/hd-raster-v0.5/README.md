@@ -1,4 +1,4 @@
-# DemonLord — kit raster em camadas v0.5 / conjunto visual v0.6
+# DemonLord — kit raster em camadas v0.5 / conjunto visual v0.9
 
 Este modelo não desenha a carta com CSS. Cada elemento visual é uma imagem raster independente e reutilizável.
 
@@ -6,17 +6,18 @@ Este modelo não desenha a carta com CSS. Cada elemento visual é uma imagem ras
 
 - R01 a R19 — catálogo completo de Raças
 - T04 — Auditoria Infernal
-- D01 — Legião dos Céus
+- D01 a D08 — catálogo completo de Decretos do playtest
 
-As 21 frentes são exportadas em `1050 × 1500 px` dentro de `exports/`.
+As 28 frentes são exportadas em `1050 × 1500 px` dentro de `exports/`.
 As Raças seguem a direção documentada em
 `../../../design/ART-DIRECTION-RACES-v0.6.md`: cenário completo em três
 planos, foco no personagem e zonas protegidas para os componentes da carta.
 
 A prancha `conjunto-completo-frentes-e-versos-v0.5.png` apresenta cada
 carta ao lado do verso correspondente ao seu baralho: Raças, Táticas ou
-Decretos. A prancha `conjunto-racas-frentes-v0.6.png` reúne exclusivamente as
-19 Raças para revisão de consistência visual.
+Decretos. A prancha `conjunto-racas-frentes-v0.9.png` reúne exclusivamente as
+19 Raças para revisão de consistência visual. A prancha
+`conjunto-decretos-frentes-v0.9.png` reúne os oito Decretos.
 
 ## Versos componentizados
 
@@ -43,7 +44,7 @@ O mapa `layers-back.json` registra dimensões e posições fixas. A prancha
 ## Camadas
 
 1. `components/pergaminho-base.png` — fundo.
-2. `art/` — somente a ilustração do monstro.
+2. `art/` — somente a ilustração-base de cada carta.
 3. `components/normalized/borda-raca.png` — moldura transparente.
 4. Medalhão de custo, cápsulas de atributo e placas.
 5. Textos e números rasterizados na montagem.
@@ -64,7 +65,7 @@ Os arquivos em `components/chroma/` são as gerações originais. Os arquivos em
 - `layers-race.json`
 - `layers-item.json` — nome técnico legado; representa o template de Tática
 - `layers-decree.json`
-- `cards-data.json` — conteúdo variável das 21 cartas em alta fidelidade.
+- `cards-data.json` — conteúdo variável das 28 cartas em alta fidelidade.
 
 ## Regerar
 

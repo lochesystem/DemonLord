@@ -108,8 +108,15 @@
     "kind": "race",
     "id": "R08",
     "name": "ORC GORDO",
-    "art": "art/orc-gordo-r08.png",
+    "art": "art/orc-gordo-r08-v2-flat.png",
     "artFocusY": 0.5,
+    "variants": [
+      {
+        "suffix": "versao-anterior-detalhada",
+        "art": "art/orc-gordo-r08.png",
+        "artFocusY": 0.5
+      }
+    ],
     "cost": 5,
     "pv": 5,
     "atk": 6,
@@ -171,8 +178,15 @@
     "kind": "race",
     "id": "R12",
     "name": "MINOTAURO",
-    "art": "art/minotauro-r12.png",
+    "art": "art/minotauro-r12-v2-flat.png",
     "artFocusY": 0.5,
+    "variants": [
+      {
+        "suffix": "versao-anterior-com-mapa",
+        "art": "art/minotauro-r12.png",
+        "artFocusY": 0.5
+      }
+    ],
     "cost": 5,
     "pv": 5,
     "atk": 5,
@@ -255,9 +269,14 @@
     "kind": "race",
     "id": "R18",
     "name": "ORC BERSERKER",
-    "art": "art/orc-berserker-r18.png",
+    "art": "art/orc-berserker-r18-v3-flat.png",
     "artFocusY": 0.48,
     "variants": [
+      {
+        "suffix": "versao-anterior-detalhada",
+        "art": "art/orc-berserker-r18.png",
+        "artFocusY": 0.48
+      },
       {
         "suffix": "alternativa-comica",
         "art": "art/orc-berserker-r18-v2-comico.png",
@@ -300,13 +319,172 @@
     "id": "D01",
     "type": "DECRETO SECRETO",
     "name": "LEGIÃO DOS CÉUS",
-    "art": "art/legiao-dos-ceus-d01.png",
-    "artFocusY": 0.4,
+    "art": "art/legiao-dos-ceus-d01-v2-flat.png",
+    "artFocusY": 0.12,
+    "variants": [
+      {
+        "suffix": "versao-anterior-detalhada",
+        "art": "art/legiao-dos-ceus-d01.png",
+        "artFocusY": 0.4
+      }
+    ],
     "budget": 18,
     "requirements": [
       { "value": "3+", "label": "VOADOR" },
       { "value": "12+", "label": "PV TOTAL" },
       { "value": "8+", "label": "INT TOTAL" }
+    ]
+  },
+  {
+    "kind": "decree",
+    "id": "D02",
+    "type": "DECRETO SECRETO",
+    "name": "TRITÕES DO ABISMO",
+    "art": "art/tritoes-do-abismo-d02-v2-flat.png",
+    "artFocusY": 0.5,
+    "variants": [
+      {
+        "suffix": "versao-anterior-detalhada",
+        "art": "art/tritoes-do-abismo-d02.png",
+        "artFocusY": 0.5
+      }
+    ],
+    "budget": 15,
+    "requirements": [
+      { "value": "3+", "label": "NADADOR" },
+      { "value": "10+", "label": "ATK TOTAL" },
+      { "value": "3+", "label": "RAÇAS" }
+    ]
+  },
+  {
+    "kind": "decree",
+    "id": "D03",
+    "type": "DECRETO SECRETO",
+    "name": "PUNHO DE PEDRA",
+    "art": "art/punho-de-pedra-d03-v2-flat.png",
+    "artFocusY": 0.5,
+    "variants": [
+      {
+        "suffix": "versao-anterior-com-goblin",
+        "art": "art/punho-de-pedra-d03.png",
+        "artFocusY": 0.5
+      }
+    ],
+    "budget": 20,
+    "requirements": [
+      { "value": "2+", "label": "BRUTO" },
+      { "value": "16+", "label": "ATK TOTAL" },
+      { "value": "≤6", "label": "INT TOTAL" }
+    ]
+  },
+  {
+    "kind": "decree",
+    "id": "D04",
+    "type": "DECRETO SECRETO",
+    "name": "ESQUADRA MISTA",
+    "art": "art/esquadra-mista-d04-v2-flat.png",
+    "artFocusY": 0.5,
+    "variants": [
+      {
+        "suffix": "versao-anterior-detalhada",
+        "art": "art/esquadra-mista-d04.png",
+        "artFocusY": 0.5
+      }
+    ],
+    "budget": 16,
+    "requirements": [
+      { "value": "4+", "label": "RAÇAS DIF." },
+      { "value": "14+", "label": "PV TOTAL" },
+      { "value": "12+", "label": "ATK TOTAL" }
+    ]
+  },
+  {
+    "kind": "decree",
+    "id": "D05",
+    "type": "DECRETO SECRETO",
+    "name": "COMPANHIA ECONÔMICA",
+    "art": "art/companhia-economica-d05-v2-flat.png",
+    "artFocusY": 0.5,
+    "variants": [
+      {
+        "suffix": "versao-anterior-detalhada",
+        "art": "art/companhia-economica-d05.png",
+        "artFocusY": 0.5
+      }
+    ],
+    "budget": 12,
+    "requirements": [
+      { "value": "4+", "label": "RAÇAS DIF." },
+      { "value": "2+ / 2+", "label": "ARCANO / FURTIVO" },
+      { "value": "12+ / ≤3", "label": "INT / VERBA MÉDIA" }
+    ]
+  },
+  {
+    "kind": "decree",
+    "id": "D06",
+    "type": "DECRETO SECRETO",
+    "name": "CORTE ARCANA",
+    "art": "art/corte-arcana-d06-v2-flat.png",
+    "artFocusY": 0.5,
+    "variants": [
+      {
+        "suffix": "versao-anterior-detalhada",
+        "art": "art/corte-arcana-d06.png",
+        "artFocusY": 0.5
+      }
+    ],
+    "budget": 18,
+    "requirements": [
+      { "value": "2+", "label": "ARCANO" },
+      { "value": "14+", "label": "INT TOTAL" },
+      { "value": "10+", "label": "PV TOTAL" }
+    ]
+  },
+  {
+    "kind": "decree",
+    "id": "D07",
+    "type": "DECRETO SECRETO",
+    "name": "FORÇA BRUTA",
+    "art": "art/forca-bruta-d07-v3-consistente.png",
+    "artFocusY": 0.5,
+    "variants": [
+      {
+        "suffix": "versao-flat-anterior",
+        "art": "art/forca-bruta-d07-v2-flat.png",
+        "artFocusY": 0.5
+      },
+      {
+        "suffix": "versao-anterior-detalhada",
+        "art": "art/forca-bruta-d07.png",
+        "artFocusY": 0.5
+      }
+    ],
+    "budget": 18,
+    "requirements": [
+      { "value": "17+", "label": "ATK TOTAL" },
+      { "value": "14+", "label": "PV TOTAL" },
+      { "value": "≤10", "label": "INT TOTAL" }
+    ]
+  },
+  {
+    "kind": "decree",
+    "id": "D08",
+    "type": "DECRETO SECRETO",
+    "name": "EXÉRCITO EQUILIBRADO",
+    "art": "art/exercito-equilibrado-d08-v2-flat.png",
+    "artFocusY": 0.5,
+    "variants": [
+      {
+        "suffix": "versao-anterior-detalhada",
+        "art": "art/exercito-equilibrado-d08.png",
+        "artFocusY": 0.5
+      }
+    ],
+    "budget": 16,
+    "requirements": [
+      { "value": "12+ / 12+", "label": "PV / ATK" },
+      { "value": "10+", "label": "INT TOTAL" },
+      { "value": "4+", "label": "RAÇAS" }
     ]
   }
 ]

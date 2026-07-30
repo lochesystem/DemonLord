@@ -124,5 +124,47 @@
     "name": "Legião dos Céus",
     "kind": "decree",
     "front": "exports/d01-legiao-dos-ceus.png"
+  },
+  {
+    "id": "D02",
+    "name": "Tritões do Abismo",
+    "kind": "decree",
+    "front": "exports/d02-tritoes-do-abismo.png"
+  },
+  {
+    "id": "D03",
+    "name": "Punho de Pedra",
+    "kind": "decree",
+    "front": "exports/d03-punho-de-pedra.png"
+  },
+  {
+    "id": "D04",
+    "name": "Esquadra Mista",
+    "kind": "decree",
+    "front": "exports/d04-esquadra-mista.png"
+  },
+  {
+    "id": "D05",
+    "name": "Companhia Econômica",
+    "kind": "decree",
+    "front": "exports/d05-companhia-economica.png"
+  },
+  {
+    "id": "D06",
+    "name": "Corte Arcana",
+    "kind": "decree",
+    "front": "exports/d06-corte-arcana.png"
+  },
+  {
+    "id": "D07",
+    "name": "Força Bruta",
+    "kind": "decree",
+    "front": "exports/d07-forca-bruta.png"
+  },
+  {
+    "id": "D08",
+    "name": "Exército Equilibrado",
+    "kind": "decree",
+    "front": "exports/d08-exercito-equilibrado.png"
   }
 ]

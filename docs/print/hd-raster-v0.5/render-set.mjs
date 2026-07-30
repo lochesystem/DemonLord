@@ -67,7 +67,7 @@ raceCtx.fillStyle = "#17130f";
 raceCtx.fillRect(0, 0, raceCanvas.width, raceCanvas.height);
 raceCtx.fillStyle = "#f2d57c";
 raceCtx.font = "54px DemonNarrow";
-raceCtx.fillText("DEMONLORD · 19 RAÇAS EM ALTA FIDELIDADE · v0.6", 80, 80);
+raceCtx.fillText("DEMONLORD · 19 RAÇAS EM ALTA FIDELIDADE · v0.9", 80, 80);
 
 for (let index = 0; index < raceCards.length; index += 1) {
   const card = raceCards[index];
@@ -92,8 +92,48 @@ for (let index = 0; index < raceCards.length; index += 1) {
 }
 
 await writeFile(
-  new URL("./exports/conjunto-racas-frentes-v0.6.png", root),
+  new URL("./exports/conjunto-racas-frentes-v0.9.png", root),
   raceCanvas.toBuffer("image/png")
+);
+
+const decreeCards = cards.filter(card => card.kind === "decree");
+const decreeRows = Math.ceil(decreeCards.length / columns);
+const decreeCanvas = createCanvas(
+  canvasW,
+  startY + decreeRows * (cardH + gapY) + 50
+);
+const decreeCtx = decreeCanvas.getContext("2d");
+decreeCtx.fillStyle = "#17130f";
+decreeCtx.fillRect(0, 0, decreeCanvas.width, decreeCanvas.height);
+decreeCtx.fillStyle = "#f2d57c";
+decreeCtx.font = "54px DemonNarrow";
+decreeCtx.fillText("DEMONLORD · 8 DECRETOS EM ALTA FIDELIDADE · v0.9", 80, 80);
+
+for (let index = 0; index < decreeCards.length; index += 1) {
+  const card = decreeCards[index];
+  const slug = card.name
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+  const image = await loadImage(
+    new URL(`./exports/${card.id.toLowerCase()}-${slug}.png`, root)
+  );
+  const column = index % columns;
+  const row = Math.floor(index / columns);
+  const x = startX + column * (cardW + gapX);
+  const y = startY + row * (cardH + gapY);
+  decreeCtx.drawImage(image, x, y, cardW, cardH);
+  decreeCtx.fillStyle = "#f4e4bd";
+  decreeCtx.font = "28px DemonNarrow";
+  decreeCtx.textAlign = "center";
+  decreeCtx.fillText(`${card.id} · ${card.name}`, x + cardW / 2, y + cardH + 48);
+}
+
+await writeFile(
+  new URL("./exports/conjunto-decretos-frentes-v0.9.png", root),
+  decreeCanvas.toBuffer("image/png")
 );
 
 const backs = {
