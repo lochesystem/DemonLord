@@ -114,6 +114,12 @@
     "front": "exports/r19-cao-infernal.png"
   },
   {
+    "id": "R21",
+    "name": "Íncubo",
+    "kind": "race",
+    "front": "exports/r21-incubo.png"
+  },
+  {
     "id": "T04",
     "name": "Auditoria Infernal",
     "kind": "tactic",

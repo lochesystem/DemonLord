@@ -49,9 +49,10 @@ espécies abaixo.
 | R18 | Orc Berserker | 3 | 6 | 0 | 4◆ | Bruto | +1 ATK se controlar outro Bruto |
 | R19 | Cão Infernal | 3 | 5 | 1 | 3◆ | Batedor | +1 PV se controlar outro Batedor |
 | R20 | Troll de Guerra | 6 | 5 | 0 | 5◆ | Bruto | +1 PV se controlar outro Bruto |
+| R21 | Íncubo | 3 | 3 | 5 | 4◆ | Arcano | Ao entrar, transfere 1 Raça Feminina rival de contrato 3◆ ou menos |
 
 Cada espécie entra com duas cópias no perfil experimental. O baralho passa de
-34 para 40 cartas de Raça.
+34 para 42 cartas de Raça.
 
 ## Habilidades adicionadas às Raças sem efeito
 

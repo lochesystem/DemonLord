@@ -468,7 +468,7 @@ Baseado nos esboços PO (23/07):
 
 ## 12. Conteúdo MVP — catálogo inicial
 
-### Raças (20 espécies para playtest)
+### Raças (21 espécies para playtest)
 
 O protótipo expandido usa cópias dessas espécies para alcançar 36–48 cartas sem exigir uma arte exclusiva por carta. Cada traço recorrente deve aparecer em pelo menos 3 espécies, permitindo que efeitos atinjam uma família de monstros em vez de depender apenas de Harpias ou de outra raça específica.
 
@@ -494,6 +494,7 @@ O protótipo expandido usa cópias dessas espécies para alcançar 36–48 carta
 | R18 | Orc Berserker | Masculino | 3 | 6 | 0 | 4 | Bruto | +1 ATK se controlar outro Bruto |
 | R19 | Cão Infernal | Neutro | 3 | 5 | 1 | 3 | Batedor | +1 PV se controlar outro Batedor |
 | R20 | Troll de Guerra | Masculino | 6 | 5 | 0 | 5 | Bruto | +1 PV se controlar outro Bruto |
+| R21 | Íncubo | Masculino | 3 | 3 | 5 | 4 | Arcano | *Ao entrar:* transfira para seu exército 1 Raça Feminina de contrato 3◆ ou menos controlada por um rival |
 
 ### Decretos (8 para playtest)
 
@@ -559,7 +560,7 @@ O primeiro playtest usa Tesouro ilimitado. Deve registrar a maior quantidade sim
 |------|---------|
 | **Agora** | Prototipar Crédito de Guerra; validar consequência de falha e janela de vitória |
 | **+1** | RULEBOOK v0.2.1 |
-| **+2** | Print: 20 espécies, 8 Decretos e 28 Táticas |
+| **+2** | Print: 21 espécies, 8 Decretos e 28 Táticas |
 | **+3** | Playtest controlado com 3, 4 e 5 jogadores |
 | **+4** | Site: publicar resultados do playtest v0.2.1 |
 

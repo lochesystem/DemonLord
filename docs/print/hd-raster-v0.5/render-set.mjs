@@ -67,7 +67,7 @@ raceCtx.fillStyle = "#17130f";
 raceCtx.fillRect(0, 0, raceCanvas.width, raceCanvas.height);
 raceCtx.fillStyle = "#f2d57c";
 raceCtx.font = "54px DemonNarrow";
-raceCtx.fillText("DEMONLORD · 19 RAÇAS EM ALTA FIDELIDADE · v0.9", 80, 80);
+raceCtx.fillText("DEMONLORD · 20 RAÇAS EM ALTA FIDELIDADE · v1.0", 80, 80);
 
 for (let index = 0; index < raceCards.length; index += 1) {
   const card = raceCards[index];
@@ -92,7 +92,7 @@ for (let index = 0; index < raceCards.length; index += 1) {
 }
 
 await writeFile(
-  new URL("./exports/conjunto-racas-frentes-v0.9.png", root),
+  new URL("./exports/conjunto-racas-frentes-v1.0.png", root),
   raceCanvas.toBuffer("image/png")
 );
 

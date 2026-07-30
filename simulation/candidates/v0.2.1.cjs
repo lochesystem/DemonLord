@@ -179,6 +179,22 @@ const NEW_RACES = [
       bonus: { pv: 1 },
     },
   },
+  {
+    id: 'R21',
+    name: 'Íncubo',
+    sex: 'Masculino',
+    pv: 3,
+    atk: 3,
+    int: 5,
+    cost: 4,
+    trait: 'Arcano',
+    art: '😈',
+    effect: 'Ao entrar: transfira para seu exército 1 Raça Feminina de contrato 3◆ ou menos controlada por um rival.',
+    ability: {
+      kind: 'transferEnemy',
+      filters: { sex: 'Feminino', maxContract: 3 },
+    },
+  },
 ];
 
 function applyCandidate() {

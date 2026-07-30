@@ -7,7 +7,7 @@ Arquivos prontos para protótipo e envio à gráfica. Abra no **Chrome** ou **Ed
 | Arquivo | Conteúdo |
 |---------|----------|
 | [index.html](index.html) | Índice do kit |
-| [microprototipo-v0.2.html](microprototipo-v0.2.html) | **Kit atual v0.2.1:** 76 cartas + Verba Real |
+| [microprototipo-v0.2.html](microprototipo-v0.2.html) | **Kit atual v0.2.1:** 78 cartas + Verba Real |
 | [hd-raster-v0.5/README.md](hd-raster-v0.5/README.md) | **Modelo HD atual:** frentes raster montadas em camadas ilustradas |
 | [hd-raster-v0.5/exports/conjunto-frentes-v0.5.png](hd-raster-v0.5/exports/conjunto-frentes-v0.5.png) | Prancha com as seis frentes concluídas |
 | [hd-components-v0.4/GUIA-COMPONENTES.md](hd-components-v0.4/GUIA-COMPONENTES.md) | Protótipo HTML/CSS anterior, preservado como referência de anatomia |
@@ -47,10 +47,10 @@ O final de `microprototipo-v0.2.html` contém 48 moedas: 24× 1◆, 16× 3◆ e 
 
 | Tipo | Quantidade |
 |------|------------|
-| Raças | 40 — 20 espécies × 2 |
+| Raças | 42 — 21 espécies × 2 |
 | Táticas | 28 |
 | Decretos | 8 |
-| **Total** | **76 cartas** |
+| **Total** | **78 cartas** |
 | Moedas de Verba Real | 48 |
 
 ## Montagem
@@ -68,7 +68,7 @@ Envie os PDFs gerados com esta tabela:
 Produto: Microprotótipo DemonLord v0.2.1
 Formato corte: 63,5 x 88,9 mm
 Sangria: 3 mm
-Quantidade: 76 cartas
+Quantidade: 78 cartas
 Papel: Cartão 300g fosco
 ```
 

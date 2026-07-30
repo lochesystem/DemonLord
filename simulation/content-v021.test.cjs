@@ -24,15 +24,15 @@ function loadPrintData() {
   );
 }
 
-test('Print & Play v0.2.1 possui 76 cartas e nenhuma Raça sem habilidade', () => {
+test('Print & Play v0.2.1 possui 78 cartas e nenhuma Raça sem habilidade', () => {
   const print = loadPrintData();
   assert.deepEqual(print.counts, {
-    races: 40,
+    races: 42,
     tactics: 28,
     decrees: 8,
-    total: 76,
+    total: 78,
   });
-  assert.equal(new Set(print.races.map((race) => race.id.split('-')[0])).size, 20);
+  assert.equal(new Set(print.races.map((race) => race.id.split('-')[0])).size, 21);
   assert.equal(
     print.races.filter((race) => !race.effect || race.effect === '—').length,
     0

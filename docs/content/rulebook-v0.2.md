@@ -26,7 +26,7 @@ Se mais de um jogador cumprir o Decreto na mesma rodada, vence quem comprometeu 
 
 | Componente | Quantidade |
 |---|---:|
-| Cartas de Raça | 40 — 20 espécies × 2 |
+| Cartas de Raça | 42 — 21 espécies × 2 |
 | Cartas de Tática | 28 |
 | Cartas de Decreto | 8 |
 | Mercado | 6 espaços |

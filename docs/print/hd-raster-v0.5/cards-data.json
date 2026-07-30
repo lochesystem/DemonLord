@@ -311,6 +311,20 @@
     "effect": "ENQUANTO ESTIVER: RECEBE +1 PV SE VOCÊ CONTROLAR OUTRO BATEDOR."
   },
   {
+    "kind": "race",
+    "id": "R21",
+    "name": "ÍNCUBO",
+    "art": "art/incubo-r21-v2.png",
+    "artFocusY": 0.48,
+    "cost": 4,
+    "pv": 3,
+    "atk": 3,
+    "int": 5,
+    "sex": "♂",
+    "trait": "ARCANO",
+    "effect": "AO ENTRAR: TRANSFIRA PARA SEU EXÉRCITO 1 RAÇA FEMININA DE CONTRATO 3◆ OU MENOS CONTROLADA POR UM RIVAL."
+  },
+  {
     "kind": "item",
     "id": "T04",
     "type": "INFLUÊNCIA · PERMANENTE",
