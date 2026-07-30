@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DemonLord — Cartas HD para impressão</title>
+  <link rel="stylesheet" href="css/hd-print.css">
+</head>
+<body>
+  <nav class="hd-print-nav">
+    <div>
+      <strong>DemonLord · Impressão HD</strong>
+      <span id="hd-print-count">Preparando cartas…</span>
+    </div>
+    <div class="hd-print-actions">
+      <a href="../cartas-hd.html">Galeria HD</a>
+      <a href="index.html">Kit de impressão</a>
+      <button type="button" id="hd-print-button">Imprimir / Salvar PDF</button>
+    </div>
+  </nav>
+
+  <header class="hd-print-intro">
+    <div>
+      <p class="eyebrow">Print & Play · 600 dpi</p>
+      <h1>Cartas de alta fidelidade</h1>
+      <p>
+        Folhas A4 com nove cartas Poker por página, margem branca de corte de
+        3 mm e versos espelhados para impressão frente e verso.
+      </p>
+    </div>
+    <aside>
+      <strong>Atenção ao baralho completo</strong>
+      <p>
+        O conjunto HD disponível possui 76 cartas jogáveis. As duas cópias da
+        R20 — Troll de Guerra ainda dependem de uma frente em alta fidelidade.
+      </p>
+    </aside>
+  </header>
+
+  <section class="hd-print-controls" aria-label="Opções de impressão">
+    <label>
+      Conjunto
+      <select id="hd-print-deck">
+        <option value="models">44 modelos HD — uma cópia de cada</option>
+        <option value="playtest">Baralho HD disponível — 76 cartas</option>
+      </select>
+    </label>
+
+    <label>
+      Lados
+      <select id="hd-print-sides">
+        <option value="front">Somente frentes</option>
+        <option value="back">Somente versos</option>
+        <option value="both">Frentes e versos</option>
+      </select>
+    </label>
+
+    <fieldset>
+      <legend>Tipos</legend>
+      <label><input type="checkbox" value="race" checked> Raças</label>
+      <label><input type="checkbox" value="tactic" checked> Táticas</label>
+      <label><input type="checkbox" value="decree" checked> Decretos</label>
+    </fieldset>
+
+    <label class="hd-guide-option">
+      <input type="checkbox" id="hd-print-guides" checked>
+      Exibir linha de corte
+    </label>
+  </section>
+
+  <section class="hd-print-help">
+    <strong>Configuração recomendada:</strong>
+    papel A4, escala 100%, margens nenhuma e gráficos de fundo ativados.
+    Para duplex automático, selecione frentes e versos e use a opção de virar
+    pela borda longa. No duplex manual, imprima primeiro somente as frentes e
+    depois somente os versos, mantendo a mesma orientação do papel.
+  </section>
+
+  <main id="hd-print-root" aria-live="polite"></main>
+
+  <script src="js/hd-print-data.js"></script>
+  <script src="js/hd-print-render.js"></script>
+</body>
+</html>

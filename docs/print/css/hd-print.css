@@ -1,0 +1,318 @@
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+:root {
+  --page-width: 210mm;
+  --page-height: 297mm;
+  --card-width: 69.5mm;
+  --card-height: 94.9mm;
+  --bleed: 3mm;
+  --ink: #17130f;
+  --paper: #f4ead2;
+  --gold: #8a6420;
+  --teal: #0d4b4f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f7f5f0;
+  color: #231d17;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+.hd-print-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #ded7ca;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 14px rgba(39, 29, 19, 0.06);
+}
+
+.hd-print-nav > div {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hd-print-nav strong {
+  color: var(--gold);
+}
+
+.hd-print-nav span {
+  color: #70675c;
+  font-size: 0.82rem;
+}
+
+.hd-print-actions a,
+.hd-print-actions button {
+  appearance: none;
+  border: 1px solid #cfc5b6;
+  border-radius: 0.45rem;
+  background: #fff;
+  color: #33291f;
+  padding: 0.48rem 0.75rem;
+  text-decoration: none;
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.hd-print-actions button {
+  border-color: #8d4a32;
+  background: #8d4a32;
+  color: #fff;
+}
+
+.hd-print-intro,
+.hd-print-controls,
+.hd-print-help {
+  width: min(1100px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.hd-print-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.7fr);
+  gap: 1.5rem;
+  padding: 2.4rem 0 1.4rem;
+}
+
+.hd-print-intro h1 {
+  margin: 0.2rem 0 0.6rem;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.7rem);
+}
+
+.hd-print-intro p {
+  margin: 0;
+  color: #665d52;
+  line-height: 1.55;
+}
+
+.hd-print-intro .eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+}
+
+.hd-print-intro aside {
+  align-self: end;
+  border: 1px solid #ddc89c;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  background: #fff9e9;
+}
+
+.hd-print-intro aside strong {
+  display: block;
+  color: #805c18;
+  margin-bottom: 0.35rem;
+}
+
+.hd-print-intro aside p {
+  font-size: 0.84rem;
+}
+
+.hd-print-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.2rem;
+  align-items: end;
+  padding: 1rem;
+  border: 1px solid #ded7ca;
+  border-radius: 0.8rem;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(39, 29, 19, 0.05);
+}
+
+.hd-print-controls > label,
+.hd-print-controls fieldset {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  color: #665d52;
+  font-size: 0.76rem;
+}
+
+.hd-print-controls select {
+  min-height: 2.35rem;
+  border: 1px solid #cfc5b6;
+  border-radius: 0.4rem;
+  background: #fff;
+  color: #33291f;
+  padding: 0.4rem 2rem 0.4rem 0.6rem;
+}
+
+.hd-print-controls fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  min-height: 2.35rem;
+  align-items: center;
+  padding: 0 0.7rem;
+  border: 1px solid #cfc5b6;
+  border-radius: 0.4rem;
+}
+
+.hd-print-controls legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.hd-print-controls fieldset label,
+.hd-guide-option {
+  display: flex !important;
+  grid-template-columns: none !important;
+  align-items: center;
+  gap: 0.35rem !important;
+  color: #453a30 !important;
+  font-size: 0.8rem !important;
+}
+
+.hd-guide-option {
+  min-height: 2.35rem;
+}
+
+.hd-print-help {
+  margin-top: 0.8rem;
+  color: #70675c;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+#hd-print-root {
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem 0 5rem;
+}
+
+.hd-sheet-group {
+  display: grid;
+  gap: 1rem;
+}
+
+.hd-sheet-heading {
+  width: var(--page-width);
+  display: flex;
+  justify-content: space-between;
+  color: #5f5549;
+  font-size: 0.8rem;
+}
+
+.hd-a4-sheet {
+  position: relative;
+  width: var(--page-width);
+  height: var(--page-height);
+  display: grid;
+  grid-template-columns: repeat(3, var(--card-width));
+  grid-template-rows: repeat(3, var(--card-height));
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.48);
+  page-break-after: always;
+  break-after: page;
+}
+
+.hd-sheet-group:last-child .hd-a4-sheet:last-child {
+  page-break-after: auto;
+}
+
+.hd-print-slot {
+  position: relative;
+  width: var(--card-width);
+  height: var(--card-height);
+  overflow: hidden;
+  background: white;
+}
+
+.hd-print-slot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  clip-path: inset(var(--bleed));
+}
+
+.hd-print-slot.guides::after {
+  content: "";
+  position: absolute;
+  inset: var(--bleed);
+  border: 0.18mm dashed rgba(210, 30, 55, 0.58);
+  pointer-events: none;
+}
+
+.hd-print-slot.blank::after {
+  display: none;
+}
+
+.hd-print-slot.blank {
+  background:
+    linear-gradient(135deg, transparent 49.7%, #ddd 50%, transparent 50.3%),
+    white;
+}
+
+@media (max-width: 850px) {
+  .hd-print-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .hd-print-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  #hd-print-root {
+    justify-content: start;
+    overflow-x: auto;
+    padding-inline: 1rem;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .hd-print-nav,
+  .hd-print-intro,
+  .hd-print-controls,
+  .hd-print-help,
+  .hd-sheet-heading {
+    display: none !important;
+  }
+
+  #hd-print-root,
+  .hd-sheet-group {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hd-a4-sheet {
+    box-shadow: none;
+    margin: 0;
+  }
+}
