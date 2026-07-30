@@ -5,10 +5,10 @@ Este modelo não desenha a carta com CSS. Cada elemento visual é uma imagem ras
 ## Cartas concluídas
 
 - R01 a R19 e R21 — 20 Raças concluídas; R20 Troll de Guerra ainda sem arte HD
-- T04 — Auditoria Infernal
+- T01–T16 — catálogo completo de Táticas
 - D01 a D08 — catálogo completo de Decretos do playtest
 
-As 29 frentes são exportadas em `1050 × 1500 px` dentro de `exports/`.
+As 44 frentes são exportadas em `1050 × 1500 px` dentro de `exports/`.
 As Raças seguem a direção documentada em
 `../../../design/ART-DIRECTION-RACES-v0.6.md`: cenário completo em três
 planos, foco no personagem e zonas protegidas para os componentes da carta.
@@ -18,6 +18,7 @@ carta ao lado do verso correspondente ao seu baralho: Raças, Táticas ou
 Decretos. A prancha `conjunto-racas-frentes-v1.0.png` reúne exclusivamente as
 20 Raças concluídas para revisão de consistência visual. A prancha
 `conjunto-decretos-frentes-v0.9.png` reúne os oito Decretos.
+`conjunto-taticas-frentes-v1.0.png` reúne as 16 Táticas.
 
 ## Versos componentizados
 
@@ -65,7 +66,7 @@ Os arquivos em `components/chroma/` são as gerações originais. Os arquivos em
 - `layers-race.json`
 - `layers-item.json` — nome técnico legado; representa o template de Tática
 - `layers-decree.json`
-- `cards-data.json` — conteúdo variável das 29 cartas em alta fidelidade.
+- `cards-data.json` — conteúdo variável das 44 cartas em alta fidelidade.
 
 ## Regerar
 

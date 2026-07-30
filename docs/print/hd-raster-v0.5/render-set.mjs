@@ -96,6 +96,46 @@ await writeFile(
   raceCanvas.toBuffer("image/png")
 );
 
+const tacticCards = cards.filter(card => card.kind === "item");
+const tacticRows = Math.ceil(tacticCards.length / columns);
+const tacticCanvas = createCanvas(
+  canvasW,
+  startY + tacticRows * (cardH + gapY) + 50
+);
+const tacticCtx = tacticCanvas.getContext("2d");
+tacticCtx.fillStyle = "#17130f";
+tacticCtx.fillRect(0, 0, tacticCanvas.width, tacticCanvas.height);
+tacticCtx.fillStyle = "#f2d57c";
+tacticCtx.font = "54px DemonNarrow";
+tacticCtx.fillText("DEMONLORD · 16 TÁTICAS EM ALTA FIDELIDADE · v1.0", 80, 80);
+
+for (let index = 0; index < tacticCards.length; index += 1) {
+  const card = tacticCards[index];
+  const slug = card.name
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+  const image = await loadImage(
+    new URL(`./exports/${card.id.toLowerCase()}-${slug}.png`, root)
+  );
+  const column = index % columns;
+  const row = Math.floor(index / columns);
+  const x = startX + column * (cardW + gapX);
+  const y = startY + row * (cardH + gapY);
+  tacticCtx.drawImage(image, x, y, cardW, cardH);
+  tacticCtx.fillStyle = "#f4e4bd";
+  tacticCtx.font = "28px DemonNarrow";
+  tacticCtx.textAlign = "center";
+  tacticCtx.fillText(`${card.id} · ${card.name}`, x + cardW / 2, y + cardH + 48);
+}
+
+await writeFile(
+  new URL("./exports/conjunto-taticas-frentes-v1.0.png", root),
+  tacticCanvas.toBuffer("image/png")
+);
+
 const decreeCards = cards.filter(card => card.kind === "decree");
 const decreeRows = Math.ceil(decreeCards.length / columns);
 const decreeCanvas = createCanvas(

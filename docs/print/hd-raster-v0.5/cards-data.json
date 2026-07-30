@@ -326,12 +326,147 @@
   },
   {
     "kind": "item",
+    "id": "T01",
+    "type": "TERRENO · PERMANENTE",
+    "name": "CIDADE NATAL DESTRUÍDA",
+    "art": "art/cidade-natal-destruida-t01-v2-raca-flat.png",
+    "artFocusY": 0.5,
+    "effect": "HARPIAS FICAM −2 ATK. NOVOS CONTRATOS DE HARPIA RECEBEM −1◆."
+  },
+  {
+    "kind": "item",
+    "id": "T02",
+    "type": "TERRENO · PERMANENTE",
+    "name": "PRAGA NO PÂNTANO",
+    "art": "art/praga-no-pantano-t02-v2-raca-flat.png",
+    "artFocusY": 0.5,
+    "effect": "RAÇAS NADADORAS FICAM −2 PV ENQUANTO ESTE TERRENO ESTIVER ATIVO."
+  },
+  {
+    "kind": "item",
+    "id": "T03",
+    "type": "TERRENO · PERMANENTE",
+    "name": "FORJA ABISSAL ABERTA",
+    "art": "art/forja-abissal-aberta-t03-v2-raca-flat.png",
+    "artFocusY": 0.5,
+    "effect": "BRUTOS FICAM +1 ATK. NOVOS CONTRATOS DE BRUTO RECEBEM +1◆."
+  },
+  {
+    "kind": "item",
     "id": "T04",
     "type": "INFLUÊNCIA · PERMANENTE",
     "name": "AUDITORIA INFERNAL",
-    "art": "art/auditoria-infernal-i04.png",
+    "art": "art/auditoria-infernal-t04-v2-raca-flat.png",
     "artFocusY": 0.45,
     "effect": "ADICIONE +1◆ A CADA CONTRATO DO ALVO. REMOVA AO DESCARTAR ESTA INFLUÊNCIA."
+  },
+  {
+    "kind": "item",
+    "id": "T05",
+    "type": "INTRIGA · INSTANTÂNEA",
+    "name": "SUBORNO DE CLÃ",
+    "art": "art/suborno-de-cla-t05-v2-raca-flat.png",
+    "artFocusY": 0.5,
+    "effect": "ROUBE 1 RAÇA DE CONTRATO 3◆ OU MENOS. SUAS MOEDAS ACOMPANHAM A CARTA."
+  },
+  {
+    "kind": "item",
+    "id": "T06",
+    "type": "INTRIGA · INSTANTÂNEA",
+    "name": "ESPIONAGEM",
+    "art": "art/espionagem-t06-v2-raca-flat.png",
+    "artFocusY": 0.5,
+    "effect": "ROUBE 1 TÁTICA ALEATÓRIA DA MÃO DE UM RIVAL."
+  },
+  {
+    "kind": "item",
+    "id": "T07",
+    "type": "INTRIGA · INSTANTÂNEA",
+    "name": "TRANSFERÊNCIA COMPULSÓRIA",
+    "art": "art/transferencia-compulsoria-t07-v2-raca-flat.png",
+    "artFocusY": 0.5,
+    "effect": "MOVA 1 RAÇA SUA PARA O EXÉRCITO ALVO. ELE ASSUME A CARTA E O CONTRATO."
+  },
+  {
+    "kind": "item",
+    "id": "T08",
+    "type": "INTRIGA · INSTANTÂNEA",
+    "name": "DESERÇÃO PLANEJADA",
+    "art": "art/desercao-planejada-t08-v2-raca-flat.png",
+    "artFocusY": 0.5,
+    "effect": "DISPENSE 1 RAÇA SUA SEM GASTAR AÇÃO E COMPRE 1 TÁTICA."
+  },
+  {
+    "kind": "item",
+    "id": "T09",
+    "type": "INTRIGA · INSTANTÂNEA",
+    "name": "INTERROGATÓRIO REAL",
+    "art": "art/interrogatorio-real-t09-v2-raca-flat.png",
+    "artFocusY": 0.5,
+    "effect": "UM RIVAL REVELA SEU DECRETO ATÉ O FIM DA RODADA."
+  },
+  {
+    "kind": "item",
+    "id": "T10",
+    "type": "INTRIGA · INSTANTÂNEA",
+    "name": "REALOCAR MISSÃO",
+    "art": "art/realocar-missao-t10-v2-raca-flat.png",
+    "artFocusY": 0.5,
+    "effect": "ALVO QUE AINDA NÃO DECLAROU COLOCA O DECRETO NO FUNDO E COMPRA OUTRO."
+  },
+  {
+    "kind": "item",
+    "id": "T11",
+    "type": "INTRIGA · REAÇÃO",
+    "name": "CONTRATO FALSO",
+    "art": "art/contrato-falso-t11-v2-raca-flat.png",
+    "artFocusY": 0.5,
+    "effect": "A PRÓXIMA RAÇA RECRUTADA PELO ALVO RECEBE +2◆ DE VERBA."
+  },
+  {
+    "kind": "item",
+    "id": "T12",
+    "type": "INTRIGA · INSTANTÂNEA",
+    "name": "PROPAGANDA DE GUERRA",
+    "art": "art/propaganda-de-guerra-t12-v2-raca-flat.png",
+    "artFocusY": 0.5,
+    "effect": "ESCOLHA 1 RAÇA SUA: SEU TRAÇO CONTA DUAS VEZES ATÉ O FIM DA RODADA."
+  },
+  {
+    "kind": "item",
+    "id": "T13",
+    "type": "EQUIPAMENTO · PERMANENTE",
+    "name": "FORJA PORTÁTIL",
+    "art": "art/forja-portatil-t13-v2-raca-flat.png",
+    "artFocusY": 0.5,
+    "effect": "ANEXE A UMA RAÇA BRUTA: ELA RECEBE +2 ATK."
+  },
+  {
+    "kind": "item",
+    "id": "T14",
+    "type": "INTRIGA · REAÇÃO",
+    "name": "ARMADILHA DE LAÇO",
+    "art": "art/armadilha-de-laco-t14-v2-raca-flat.png",
+    "artFocusY": 0.5,
+    "effect": "CANCELE UM RECRUTAMENTO. A RAÇA PERMANECE NO MERCADO."
+  },
+  {
+    "kind": "item",
+    "id": "T15",
+    "type": "INTRIGA · INSTANTÂNEA",
+    "name": "TREINAMENTO REAL",
+    "art": "art/treinamento-real-t15-v2-raca-flat.png",
+    "artFocusY": 0.5,
+    "effect": "SUAS RAÇAS RECEBEM +1 INT ATÉ O FIM DA RODADA."
+  },
+  {
+    "kind": "item",
+    "id": "T16",
+    "type": "EQUIPAMENTO · PERMANENTE",
+    "name": "ESCUDO DE PEDRA",
+    "art": "art/escudo-de-pedra-t16-v2-raca-flat.png",
+    "artFocusY": 0.5,
+    "effect": "ANEXE A 1 RAÇA: ELA RECEBE +3 PV."
   },
   {
     "kind": "decree",

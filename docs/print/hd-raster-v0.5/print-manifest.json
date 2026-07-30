@@ -120,10 +120,100 @@
     "front": "exports/r21-incubo.png"
   },
   {
+    "id": "T01",
+    "name": "Cidade Natal Destruída",
+    "kind": "tactic",
+    "front": "exports/t01-cidade-natal-destruida.png"
+  },
+  {
+    "id": "T02",
+    "name": "Praga no Pântano",
+    "kind": "tactic",
+    "front": "exports/t02-praga-no-pantano.png"
+  },
+  {
+    "id": "T03",
+    "name": "Forja Abissal Aberta",
+    "kind": "tactic",
+    "front": "exports/t03-forja-abissal-aberta.png"
+  },
+  {
     "id": "T04",
     "name": "Auditoria Infernal",
     "kind": "tactic",
     "front": "exports/t04-auditoria-infernal.png"
+  },
+  {
+    "id": "T05",
+    "name": "Suborno de Clã",
+    "kind": "tactic",
+    "front": "exports/t05-suborno-de-cla.png"
+  },
+  {
+    "id": "T06",
+    "name": "Espionagem",
+    "kind": "tactic",
+    "front": "exports/t06-espionagem.png"
+  },
+  {
+    "id": "T07",
+    "name": "Transferência Compulsória",
+    "kind": "tactic",
+    "front": "exports/t07-transferencia-compulsoria.png"
+  },
+  {
+    "id": "T08",
+    "name": "Deserção Planejada",
+    "kind": "tactic",
+    "front": "exports/t08-desercao-planejada.png"
+  },
+  {
+    "id": "T09",
+    "name": "Interrogatório Real",
+    "kind": "tactic",
+    "front": "exports/t09-interrogatorio-real.png"
+  },
+  {
+    "id": "T10",
+    "name": "Realocar Missão",
+    "kind": "tactic",
+    "front": "exports/t10-realocar-missao.png"
+  },
+  {
+    "id": "T11",
+    "name": "Contrato Falso",
+    "kind": "tactic",
+    "front": "exports/t11-contrato-falso.png"
+  },
+  {
+    "id": "T12",
+    "name": "Propaganda de Guerra",
+    "kind": "tactic",
+    "front": "exports/t12-propaganda-de-guerra.png"
+  },
+  {
+    "id": "T13",
+    "name": "Forja Portátil",
+    "kind": "tactic",
+    "front": "exports/t13-forja-portatil.png"
+  },
+  {
+    "id": "T14",
+    "name": "Armadilha de Laço",
+    "kind": "tactic",
+    "front": "exports/t14-armadilha-de-laco.png"
+  },
+  {
+    "id": "T15",
+    "name": "Treinamento Real",
+    "kind": "tactic",
+    "front": "exports/t15-treinamento-real.png"
+  },
+  {
+    "id": "T16",
+    "name": "Escudo de Pedra",
+    "kind": "tactic",
+    "front": "exports/t16-escudo-de-pedra.png"
   },
   {
     "id": "D01",
