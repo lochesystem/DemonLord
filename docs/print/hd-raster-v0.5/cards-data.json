@@ -178,9 +178,14 @@
     "kind": "race",
     "id": "R12",
     "name": "MINOTAURO",
-    "art": "art/minotauro-r12-v2-flat.png",
+    "art": "art/minotauro-r12-v3-labirinto.png",
     "artFocusY": 0.5,
     "variants": [
+      {
+        "suffix": "versao-flat-bracos-cruzados",
+        "art": "art/minotauro-r12-v2-flat.png",
+        "artFocusY": 0.5
+      },
       {
         "suffix": "versao-anterior-com-mapa",
         "art": "art/minotauro-r12.png",
@@ -403,9 +408,14 @@
     "id": "D05",
     "type": "DECRETO SECRETO",
     "name": "COMPANHIA ECONÔMICA",
-    "art": "art/companhia-economica-d05-v2-flat.png",
+    "art": "art/companhia-economica-d05-v3-espectro-feminino.png",
     "artFocusY": 0.5,
     "variants": [
+      {
+        "suffix": "versao-flat-espectro-anterior",
+        "art": "art/companhia-economica-d05-v2-flat.png",
+        "artFocusY": 0.5
+      },
       {
         "suffix": "versao-anterior-detalhada",
         "art": "art/companhia-economica-d05.png",
