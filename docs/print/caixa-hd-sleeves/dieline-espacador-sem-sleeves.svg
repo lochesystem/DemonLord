@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+  <title>DemonLord - Espaçador removível</title>
+  <desc>Dieline vetorial 1:1 para uso sem sleeves</desc>
+  <style>
+    .cut { fill: none; stroke: #302477; stroke-width: .55; vector-effect: non-scaling-stroke; }
+    .crease { fill: none; stroke: #e33d3d; stroke-width: .45; stroke-dasharray: 4 2; vector-effect: non-scaling-stroke; }
+    .bleed { fill: none; stroke: #54b948; stroke-width: .45; stroke-dasharray: 2 2; vector-effect: non-scaling-stroke; }
+    .safe { fill: none; stroke: #c3932e; stroke-width: .35; stroke-dasharray: 3 2; vector-effect: non-scaling-stroke; }
+    .title { font: 700 7px Arial, sans-serif; fill: #231f20; }
+    .subtitle { font: 3.2px Arial, sans-serif; fill: #6e6962; }
+    .label { font: 700 2.5px Arial, sans-serif; fill: #98938b; }
+    .note { font: 3px Arial, sans-serif; fill: #231f20; }
+  </style>
+  <rect width="420" height="297" fill="white"/>
+  <text class="title" x="18" y="18">DemonLord - Espaçador removível</text>
+  <text class="subtitle" x="18" y="27">Dieline vetorial 1:1 para uso sem sleeves</text>
+  <g id="spacer" transform="translate(115 80)">
+<rect class="bleed" x="-3" y="-3" width="188" height="98"/>
+<polyline class="cut" points="12,0 0,5 0,87 12,92"/>
+<polyline class="cut" points="12,0 182,0 182,92 12,92"/>
+<polyline class="crease" points="12,0 12,92"/>
+<polyline class="crease" points="79,0 79,92"/>
+<polyline class="crease" points="97,0 97,92"/>
+<polyline class="crease" points="164,0 164,92"/>
+<text class="label" x="6" y="48" text-anchor="middle">COLA</text>
+<text class="label" x="45.5" y="48" text-anchor="middle">67 mm</text>
+<text class="label" x="88" y="48" text-anchor="middle">18</text>
+<text class="label" x="130.5" y="48" text-anchor="middle">67 mm</text>
+<text class="label" x="173" y="48" text-anchor="middle">18</text>
+</g>
+  
+      <text class="note" x="18" y="58">MONTADO: 67 x 18 x 92 mm</text>
+      <text class="note" x="18" y="68">USO: preencher a folga do baralho sem sleeves</text>
+      <text class="note" x="115" y="195">Dobre nas linhas vermelhas e cole a aba de 12 mm por dentro.</text>
+    
+</svg>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+  <title>DemonLord - Tuck box para 76 cartas</title>
+  <desc>Dieline vetorial 1:1 com sleeves simples premium</desc>
+  <style>
+    .cut { fill: none; stroke: #302477; stroke-width: .55; vector-effect: non-scaling-stroke; }
+    .crease { fill: none; stroke: #e33d3d; stroke-width: .45; stroke-dasharray: 4 2; vector-effect: non-scaling-stroke; }
+    .bleed { fill: none; stroke: #54b948; stroke-width: .45; stroke-dasharray: 2 2; vector-effect: non-scaling-stroke; }
+    .safe { fill: none; stroke: #c3932e; stroke-width: .35; stroke-dasharray: 3 2; vector-effect: non-scaling-stroke; }
+    .title { font: 700 7px Arial, sans-serif; fill: #231f20; }
+    .subtitle { font: 3.2px Arial, sans-serif; fill: #6e6962; }
+    .label { font: 700 2.5px Arial, sans-serif; fill: #98938b; }
+    .note { font: 3px Arial, sans-serif; fill: #231f20; }
+  </style>
+  <rect width="420" height="297" fill="white"/>
+  <text class="title" x="18" y="18">DemonLord - Tuck box para 76 cartas</text>
+  <text class="subtitle" x="18" y="27">Dieline vetorial 1:1 com sleeves simples premium</text>
+  <g id="dieline" transform="translate(92 47)">
+<rect class="bleed" x="-3" y="-3" width="249" height="207"/>
+<polyline class="cut" points="15,62 0,66 0,152 15,156"/>
+<polyline class="cut" points="15,62 15,17 22,17 22,10"/>
+<polyline class="cut" points="77,10 77,17 84,17 84,62"/>
+<polyline class="cut" points="84,62 84,24 92,17 121,17 129,24 129,62"/>
+<polyline class="cut" points="198,62 198,24 206,17 235,17 243,24 243,156"/>
+<polyline class="cut" points="15,156 15,191 26,191 26,198 73,198 73,191 84,191 84,156"/>
+<polyline class="cut" points="84,156 84,189 92,196 121,196 129,189 129,156"/>
+<polyline class="cut" points="129,156 129,201 139,192 188,192 198,201 198,156"/>
+<polyline class="cut" points="198,156 198,189 206,196 235,196 243,189 243,156"/>
+<path class="cut" d="M 22 10 C 22 3 27 0 34 0 L 65 0 C 72 0 77 3 77 10"/>
+<path class="cut" d="M 129 62 L 156 62 C 156 73 171 73 171 62 L 198 62"/>
+<polyline class="crease" points="15,62 15,156"/>
+<polyline class="crease" points="84,62 84,156"/>
+<polyline class="crease" points="129,62 129,156"/>
+<polyline class="crease" points="198,62 198,156"/>
+<polyline class="crease" points="15,62 129,62"/>
+<polyline class="crease" points="198,62 243,62"/>
+<polyline class="crease" points="15,156 243,156"/>
+<polyline class="crease" points="22,17 77,17"/>
+<rect class="safe" x="19" y="66" width="61" height="86"/>
+<rect class="safe" x="133" y="66" width="61" height="86"/>
+<text class="label" x="7.5" y="109" text-anchor="middle">COLA</text>
+<text class="label" x="49.5" y="111" text-anchor="middle">VERSO</text>
+<text class="label" x="106.5" y="111" text-anchor="middle">LATERAL</text>
+<text class="label" x="163.5" y="111" text-anchor="middle">FRENTE</text>
+<text class="label" x="220.5" y="111" text-anchor="middle">LATERAL</text>
+<text class="label" x="49.5" y="42" text-anchor="middle">TAMPA</text>
+<text class="label" x="49.5" y="10" text-anchor="middle">ABA DE ENCAIXE</text>
+</g>
+  
+      <text class="note" x="18" y="58">INTERNO: 69 x 45 x 94 mm</text>
+      <text class="note" x="18" y="68">CAPACIDADE: 76 cartas em sleeves 66 x 91 mm</text>
+      <text class="note" x="18" y="78">MATERIAL: cartão 350 g / aproximadamente 0,5 mm</text>
+      <text class="note" x="92" y="275">Escala 1:1. Validar faca e compensações com a gráfica antes da produção.</text>
+    
+</svg>
